@@ -92,7 +92,7 @@
 <meta property="og:description" content="最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://www.hollytree.top/2018/03/02/深拷贝浅拷贝/lan.gif">
-<meta property="og:updated_time" content="2018-05-01T16:31:18.956Z">
+<meta property="og:updated_time" content="2018-05-03T17:16:40.077Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深拷贝与浅拷贝">
 <meta name="twitter:description" content="最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。">
@@ -400,7 +400,7 @@
         <blockquote>
 <p>最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。</p>
 </blockquote>
-<h3 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h3><h3 id="1-首先看看-js-基本数据类型和引用类型的区别"><a href="#1-首先看看-js-基本数据类型和引用类型的区别" class="headerlink" title="1. 首先看看 js 基本数据类型和引用类型的区别"></a>1. 首先看看 js 基本数据类型和引用类型的区别</h3><ul>
+<h3 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h3><h3 id="1-首先看看-js-基本数据类型和引用类型的区别"><a href="#1-首先看看-js-基本数据类型和引用类型的区别" class="headerlink" title="1.首先看看 js 基本数据类型和引用类型的区别"></a>1.首先看看 js 基本数据类型和引用类型的区别</h3><ul>
 <li>基本数据类型：String , Number, Boolean, Null, Undefined 存放在栈内存中。直接按值存放，可以直接访问。</li>
 <li>引用数据类型：Array, Object, Function 等；存放在堆内存中，变量实际保存是保存在栈中的一个地址，指向堆中具体的位置。从栈中获取地址再从堆内存中取到数据。</li>
 </ul>
@@ -544,6 +544,22 @@ console.log(arr1) // [3, 2, 3]
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/03/rundev时node内存溢出/" rel="prev" title="跑Vue项目时服务突然停止(Node内存溢出)">
+                跑Vue项目时服务突然停止(Node内存溢出) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
       
@@ -631,7 +647,7 @@ console.log(arr1) // [3, 2, 3]
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -642,7 +658,7 @@ console.log(arr1) // [3, 2, 3]
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -653,7 +669,7 @@ console.log(arr1) // [3, 2, 3]
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -709,7 +725,7 @@ console.log(arr1) // [3, 2, 3]
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-首先看看-js-基本数据类型和引用类型的区别"><span class="nav-number">2.</span> <span class="nav-text">1. 首先看看 js 基本数据类型和引用类型的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-赋值，拷贝"><span class="nav-number">3.</span> <span class="nav-text">2.赋值，拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-深拷贝和浅拷贝"><span class="nav-number">4.</span> <span class="nav-text">3.深拷贝和浅拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-实现深拷贝的方法"><span class="nav-number">5.</span> <span class="nav-text">4.实现深拷贝的方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-首先看看-js-基本数据类型和引用类型的区别"><span class="nav-number">2.</span> <span class="nav-text">1.首先看看 js 基本数据类型和引用类型的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-赋值，拷贝"><span class="nav-number">3.</span> <span class="nav-text">2.赋值，拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-深拷贝和浅拷贝"><span class="nav-number">4.</span> <span class="nav-text">3.深拷贝和浅拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-实现深拷贝的方法"><span class="nav-number">5.</span> <span class="nav-text">4.实现深拷贝的方法</span></a></li></ol></div>
             
 
           </div>
