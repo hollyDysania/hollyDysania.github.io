@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="每日一坑,Node,Vue,Webpack," />
+  <meta name="keywords" content="每日一坑," />
 
 
 
@@ -83,20 +83,20 @@
 
 
 
-<meta name="description" content="先描述下现象：vue项目在跑时偶尔出现webpack-dev-server服务停止,需要重新npm run dev.  FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory">
-<meta name="keywords" content="每日一坑,Node,Vue,Webpack">
+<meta name="description" content="最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。">
+<meta name="keywords" content="每日一坑">
 <meta property="og:type" content="article">
-<meta property="og:title" content="跑Vue项目时服务突然停止(Node内存溢出)">
-<meta property="og:url" content="https://www.hollytree.top/2018/03/03/rundev时node内存溢出/index.html">
+<meta property="og:title" content="深拷贝与浅拷贝">
+<meta property="og:url" content="https://www.hollytree.top/2018/03/02/copyDeep/index.html">
 <meta property="og:site_name" content="Welcome">
-<meta property="og:description" content="先描述下现象：vue项目在跑时偶尔出现webpack-dev-server服务停止,需要重新npm run dev.  FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory">
+<meta property="og:description" content="最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://www.hollytree.top/2018/03/03/rundev时node内存溢出/375670145D5D7073D7D7843A1AE5D529069481DAA.jpg">
-<meta property="og:updated_time" content="2018-05-03T17:23:42.593Z">
+<meta property="og:image" content="https://www.hollytree.top/2018/03/02/copyDeep/lan.gif">
+<meta property="og:updated_time" content="2018-05-07T15:16:32.281Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跑Vue项目时服务突然停止(Node内存溢出)">
-<meta name="twitter:description" content="先描述下现象：vue项目在跑时偶尔出现webpack-dev-server服务停止,需要重新npm run dev.  FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory">
-<meta name="twitter:image" content="https://www.hollytree.top/2018/03/03/rundev时node内存溢出/375670145D5D7073D7D7843A1AE5D529069481DAA.jpg">
+<meta name="twitter:title" content="深拷贝与浅拷贝">
+<meta name="twitter:description" content="最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。">
+<meta name="twitter:image" content="https://www.hollytree.top/2018/03/02/copyDeep/lan.gif">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://www.hollytree.top/2018/03/03/rundev时node内存溢出/"/>
+  <link rel="canonical" href="https://www.hollytree.top/2018/03/02/copyDeep/"/>
 
 
 
 
 
-  <title>跑Vue项目时服务突然停止(Node内存溢出) | Welcome</title>
+  <title>深拷贝与浅拷贝 | Welcome</title>
   
 
 
@@ -308,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.hollytree.top/2018/03/03/rundev时node内存溢出/">
+    <link itemprop="mainEntityOfPage" href="https://www.hollytree.top/2018/03/02/copyDeep/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="holly">
@@ -325,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">跑Vue项目时服务突然停止(Node内存溢出)</h1>
+          <h1 class="post-title" itemprop="name headline">深拷贝与浅拷贝</h1>
         
 
         <div class="post-meta">
@@ -337,8 +337,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-03T12:17:33+08:00">
-                2018-03-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-02T10:11:14+08:00">
+                2018-03-02
               </time>
             
 
@@ -360,8 +360,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vue/" itemprop="url" rel="index">
-                    <span itemprop="name">Vue</span>
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
                   </a>
                 </span>
 
@@ -398,27 +398,97 @@
 
       
         <blockquote>
-<p><strong>先描述下现象：vue项目在跑时偶尔出现webpack-dev-server服务停止,需要重新npm run dev.</strong></p>
+<p>最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。</p>
 </blockquote>
-<pre><code>FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory
-</code></pre>  <a id="more"></a>
-<ul>
-<li>报错信息说堆内存溢出（其实就是node内存溢出）</li>
+<a id="more"></a>
+<h3 id="1-首先看看-js-基本数据类型和引用类型的区别"><a href="#1-首先看看-js-基本数据类型和引用类型的区别" class="headerlink" title="1.首先看看 js 基本数据类型和引用类型的区别"></a>1.首先看看 js 基本数据类型和引用类型的区别</h3><ul>
+<li>基本数据类型：String , Number, Boolean, Null, Undefined 存放在栈内存中。直接按值存放，可以直接访问。</li>
+<li>引用数据类型：Array, Object, Function 等；存放在堆内存中，变量实际保存是保存在栈中的一个地址，指向堆中具体的位置。从栈中获取地址再从堆内存中取到数据。</li>
+</ul>
+<h3 id="2-赋值，拷贝"><a href="#2-赋值，拷贝" class="headerlink" title="2.赋值，拷贝"></a>2.赋值，拷贝</h3><ul>
+<li>基本数据类型拷贝的时候，在堆内存中开辟了新的空间，和原来的变量互不相干。不用考虑深拷贝浅拷贝的问题。</li>
+<li>引用数据类型在用=号赋值时，实际上是将栈中的地址赋值给新的变量。所以当改变这个新的变量里的数据时，指向的堆中的数据也是会有变化的。（我那个 bug 也就是这个问题）</li>
+</ul>
+<pre><code class="javascript">let a = 123
+let b = a
+a = 1234
+console.log(a) // 1234
+console.log(b) // 123
+</code></pre>
+<p>基本数据类型复制不会发生引用, 栈中会开辟新的空间存放</p>
+<pre><code class="javascript">let arr = [1, 2, 3]
+let arr1 = arr
+arr[0] = 3
+console.log(arr) // [3, 2, 3]
+console.log(arr1) // [3, 2, 3]
+</code></pre>
+<p>引用数据类型复制是将栈中的地址赋值给变量，指向堆中的同一个空间，所以当改变其中一个时，其实是改变堆中的数据，所有指向这个空间的变量都会发生改变。</p>
+<h3 id="3-深拷贝和浅拷贝"><a href="#3-深拷贝和浅拷贝" class="headerlink" title="3.深拷贝和浅拷贝"></a>3.深拷贝和浅拷贝</h3><ul>
+<li><p>上面的例子其实就是浅拷贝，引用类型的数据复制的是指向地址。</p>
+</li>
+<li><p>深拷贝，堆开辟一个新的空间存放复制的对象。</p>
+</li>
 </ul>
 <blockquote>
-<h4 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h4></blockquote>
+<p>引用类型的浅拷贝会出现很多问题，那么下面来看看引用类型如何实现深拷贝。</p>
+</blockquote>
+<h3 id="4-实现深拷贝的方法"><a href="#4-实现深拷贝的方法" class="headerlink" title="4.实现深拷贝的方法"></a>4.实现深拷贝的方法</h3><ol>
+<li>我最常用的一个是（简单粗暴）序列化反序列化法</li>
+</ol>
+<pre><code class="javascript">JSON.parse(JSON.stringify(obj))
+</code></pre>
+<p>但这个方法存在一些问题 ：</p>
 <ul>
-<li>如果是run dev时报错,在package.json文件里的scripts字段的 ‘dev’ : node 后面加上 <strong>–max_old_space_size=4096</strong>   这里的4096单位是M也就是4G（具体的大小根据实际情况而定）</li>
-<li>如果是在打包时 就在build后面加上面的内容</li>
+<li>无法复制正则表达式类型、函数类型</li>
+<li>无论构造器是什么都会变成 Object</li>
+<li>undefined 无法复制</li>
+<li>只能深拷贝对象和数组其他类型会失真</li>
 </ul>
+<p>但实际开发中只是复制数据是够用的</p>
+<ol start="2">
+<li>迭代递归法</li>
+</ol>
 <blockquote>
-<h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4></blockquote>
-<ul>
-<li>首先项目在跑时其实用的是用的webpack-dev-server工具，是一个小型的Node.js Express 服务器。</li>
-<li>webpack在每次代码更改保存时都会进行编译然后实刷新页面得到最新的效果，但同时也会占用大量内存，也就是占用node内存。</li>
-<li>node是基于V8构建的，V8对内存的使用是有限制的（老64位系统约1.4G，32位约0.7G，新生代内存64位约32M，32系统下约为16M）在这种限制下，如果不小心触碰到这个界限，<strong>就会造成进程退出</strong>。</li>
-</ul>
-<p><img src="/2018/03/03/rundev时node内存溢出/375670145D5D7073D7D7843A1AE5D529069481DAA.jpg" alt=""></p>
+<p>对对象进行迭代操作，对它的每个值进行递归深拷贝</p>
+</blockquote>
+<pre><code class="javascript">function deepClone(obj) {
+  let copy
+  if (null == obj || &#39;object&#39; != typeof obj) return obj
+  // Date
+  if (obj instanceof Date) {
+    copy = new Date()
+    copy.setTime(obj.getTime())
+    return copy
+  }
+  // Array
+  if (obj instanceof Array) {
+    copy = []
+    for (var i = 0; i &lt; obj.length; i++) {
+      copy[i] = clone(obj[i])
+    }
+    return copy
+  }
+  // Object
+  if (obj instanceof Object) {
+    copy = {}
+    for (var key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        copy[key] = clone(obj[key])
+      }
+    }
+    return copy
+  }
+  throw new Error(&#39;error&#39;)
+}
+</code></pre>
+<ol start="3">
+<li>Object.assign() ES6 的深拷贝方法</li>
+<li>concat 对数组进行深拷贝</li>
+</ol>
+<blockquote>
+<p>应该还有很多方法 或者更深入的思考 关于可枚举不可枚举这些概念我还不太清楚 有待进步</p>
+</blockquote>
+<p><img src="/2018/03/02/copyDeep/lan.gif" alt=""></p>
 
       
     </div>
@@ -467,12 +537,6 @@
           
             <a href="/tags/每日一坑/" rel="tag"><i class="fa fa-tag"></i> 每日一坑</a>
           
-            <a href="/tags/Node/" rel="tag"><i class="fa fa-tag"></i> Node</a>
-          
-            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
-          
-            <a href="/tags/Webpack/" rel="tag"><i class="fa fa-tag"></i> Webpack</a>
-          
         </div>
       
 
@@ -484,15 +548,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/02/深拷贝浅拷贝/" rel="next" title="深拷贝与浅拷贝">
-                <i class="fa fa-chevron-left"></i> 深拷贝与浅拷贝
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/04/nodeFull/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -584,7 +648,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -595,7 +659,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -606,7 +670,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -662,7 +726,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决办法："><span class="nav-number">1.</span> <span class="nav-text">解决办法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原因"><span class="nav-number">2.</span> <span class="nav-text">原因</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-首先看看-js-基本数据类型和引用类型的区别"><span class="nav-number">1.</span> <span class="nav-text">1.首先看看 js 基本数据类型和引用类型的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-赋值，拷贝"><span class="nav-number">2.</span> <span class="nav-text">2.赋值，拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-深拷贝和浅拷贝"><span class="nav-number">3.</span> <span class="nav-text">3.深拷贝和浅拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-实现深拷贝的方法"><span class="nav-number">4.</span> <span class="nav-text">4.实现深拷贝的方法</span></a></li></ol></div>
             
 
           </div>
