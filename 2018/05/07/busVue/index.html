@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="移动,踩坑记,ios,javascript," />
+  <meta name="keywords" content="Vue,组件通信,bus,每日一坑," />
 
 
 
@@ -83,20 +83,20 @@
 
 
 
-<meta name="description" content="ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN 解决办法 （转化为/分隔的就可以）  var resData = &amp;#39;2017-3-14 10:03:45&amp;#39;;      resData=resData..replace(/-/g, &amp;#39;/&amp;#39;);             console.log(&amp;">
-<meta name="keywords" content="移动,踩坑记,ios,javascript">
+<meta name="description" content="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。 解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事">
+<meta name="keywords" content="Vue,组件通信,bus,每日一坑">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ios系统Date对象问题">
-<meta property="og:url" content="https://www.hollytree.top/2018/03/30/moveIos/index.html">
+<meta property="og:title" content="busVue">
+<meta property="og:url" content="https://www.hollytree.top/2018/05/07/busVue/index.html">
 <meta property="og:site_name" content="Welcome">
-<meta property="og:description" content="ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN 解决办法 （转化为/分隔的就可以）  var resData = &amp;#39;2017-3-14 10:03:45&amp;#39;;      resData=resData..replace(/-/g, &amp;#39;/&amp;#39;);             console.log(&amp;">
+<meta property="og:description" content="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。 解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://www.hollytree.top/2018/03/30/moveIos/7a2fbe229152dc83c16462315859a01bfd4aaa6f.gif">
-<meta property="og:updated_time" content="2018-05-07T15:30:10.652Z">
+<meta property="og:image" content="https://www.hollytree.top/2018/05/07/busVue/bfd556a757c6e8b489fa183e61246e526183e9ae.gif">
+<meta property="og:updated_time" content="2018-05-07T15:35:07.842Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ios系统Date对象问题">
-<meta name="twitter:description" content="ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN 解决办法 （转化为/分隔的就可以）  var resData = &amp;#39;2017-3-14 10:03:45&amp;#39;;      resData=resData..replace(/-/g, &amp;#39;/&amp;#39;);             console.log(&amp;">
-<meta name="twitter:image" content="https://www.hollytree.top/2018/03/30/moveIos/7a2fbe229152dc83c16462315859a01bfd4aaa6f.gif">
+<meta name="twitter:title" content="busVue">
+<meta name="twitter:description" content="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。 解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事">
+<meta name="twitter:image" content="https://www.hollytree.top/2018/05/07/busVue/bfd556a757c6e8b489fa183e61246e526183e9ae.gif">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://www.hollytree.top/2018/03/30/moveIos/"/>
+  <link rel="canonical" href="https://www.hollytree.top/2018/05/07/busVue/"/>
 
 
 
 
 
-  <title>ios系统Date对象问题 | Welcome</title>
+  <title>busVue | Welcome</title>
   
 
 
@@ -308,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.hollytree.top/2018/03/30/moveIos/">
+    <link itemprop="mainEntityOfPage" href="https://www.hollytree.top/2018/05/07/busVue/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="holly">
@@ -325,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ios系统Date对象问题</h1>
+          <h1 class="post-title" itemprop="name headline">busVue</h1>
         
 
         <div class="post-meta">
@@ -337,8 +337,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-30T06:49:50+08:00">
-                2018-03-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-07T23:33:10+08:00">
+                2018-05-07
               </time>
             
 
@@ -360,8 +360,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/每日一坑/" itemprop="url" rel="index">
-                    <span itemprop="name">每日一坑</span>
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
                   </a>
                 </span>
 
@@ -397,14 +397,10 @@
       
 
       
-        <h3 id="ios系统-Date-parse-获取时间戳时-ios系统只认得-分隔的时间-其它-分隔或者别的-ios获取的都是NaN"><a href="#ios系统-Date-parse-获取时间戳时-ios系统只认得-分隔的时间-其它-分隔或者别的-ios获取的都是NaN" class="headerlink" title="ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN"></a>ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN</h3><blockquote>
-<p>解决办法 （转化为/分隔的就可以）</p>
+        <h3 id="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。"><a href="#Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。" class="headerlink" title="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。"></a>Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。</h3><blockquote>
+<p>解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事</p>
 </blockquote>
-<pre><code class="javascript">var resData = &#39;2017-3-14 10:03:45&#39;;  
-   resData=resData..replace(/-/g, &#39;/&#39;);  
-          console.log(&quot;返回时间：&quot; + resData)
-</code></pre>
-<p><img src="/2018/03/30/moveIos/7a2fbe229152dc83c16462315859a01bfd4aaa6f.gif" alt=""></p>
+<p><img src="/2018/05/07/busVue/bfd556a757c6e8b489fa183e61246e526183e9ae.gif" alt=""></p>
 
       
     </div>
@@ -451,13 +447,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/移动/" rel="tag"><i class="fa fa-tag"></i> 移动</a>
+            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
           
-            <a href="/tags/踩坑记/" rel="tag"><i class="fa fa-tag"></i> 踩坑记</a>
+            <a href="/tags/组件通信/" rel="tag"><i class="fa fa-tag"></i> 组件通信</a>
           
-            <a href="/tags/ios/" rel="tag"><i class="fa fa-tag"></i> ios</a>
+            <a href="/tags/bus/" rel="tag"><i class="fa fa-tag"></i> bus</a>
           
-            <a href="/tags/javascript/" rel="tag"><i class="fa fa-tag"></i> javascript</a>
+            <a href="/tags/每日一坑/" rel="tag"><i class="fa fa-tag"></i> 每日一坑</a>
           
         </div>
       
@@ -479,6 +475,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/07/moveIos-1/" rel="prev" title="moveIos">
+                moveIos <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -581,7 +581,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -648,7 +648,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ios系统-Date-parse-获取时间戳时-ios系统只认得-分隔的时间-其它-分隔或者别的-ios获取的都是NaN"><span class="nav-number">1.</span> <span class="nav-text">ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。"><span class="nav-number">1.</span> <span class="nav-text">Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。</span></a></li></ol></div>
             
 
           </div>
