@@ -4,37 +4,11 @@
 
     
   <url>
-    <loc>https://www.hollytree.top/2018/05/07/moveIos-1/</loc>
-    <lastmod>2018-05-07T15:36:49.981Z</lastmod>
-    <data>
-        <display>
-        <title>moveIos</title>
-        <pubTime>2018-05-07T15:35:26.000Z</pubTime>
-        
-        <tag>移动</tag>
-         
-        <tag>踩坑记</tag>
-         
-        <tag>ios</tag>
-         
-        <tag>javascript</tag>
-         
-         
-           
-             
-              <breadCrumb title="每日一坑" url="https://www.hollytree.top/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.hollytree.top/2018/05/07/busVue/</loc>
-    <lastmod>2018-05-07T15:35:07.842Z</lastmod>
+    <lastmod>2018-05-07T15:39:59.334Z</lastmod>
     <data>
         <display>
-        <title>busVue</title>
+        <title>Vue的bus组件通信时多次触发的问题</title>
         <pubTime>2018-05-07T15:33:10.000Z</pubTime>
         
         <tag>Vue</tag>
@@ -49,6 +23,32 @@
            
              
               <breadCrumb title="Vue" url="https://www.hollytree.top/categories/Vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hollytree.top/2018/05/01/moveIos-1/</loc>
+    <lastmod>2018-05-07T15:39:15.427Z</lastmod>
+    <data>
+        <display>
+        <title>Ios系统与Date的Bug</title>
+        <pubTime>2018-05-01T15:35:26.000Z</pubTime>
+        
+        <tag>移动</tag>
+         
+        <tag>踩坑记</tag>
+         
+        <tag>ios</tag>
+         
+        <tag>javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="每日一坑" url="https://www.hollytree.top/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
           
         </display>
     </data>
