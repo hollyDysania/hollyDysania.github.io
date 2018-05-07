@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Vue， 组件通信， bus," />
 
 
 
@@ -83,20 +83,20 @@
 
 
 
-<meta name="description" content="title: vue利用bus组件通信时，生命周期多次触发问题 date: 2015-04-01 10:39:00 tags: [&amp;#39;Vue&amp;#39;， &amp;#39;组件通信&amp;#39;， &amp;#39;bus&amp;#39;] categories: [&amp;#39;Vue&amp;#39;, &amp;#39;每日一坑&amp;#39;] Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发">
-<meta name="keywords" content="侯玲">
+<meta name="description" content="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。 解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事">
+<meta name="keywords" content="Vue， 组件通信， bus">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Welcome">
-<meta property="og:url" content="https://www.hollytree.top/2018/05/07/bus/index.html">
+<meta property="og:title" content="vue利用bus组件通信时，生命周期多次触发问题">
+<meta property="og:url" content="https://www.hollytree.top/2015/04/01/bus/index.html">
 <meta property="og:site_name" content="Welcome">
-<meta property="og:description" content="title: vue利用bus组件通信时，生命周期多次触发问题 date: 2015-04-01 10:39:00 tags: [&amp;#39;Vue&amp;#39;， &amp;#39;组件通信&amp;#39;， &amp;#39;bus&amp;#39;] categories: [&amp;#39;Vue&amp;#39;, &amp;#39;每日一坑&amp;#39;] Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发">
+<meta property="og:description" content="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。 解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://www.hollytree.top/2018/05/07/bus/E:/前端区/博客/blog/source/_posts/bus/bfd556a757c6e8b489fa183e61246e526183e9ae.gif">
-<meta property="og:updated_time" content="2018-05-07T15:15:12.165Z">
+<meta property="og:image" content="https://www.hollytree.top/2015/04/01/bus/E:/前端区/博客/blog/source/_posts/bus/bfd556a757c6e8b489fa183e61246e526183e9ae.gif">
+<meta property="og:updated_time" content="2018-05-07T15:24:26.180Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome">
-<meta name="twitter:description" content="title: vue利用bus组件通信时，生命周期多次触发问题 date: 2015-04-01 10:39:00 tags: [&amp;#39;Vue&amp;#39;， &amp;#39;组件通信&amp;#39;， &amp;#39;bus&amp;#39;] categories: [&amp;#39;Vue&amp;#39;, &amp;#39;每日一坑&amp;#39;] Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发">
-<meta name="twitter:image" content="https://www.hollytree.top/2018/05/07/bus/E:/前端区/博客/blog/source/_posts/bus/bfd556a757c6e8b489fa183e61246e526183e9ae.gif">
+<meta name="twitter:title" content="vue利用bus组件通信时，生命周期多次触发问题">
+<meta name="twitter:description" content="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。 解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事">
+<meta name="twitter:image" content="https://www.hollytree.top/2015/04/01/bus/E:/前端区/博客/blog/source/_posts/bus/bfd556a757c6e8b489fa183e61246e526183e9ae.gif">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://www.hollytree.top/2018/05/07/bus/"/>
+  <link rel="canonical" href="https://www.hollytree.top/2015/04/01/bus/"/>
 
 
 
 
 
-  <title> | Welcome</title>
+  <title>vue利用bus组件通信时，生命周期多次触发问题 | Welcome</title>
   
 
 
@@ -308,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.hollytree.top/2018/05/07/bus/">
+    <link itemprop="mainEntityOfPage" href="https://www.hollytree.top/2015/04/01/bus/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="holly">
@@ -325,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">vue利用bus组件通信时，生命周期多次触发问题</h1>
         
 
         <div class="post-meta">
@@ -337,8 +337,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-07T23:11:39+08:00">
-                2018-05-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-04-01T10:39:00+08:00">
+                2015-04-01
               </time>
             
 
@@ -347,6 +347,39 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/每日一坑/" itemprop="url" rel="index">
+                    <span itemprop="name">每日一坑</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -375,14 +408,10 @@
       
 
       
-        <pre><code>title: vue利用bus组件通信时，生命周期多次触发问题
-date: 2015-04-01 10:39:00
-tags: [&#39;Vue&#39;， &#39;组件通信&#39;， &#39;bus&#39;]
-categories: [&#39;Vue&#39;, &#39;每日一坑&#39;]
-</code></pre><h3 id="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。"><a href="#Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。" class="headerlink" title="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。"></a>Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。</h3><blockquote>
+        <h3 id="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。"><a href="#Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。" class="headerlink" title="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。"></a>Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。</h3><blockquote>
 <p>解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事</p>
 </blockquote>
-<p><img src="/2018/05/07/bus/E:/前端区\博客\blog\source\_posts\bus\bfd556a757c6e8b489fa183e61246e526183e9ae.gif" alt=""></p>
+<p><img src="/2015/04/01/bus/E:/前端区\博客\blog\source\_posts\bus\bfd556a757c6e8b489fa183e61246e526183e9ae.gif" alt=""></p>
 
       
     </div>
@@ -427,6 +456,12 @@ categories: [&#39;Vue&#39;, &#39;每日一坑&#39;]
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Vue，-组件通信，-bus/" rel="tag"><i class="fa fa-tag"></i> Vue， 组件通信， bus</a>
+          
+        </div>
+      
 
       
       
@@ -436,18 +471,14 @@ categories: [&#39;Vue&#39;, &#39;每日一坑&#39;]
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/04/nodeFull/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/07/moveIos/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/02/copyDeep/" rel="prev" title="深拷贝与浅拷贝">
+                深拷贝与浅拷贝 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -551,7 +582,7 @@ categories: [&#39;Vue&#39;, &#39;每日一坑&#39;]
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -562,7 +593,7 @@ categories: [&#39;Vue&#39;, &#39;每日一坑&#39;]
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
