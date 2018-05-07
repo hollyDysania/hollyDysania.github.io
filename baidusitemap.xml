@@ -5,13 +5,17 @@
     
   <url>
     <loc>https://www.hollytree.top/2015/04/01/bus/</loc>
-    <lastmod>2018-05-07T15:24:26.180Z</lastmod>
+    <lastmod>2018-05-07T15:28:39.309Z</lastmod>
     <data>
         <display>
         <title>vue利用bus组件通信时，生命周期多次触发问题</title>
         <pubTime>2015-04-01T02:39:00.000Z</pubTime>
         
-        <tag>Vue， 组件通信， bus</tag>
+        <tag>Vue</tag>
+         
+        <tag>组件通信</tag>
+         
+        <tag>bus</tag>
          
          
            
@@ -28,13 +32,19 @@
     
   <url>
     <loc>https://www.hollytree.top/2018/03/30/moveIos/</loc>
-    <lastmod>2018-05-07T15:24:13.743Z</lastmod>
+    <lastmod>2018-05-07T15:28:33.499Z</lastmod>
     <data>
         <display>
         <title>ios系统Date对象问题</title>
         <pubTime>2018-03-29T22:49:50.000Z</pubTime>
         
-        <tag>移动， 踩坑记， ios， javascript</tag>
+        <tag>移动</tag>
+         
+        <tag>踩坑记</tag>
+         
+        <tag>ios</tag>
+         
+        <tag>javascript</tag>
          
          
            
@@ -54,11 +64,11 @@
         <title>跑Vue项目时服务突然停止(Node内存溢出)</title>
         <pubTime>2018-03-03T04:17:33.000Z</pubTime>
         
+        <tag>Vue</tag>
+         
         <tag>每日一坑</tag>
          
         <tag>Node</tag>
-         
-        <tag>Vue</tag>
          
         <tag>Webpack</tag>
          
