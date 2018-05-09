@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Vue,组件通信,bus,每日一坑," />
+  <meta name="keywords" content="Vue,优化," />
 
 
 
@@ -83,20 +83,20 @@
 
 
 
-<meta name="description" content="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。 解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事">
-<meta name="keywords" content="Vue,组件通信,bus,每日一坑">
+<meta name="description" content="Vue路由懒加载优化首屏加载速度 Vue项目比较大时build后首次加载会有很慢的问题,路由懒加载就是优化加载速度的方法之一">
+<meta name="keywords" content="Vue,优化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue的bus组件通信时多次触发的问题">
-<meta property="og:url" content="https://www.hollytree.top/2018/05/07/busVue/index.html">
+<meta property="og:title" content="Vue首屏优化之路由懒加载">
+<meta property="og:url" content="https://www.hollytree.top/2018/05/10/routerLazy/index.html">
 <meta property="og:site_name" content="Welcome">
-<meta property="og:description" content="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。 解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事">
+<meta property="og:description" content="Vue路由懒加载优化首屏加载速度 Vue项目比较大时build后首次加载会有很慢的问题,路由懒加载就是优化加载速度的方法之一">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://www.hollytree.top/2018/05/07/busVue/bfd556a757c6e8b489fa183e61246e526183e9ae.gif">
-<meta property="og:updated_time" content="2018-05-07T15:39:59.334Z">
+<meta property="og:image" content="https://www.hollytree.top/2018/05/10/routerLazy/aaa355983dfbfb1d364f714a4b69fc183e63a4b9.gif">
+<meta property="og:updated_time" content="2018-05-09T16:50:39.674Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue的bus组件通信时多次触发的问题">
-<meta name="twitter:description" content="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。 解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事">
-<meta name="twitter:image" content="https://www.hollytree.top/2018/05/07/busVue/bfd556a757c6e8b489fa183e61246e526183e9ae.gif">
+<meta name="twitter:title" content="Vue首屏优化之路由懒加载">
+<meta name="twitter:description" content="Vue路由懒加载优化首屏加载速度 Vue项目比较大时build后首次加载会有很慢的问题,路由懒加载就是优化加载速度的方法之一">
+<meta name="twitter:image" content="https://www.hollytree.top/2018/05/10/routerLazy/aaa355983dfbfb1d364f714a4b69fc183e63a4b9.gif">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://www.hollytree.top/2018/05/07/busVue/"/>
+  <link rel="canonical" href="https://www.hollytree.top/2018/05/10/routerLazy/"/>
 
 
 
 
 
-  <title>Vue的bus组件通信时多次触发的问题 | Welcome</title>
+  <title>Vue首屏优化之路由懒加载 | Welcome</title>
   
 
 
@@ -308,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.hollytree.top/2018/05/07/busVue/">
+    <link itemprop="mainEntityOfPage" href="https://www.hollytree.top/2018/05/10/routerLazy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="holly">
@@ -325,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue的bus组件通信时多次触发的问题</h1>
+          <h1 class="post-title" itemprop="name headline">Vue首屏优化之路由懒加载</h1>
         
 
         <div class="post-meta">
@@ -337,8 +337,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-07T23:33:10+08:00">
-                2018-05-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-10T00:16:55+08:00">
+                2018-05-10
               </time>
             
 
@@ -397,10 +397,57 @@
       
 
       
-        <h3 id="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。"><a href="#Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。" class="headerlink" title="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。"></a>Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。</h3><blockquote>
-<p>解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事</p>
+        <h3 id="Vue路由懒加载优化首屏加载速度"><a href="#Vue路由懒加载优化首屏加载速度" class="headerlink" title="Vue路由懒加载优化首屏加载速度"></a>Vue路由懒加载优化首屏加载速度</h3><blockquote>
+<p>Vue项目比较大时build后首次加载会有很慢的问题,路由懒加载就是优化加载速度的方法之一</p>
 </blockquote>
-<p><img src="/2018/05/07/busVue/bfd556a757c6e8b489fa183e61246e526183e9ae.gif" alt=""></p>
+<p><img src="/2018/05/10/routerLazy/aaa355983dfbfb1d364f714a4b69fc183e63a4b9.gif" alt=""></p>
+  <a id="more"></a>
+<p><a href="https://router.vuejs.org/zh-cn/advanced/lazy-loading.html" target="_blank" rel="noopener">首先贴个官方文档</a></p>
+<h3 id="1-路由配置如下"><a href="#1-路由配置如下" class="headerlink" title="1. 路由配置如下"></a>1. 路由配置如下</h3><pre><code class="javascript">// router 文件夹下的index.js文件
+import Vue from &#39;vue&#39;
+improt VueRouter from &#39;vue-router&#39;
+improt Holly from &#39;@/pages/Holly&#39; // 某页面
+
+Vue.use(VueRouter)
+
+// 非懒加载
+/* const routes = [
+    {
+        path: &#39;/&#39;,
+        name: &#39;holly&#39;,
+        component: Holly
+    }
+] */
+// 懒加载
+const routes= [
+    {
+        path: &#39;/&#39;,
+        name: &#39;holly&#39;,
+        componet: () =&gt; improt(&#39;@/pages/Holly&#39;) //其实就相当于按需加载
+    }
+] 
+
+//实例化
+const router = new VueRouter({
+    routes
+})
+
+export default router
+</code></pre>
+<ul>
+<li>这就是将不同路由对应的组件分割成不同的代码块，然后当路由被访问时才加载对应组件。</li>
+</ul>
+<h3 id="2-main-js入口文件关于路由的配置"><a href="#2-main-js入口文件关于路由的配置" class="headerlink" title="2. main.js入口文件关于路由的配置"></a>2. main.js入口文件关于路由的配置</h3><pre><code class="javascript">improt router from &#39;./router&#39; //引入路由配置文件
+
+new Vue({
+    el: &#39;#app&#39;,
+    router, // 注入到根实例中
+    render: h =&gt; h(App)
+})
+</code></pre>
+<blockquote>
+<p>今天把项目做了路由懒加载的优化，首屏快了几秒~ 😄</p>
+</blockquote>
 
       
     </div>
@@ -449,11 +496,7 @@
           
             <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
           
-            <a href="/tags/组件通信/" rel="tag"><i class="fa fa-tag"></i> 组件通信</a>
-          
-            <a href="/tags/bus/" rel="tag"><i class="fa fa-tag"></i> bus</a>
-          
-            <a href="/tags/每日一坑/" rel="tag"><i class="fa fa-tag"></i> 每日一坑</a>
+            <a href="/tags/优化/" rel="tag"><i class="fa fa-tag"></i> 优化</a>
           
         </div>
       
@@ -466,8 +509,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/01/moveIos-1/" rel="next" title="Ios系统与Date的Bug">
-                <i class="fa fa-chevron-left"></i> Ios系统与Date的Bug
+              <a href="/2018/05/07/busVue/" rel="next" title="Vue的bus组件通信时多次触发的问题">
+                <i class="fa fa-chevron-left"></i> Vue的bus组件通信时多次触发的问题
               </a>
             
           </div>
@@ -475,10 +518,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/10/routerLazy/" rel="prev" title="Vue首屏优化之路由懒加载">
-                Vue首屏优化之路由懒加载 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -648,7 +687,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。"><span class="nav-number">1.</span> <span class="nav-text">Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue路由懒加载优化首屏加载速度"><span class="nav-number">1.</span> <span class="nav-text">Vue路由懒加载优化首屏加载速度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-路由配置如下"><span class="nav-number">2.</span> <span class="nav-text">1. 路由配置如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-main-js入口文件关于路由的配置"><span class="nav-number">3.</span> <span class="nav-text">2. main.js入口文件关于路由的配置</span></a></li></ol></div>
             
 
           </div>
