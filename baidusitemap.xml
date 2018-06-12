@@ -4,7 +4,7 @@
 
     
   <url>
-    <loc>https://www.hollytree.top/blog/2018/05/10/routerLazy/</loc>
+    <loc>https://www.hollytree.top/blog/blog/2018/05/10/routerLazy/</loc>
     <lastmod>2018-05-09T16:54:16.252Z</lastmod>
     <data>
         <display>
@@ -18,7 +18,7 @@
          
            
              
-              <breadCrumb title="Vue" url="https://www.hollytree.top/blog/categories/Vue/"/>
+              <breadCrumb title="Vue" url="https://www.hollytree.top/blog/blog/categories/Vue/"/>
           
         </display>
     </data>
@@ -26,25 +26,25 @@
 
     
   <url>
-    <loc>https://www.hollytree.top/blog/2018/05/07/busVue/</loc>
+    <loc>https://www.hollytree.top/blog/blog/2018/05/07/busVue/</loc>
     <lastmod>2018-05-07T15:39:59.334Z</lastmod>
     <data>
         <display>
         <title>Vue的bus组件通信时多次触发的问题</title>
         <pubTime>2018-05-07T15:33:10.000Z</pubTime>
         
+        <tag>每日一坑</tag>
+         
         <tag>Vue</tag>
          
         <tag>组件通信</tag>
          
         <tag>bus</tag>
          
-        <tag>每日一坑</tag>
-         
          
            
              
-              <breadCrumb title="Vue" url="https://www.hollytree.top/blog/categories/Vue/"/>
+              <breadCrumb title="Vue" url="https://www.hollytree.top/blog/blog/categories/Vue/"/>
           
         </display>
     </data>
@@ -52,7 +52,7 @@
 
     
   <url>
-    <loc>https://www.hollytree.top/blog/2018/05/01/moveIos-1/</loc>
+    <loc>https://www.hollytree.top/blog/blog/2018/05/01/moveIos-1/</loc>
     <lastmod>2018-05-07T15:39:15.427Z</lastmod>
     <data>
         <display>
@@ -70,7 +70,7 @@
          
            
              
-              <breadCrumb title="每日一坑" url="https://www.hollytree.top/blog/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
+              <breadCrumb title="每日一坑" url="https://www.hollytree.top/blog/blog/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
           
         </display>
     </data>
@@ -78,7 +78,7 @@
 
     
   <url>
-    <loc>https://www.hollytree.top/blog/2018/03/02/copyDeep/</loc>
+    <loc>https://www.hollytree.top/blog/blog/2018/03/02/copyDeep/</loc>
     <lastmod>2018-05-07T15:30:52.129Z</lastmod>
     <data>
         <display>
@@ -90,7 +90,7 @@
          
            
              
-              <breadCrumb title="JavaScript" url="https://www.hollytree.top/blog/categories/JavaScript/"/>
+              <breadCrumb title="JavaScript" url="https://www.hollytree.top/blog/blog/categories/JavaScript/"/>
           
         </display>
     </data>
@@ -98,16 +98,16 @@
 
     
   <url>
-    <loc>https://www.hollytree.top/blog/2018/03/03/nodeFull/</loc>
+    <loc>https://www.hollytree.top/blog/blog/2018/03/03/nodeFull/</loc>
     <lastmod>2018-05-07T15:30:47.624Z</lastmod>
     <data>
         <display>
         <title>跑Vue项目时服务突然停止(Node内存溢出)</title>
         <pubTime>2018-03-03T04:17:33.000Z</pubTime>
         
-        <tag>Vue</tag>
-         
         <tag>每日一坑</tag>
+         
+        <tag>Vue</tag>
          
         <tag>Node</tag>
          
@@ -116,7 +116,7 @@
          
            
              
-              <breadCrumb title="Vue" url="https://www.hollytree.top/blog/categories/Vue/"/>
+              <breadCrumb title="Vue" url="https://www.hollytree.top/blog/blog/categories/Vue/"/>
           
         </display>
     </data>
