@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="每日一坑," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -83,20 +83,20 @@
 
 
 
-<meta name="description" content="最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。">
-<meta name="keywords" content="每日一坑">
+<meta name="description" content="jsonp的原理及使用 浏览器的同源策略不允许跨域，jsonp是解决跨域的一种方法。但也存在一些缺点，所以跨域最好还是后台进行设置   原理 利用script标签的src属性不受同源策略影响（协议，端口，域名任何一个不同，同源策略都会禁止跨域） 通过前端方法作为参数传递到服务器，服务器注入参数后再返还，实现服务器向客户通信 只支持get方法  请求过程 请求前：创建一个script标签，并给src">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="深拷贝与浅拷贝">
-<meta property="og:url" content="https://www.hollytree.top/2018/03/02/copyDeep/index.html">
+<meta property="og:title" content="jsonp的原理和使用">
+<meta property="og:url" content="https://www.hollytree.top/2018/03/15/jsonp的原理和使用/index.html">
 <meta property="og:site_name" content="holly blog">
-<meta property="og:description" content="最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。">
+<meta property="og:description" content="jsonp的原理及使用 浏览器的同源策略不允许跨域，jsonp是解决跨域的一种方法。但也存在一些缺点，所以跨域最好还是后台进行设置   原理 利用script标签的src属性不受同源策略影响（协议，端口，域名任何一个不同，同源策略都会禁止跨域） 通过前端方法作为参数传递到服务器，服务器注入参数后再返还，实现服务器向客户通信 只支持get方法  请求过程 请求前：创建一个script标签，并给src">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://www.hollytree.top/2018/03/02/copyDeep/lan.gif">
-<meta property="og:updated_time" content="2018-05-07T15:30:52.129Z">
+<meta property="og:image" content="https://www.hollytree.top/2018/03/15/jsonp的原理和使用/喷了.gif">
+<meta property="og:updated_time" content="2018-06-17T19:40:01.793Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="深拷贝与浅拷贝">
-<meta name="twitter:description" content="最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。">
-<meta name="twitter:image" content="https://www.hollytree.top/2018/03/02/copyDeep/lan.gif">
+<meta name="twitter:title" content="jsonp的原理和使用">
+<meta name="twitter:description" content="jsonp的原理及使用 浏览器的同源策略不允许跨域，jsonp是解决跨域的一种方法。但也存在一些缺点，所以跨域最好还是后台进行设置   原理 利用script标签的src属性不受同源策略影响（协议，端口，域名任何一个不同，同源策略都会禁止跨域） 通过前端方法作为参数传递到服务器，服务器注入参数后再返还，实现服务器向客户通信 只支持get方法  请求过程 请求前：创建一个script标签，并给src">
+<meta name="twitter:image" content="https://www.hollytree.top/2018/03/15/jsonp的原理和使用/喷了.gif">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://www.hollytree.top/2018/03/02/copyDeep/"/>
+  <link rel="canonical" href="https://www.hollytree.top/2018/03/15/jsonp的原理和使用/"/>
 
 
 
 
 
-  <title>深拷贝与浅拷贝 | holly blog</title>
+  <title>jsonp的原理和使用 | holly blog</title>
   
 
 
@@ -298,7 +298,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.hollytree.top/2018/03/02/copyDeep/">
+    <link itemprop="mainEntityOfPage" href="https://www.hollytree.top/2018/03/15/jsonp的原理和使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="holly">
@@ -315,7 +315,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">深拷贝与浅拷贝</h1>
+          <h1 class="post-title" itemprop="name headline">jsonp的原理和使用</h1>
         
 
         <div class="post-meta">
@@ -327,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-02T10:11:14+08:00">
-                2018-03-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T22:49:15+08:00">
+                2018-03-15
               </time>
             
 
@@ -387,58 +387,25 @@
       
 
       
-        <blockquote>
-<p>最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。</p>
+        <h3 id="jsonp的原理及使用"><a href="#jsonp的原理及使用" class="headerlink" title="jsonp的原理及使用"></a>jsonp的原理及使用</h3><blockquote>
+<p>浏览器的同源策略不允许跨域，jsonp是解决跨域的一种方法。但也存在一些缺点，所以跨域最好还是后台进行设置</p>
 </blockquote>
-<a id="more"></a>
-<h3 id="1-首先看看-js-基本数据类型和引用类型的区别"><a href="#1-首先看看-js-基本数据类型和引用类型的区别" class="headerlink" title="1.首先看看 js 基本数据类型和引用类型的区别"></a>1.首先看看 js 基本数据类型和引用类型的区别</h3><ul>
-<li>基本数据类型：String , Number, Boolean, Null, Undefined 存放在栈内存中。直接按值存放，可以直接访问。</li>
-<li>引用数据类型：Array, Object, Function 等；存放在堆内存中，变量实际保存是保存在栈中的一个地址，指向堆中具体的位置。从栈中获取地址再从堆内存中取到数据。</li>
+<p><img src="/2018/03/15/jsonp的原理和使用/喷了.gif" alt=""></p>
+<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><ul>
+<li>利用script标签的src属性不受同源策略影响（协议，端口，域名任何一个不同，同源策略都会禁止跨域）</li>
+<li>通过前端方法作为参数传递到服务器，服务器注入参数后再返还，实现服务器向客户通信</li>
+<li>只支持get方法</li>
 </ul>
-<h3 id="2-赋值，拷贝"><a href="#2-赋值，拷贝" class="headerlink" title="2.赋值，拷贝"></a>2.赋值，拷贝</h3><ul>
-<li>基本数据类型拷贝的时候，在堆内存中开辟了新的空间，和原来的变量互不相干。不用考虑深拷贝浅拷贝的问题。</li>
-<li>引用数据类型在用=号赋值时，实际上是将栈中的地址赋值给新的变量。所以当改变这个新的变量里的数据时，指向的堆中的数据也是会有变化的。（我那个 bug 也就是这个问题）</li>
+<h4 id="请求过程"><a href="#请求过程" class="headerlink" title="请求过程"></a>请求过程</h4><ul>
+<li>请求前：创建一个script标签，并给src赋值 url+callback的方法名</li>
+<li>发送请求： 当给script赋值时，浏览器会发起一个请求</li>
+<li>数据响应：服务器将返回的数据作为参数和函数名拼接在一起 jsonpCbk({data:”data”})。当浏览器接收到响应数据，由于发起请求的是script，所以相当于直接调用jsonpCbk方法，并且传入了一个参数。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">123</span></span><br><span class="line"><span class="keyword">let</span> b = a</span><br><span class="line">a = <span class="number">1234</span></span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// 1234</span></span><br><span class="line"><span class="built_in">console</span>.log(b) <span class="comment">// 123</span></span><br></pre></td></tr></table></figure>
-<p>基本数据类型复制不会发生引用, 栈中会开辟新的空间存放</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="keyword">let</span> arr1 = arr</span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">3</span></span><br><span class="line"><span class="built_in">console</span>.log(arr) <span class="comment">// [3, 2, 3]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr1) <span class="comment">// [3, 2, 3]</span></span><br></pre></td></tr></table></figure>
-<p>引用数据类型复制是将栈中的地址赋值给变量，指向堆中的同一个空间，所以当改变其中一个时，其实是改变堆中的数据，所有指向这个空间的变量都会发生改变。</p>
-<h3 id="3-深拷贝和浅拷贝"><a href="#3-深拷贝和浅拷贝" class="headerlink" title="3.深拷贝和浅拷贝"></a>3.深拷贝和浅拷贝</h3><ul>
-<li><p>上面的例子其实就是浅拷贝，引用类型的数据复制的是指向地址。</p>
-</li>
-<li><p>深拷贝，堆开辟一个新的空间存放复制的对象。</p>
-</li>
-</ul>
+<h4 id="原生js写一个jsonp"><a href="#原生js写一个jsonp" class="headerlink" title="原生js写一个jsonp"></a>原生js写一个jsonp</h4><figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// url要请求的地址以及拼接的参数；opts&#123;param: 约定的函数参数，timeout:超时时间，name:指定的函数名，prefix:指定的函数名前缀&#125;；fn回调函数</span></span><br><span class="line"><span class="keyword">var</span> count = <span class="number">0</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">noop</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">jsonp</span>(<span class="params">url, opts, fn</span>) </span>&#123;</span><br><span class="line"> <span class="comment">// opts 如果是一个函数 赋值给fn 并重置opts为空对象</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="string">'function'</span> == <span class="keyword">typeof</span> opts)&#123;</span><br><span class="line">        fn = opts</span><br><span class="line">        opts = &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">   <span class="comment">// 如果没有opts 给opts赋值空对象</span></span><br><span class="line">    <span class="keyword">if</span>(!opts) opts = &#123;&#125;</span><br><span class="line">    <span class="keyword">var</span> prefix = opts.prefix || <span class="string">'__jp'</span></span><br><span class="line">    <span class="comment">// id为opts的name或者prefix+计数（prefix为opts.prefix或__jp）</span></span><br><span class="line">    <span class="keyword">var</span> id = opts.name || (prefix + (count++))</span><br><span class="line">    <span class="keyword">var</span> param = opts.param || <span class="string">'callback'</span></span><br><span class="line">    <span class="comment">// 有opts.timeout 就取 没有就是60000ms</span></span><br><span class="line">    <span class="keyword">var</span> timeout = <span class="literal">null</span> != opts.timeout ? <span class="attribute">opts.timeout</span> : <span class="number">60000</span></span><br><span class="line">    <span class="keyword">var</span> enc = <span class="built_in">encodeURIComponent</span></span><br><span class="line">    <span class="comment">// 第一个script或者head标签</span></span><br><span class="line">    <span class="keyword">var</span> target = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'script'</span>)[<span class="number">0</span>] || <span class="built_in">document</span>.head</span><br><span class="line">  	<span class="keyword">var</span> script</span><br><span class="line">  	<span class="keyword">var</span> timer</span><br><span class="line">  	<span class="comment">// 如果有timeout就在timeout之后执行clean并抛出Error</span></span><br><span class="line">  	<span class="keyword">if</span> (timeout) &#123;</span><br><span class="line">    	timer = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            cleanup()</span><br><span class="line">            <span class="keyword">if</span>(fn) fn(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'Timeout'</span>))</span><br><span class="line">    	&#125;, timeout)</span><br><span class="line">  	&#125;</span><br><span class="line">  	<span class="function"><span class="keyword">function</span> <span class="title">cleanup</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  		<span class="comment">// 移除创建的script 回调函数置空 清除定时器</span></span><br><span class="line">        <span class="keyword">if</span>(script.parentNode) script.parentNode.removeChild(script)</span><br><span class="line">        <span class="built_in">window</span>[id] = noop</span><br><span class="line">        <span class="keyword">if</span>(timer) clearTimeout(timer)</span><br><span class="line">  	&#125;</span><br><span class="line">  	<span class="function"><span class="keyword">function</span> <span class="title">cancel</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  		<span class="keyword">if</span>(<span class="built_in">window</span>[id]) &#123;</span><br><span class="line">            cleanup()</span><br><span class="line">  		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 全局挂在id</span></span><br><span class="line">	<span class="built_in">window</span>[id] = <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">        cleanup()</span><br><span class="line">        <span class="comment">// 返回后执行回调fn</span></span><br><span class="line">        <span class="keyword">if</span>(fn) fn(data)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">url</span> += (~<span class="built_in">url</span>.indexOf(<span class="string">'?'</span>) ? <span class="string">'&amp;'</span> : <span class="string">'?'</span>) + param + <span class="string">'='</span> + enc(id);</span><br><span class="line">  	<span class="built_in">url</span> = <span class="built_in">url</span>.replace(<span class="string">'?&amp;'</span>, <span class="string">'?'</span>);</span><br><span class="line">  	<span class="comment">// 创建script标签src属性赋值url</span></span><br><span class="line">  	script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>)</span><br><span class="line">  	script.src = <span class="built_in">url</span>;</span><br><span class="line">  	<span class="comment">// 插入到head或script的前面</span></span><br><span class="line">  	target.parentNode.insertBefore(script, target);</span><br><span class="line">  	<span class="keyword">return</span> cancel;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>引用类型的浅拷贝会出现很多问题，那么下面来看看引用类型如何实现深拷贝。</p>
+<p>以上是参照一个jsonp插件的源码写的 <a href="https://github.com/webmodules/jsonp" target="_blank" rel="noopener">传送门</a></p>
 </blockquote>
-<h3 id="4-实现深拷贝的方法"><a href="#4-实现深拷贝的方法" class="headerlink" title="4.实现深拷贝的方法"></a>4.实现深拷贝的方法</h3><ol>
-<li>我最常用的一个是（简单粗暴）序列化反序列化法</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(obj))</span><br></pre></td></tr></table></figure>
-<p>但这个方法存在一些问题 ：</p>
-<ul>
-<li>无法复制正则表达式类型、函数类型</li>
-<li>无论构造器是什么都会变成 Object</li>
-<li>undefined 无法复制</li>
-<li>只能深拷贝对象和数组其他类型会失真</li>
-</ul>
-<p>但实际开发中只是复制数据是够用的</p>
-<ol start="2">
-<li>迭代递归法</li>
-</ol>
-<blockquote>
-<p>对对象进行迭代操作，对它的每个值进行递归深拷贝</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepClone</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> copy</span><br><span class="line">  <span class="keyword">if</span> (<span class="literal">null</span> == obj || <span class="string">'object'</span> != <span class="keyword">typeof</span> obj) <span class="keyword">return</span> obj</span><br><span class="line">  <span class="comment">// Date</span></span><br><span class="line">  <span class="keyword">if</span> (obj <span class="keyword">instanceof</span> <span class="built_in">Date</span>) &#123;</span><br><span class="line">    copy = <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line">    copy.setTime(obj.getTime())</span><br><span class="line">    <span class="keyword">return</span> copy</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// Array</span></span><br><span class="line">  <span class="keyword">if</span> (obj <span class="keyword">instanceof</span> <span class="built_in">Array</span>) &#123;</span><br><span class="line">    copy = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; obj.length; i++) &#123;</span><br><span class="line">      copy[i] = clone(obj[i])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> copy</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// Object</span></span><br><span class="line">  <span class="keyword">if</span> (obj <span class="keyword">instanceof</span> <span class="built_in">Object</span>) &#123;</span><br><span class="line">    copy = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">      <span class="keyword">if</span> (obj.hasOwnProperty(key)) &#123;</span><br><span class="line">        copy[key] = clone(obj[key])</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> copy</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'error'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>Object.assign() ES6 的深拷贝方法</li>
-<li>concat 对数组进行深拷贝</li>
-</ol>
-<blockquote>
-<p>应该还有很多方法 或者更深入的思考 关于可枚举不可枚举这些概念我还不太清楚 有待进步</p>
-</blockquote>
-<p><img src="/2018/03/02/copyDeep/lan.gif" alt=""></p>
+<p>此方法在调用时需要自己拼接将参数拼接在url后面 opts如果跟后台有约定callback参数名就传{param: 约定参数名} ，没有默认callback</p>
 
       
     </div>
@@ -485,7 +452,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/每日一坑/" rel="tag"><i class="fa fa-tag"></i> 每日一坑</a>
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
           
         </div>
       
@@ -498,8 +465,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/01/moveIos-1/" rel="next" title="Ios系统与Date的Bug">
-                <i class="fa fa-chevron-left"></i> Ios系统与Date的Bug
+              <a href="/2018/03/10/routerLazy/" rel="next" title="Vue首屏优化之路由懒加载">
+                <i class="fa fa-chevron-left"></i> Vue首屏优化之路由懒加载
               </a>
             
           </div>
@@ -508,8 +475,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/03/nodeFull/" rel="prev" title="跑Vue项目时服务突然停止(Node内存溢出)">
-                跑Vue项目时服务突然停止(Node内存溢出) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/17/vue音乐demo总结/" rel="prev" title="vue音乐demo总结">
+                vue音乐demo总结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -680,7 +647,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-首先看看-js-基本数据类型和引用类型的区别"><span class="nav-number">1.</span> <span class="nav-text">1.首先看看 js 基本数据类型和引用类型的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-赋值，拷贝"><span class="nav-number">2.</span> <span class="nav-text">2.赋值，拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-深拷贝和浅拷贝"><span class="nav-number">3.</span> <span class="nav-text">3.深拷贝和浅拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-实现深拷贝的方法"><span class="nav-number">4.</span> <span class="nav-text">4.实现深拷贝的方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#jsonp的原理及使用"><span class="nav-number">1.</span> <span class="nav-text">jsonp的原理及使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理"><span class="nav-number">1.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求过程"><span class="nav-number">1.2.</span> <span class="nav-text">请求过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原生js写一个jsonp"><span class="nav-number">1.3.</span> <span class="nav-text">原生js写一个jsonp</span></a></li></ol></li></ol></div>
             
 
           </div>
