@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="每日一坑," />
+  <meta name="keywords" content="Vue,优化," />
 
 
 
@@ -83,20 +83,20 @@
 
 
 
-<meta name="description" content="最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。">
-<meta name="keywords" content="每日一坑">
+<meta name="description" content="路由懒加载优化首屏加载速度 项目比较大时build后首次加载会有很慢的问题,路由懒加载就是优化加载速度的方法之一">
+<meta name="keywords" content="Vue,优化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="深拷贝与浅拷贝">
-<meta property="og:url" content="https://www.hollytree.top/2018/03/02/copyDeep/index.html">
+<meta property="og:title" content="Vue首屏优化之路由懒加载">
+<meta property="og:url" content="https://www.hollytree.top/2018/03/10/routerLazy/index.html">
 <meta property="og:site_name" content="holly blog">
-<meta property="og:description" content="最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。">
+<meta property="og:description" content="路由懒加载优化首屏加载速度 项目比较大时build后首次加载会有很慢的问题,路由懒加载就是优化加载速度的方法之一">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://www.hollytree.top/2018/03/02/copyDeep/lan.gif">
-<meta property="og:updated_time" content="2018-05-07T15:30:52.129Z">
+<meta property="og:image" content="https://www.hollytree.top/2018/03/10/routerLazy/aaa355983dfbfb1d364f714a4b69fc183e63a4b9.gif">
+<meta property="og:updated_time" content="2018-06-17T11:59:58.382Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="深拷贝与浅拷贝">
-<meta name="twitter:description" content="最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。">
-<meta name="twitter:image" content="https://www.hollytree.top/2018/03/02/copyDeep/lan.gif">
+<meta name="twitter:title" content="Vue首屏优化之路由懒加载">
+<meta name="twitter:description" content="路由懒加载优化首屏加载速度 项目比较大时build后首次加载会有很慢的问题,路由懒加载就是优化加载速度的方法之一">
+<meta name="twitter:image" content="https://www.hollytree.top/2018/03/10/routerLazy/aaa355983dfbfb1d364f714a4b69fc183e63a4b9.gif">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://www.hollytree.top/2018/03/02/copyDeep/"/>
+  <link rel="canonical" href="https://www.hollytree.top/2018/03/10/routerLazy/"/>
 
 
 
 
 
-  <title>深拷贝与浅拷贝 | holly blog</title>
+  <title>Vue首屏优化之路由懒加载 | holly blog</title>
   
 
 
@@ -308,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.hollytree.top/2018/03/02/copyDeep/">
+    <link itemprop="mainEntityOfPage" href="https://www.hollytree.top/2018/03/10/routerLazy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="holly">
@@ -325,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">深拷贝与浅拷贝</h1>
+          <h1 class="post-title" itemprop="name headline">Vue首屏优化之路由懒加载</h1>
         
 
         <div class="post-meta">
@@ -337,8 +337,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-02T10:11:14+08:00">
-                2018-03-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-10T00:16:55+08:00">
+                2018-03-10
               </time>
             
 
@@ -360,8 +360,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
                   </a>
                 </span>
 
@@ -397,58 +397,20 @@
       
 
       
-        <blockquote>
-<p>最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。</p>
+        <h3 id="路由懒加载优化首屏加载速度"><a href="#路由懒加载优化首屏加载速度" class="headerlink" title="路由懒加载优化首屏加载速度"></a>路由懒加载优化首屏加载速度</h3><blockquote>
+<p>项目比较大时build后首次加载会有很慢的问题,路由懒加载就是优化加载速度的方法之一</p>
 </blockquote>
-<a id="more"></a>
-<h3 id="1-首先看看-js-基本数据类型和引用类型的区别"><a href="#1-首先看看-js-基本数据类型和引用类型的区别" class="headerlink" title="1.首先看看 js 基本数据类型和引用类型的区别"></a>1.首先看看 js 基本数据类型和引用类型的区别</h3><ul>
-<li>基本数据类型：String , Number, Boolean, Null, Undefined 存放在栈内存中。直接按值存放，可以直接访问。</li>
-<li>引用数据类型：Array, Object, Function 等；存放在堆内存中，变量实际保存是保存在栈中的一个地址，指向堆中具体的位置。从栈中获取地址再从堆内存中取到数据。</li>
-</ul>
-<h3 id="2-赋值，拷贝"><a href="#2-赋值，拷贝" class="headerlink" title="2.赋值，拷贝"></a>2.赋值，拷贝</h3><ul>
-<li>基本数据类型拷贝的时候，在堆内存中开辟了新的空间，和原来的变量互不相干。不用考虑深拷贝浅拷贝的问题。</li>
-<li>引用数据类型在用=号赋值时，实际上是将栈中的地址赋值给新的变量。所以当改变这个新的变量里的数据时，指向的堆中的数据也是会有变化的。（我那个 bug 也就是这个问题）</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">123</span></span><br><span class="line"><span class="keyword">let</span> b = a</span><br><span class="line">a = <span class="number">1234</span></span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// 1234</span></span><br><span class="line"><span class="built_in">console</span>.log(b) <span class="comment">// 123</span></span><br></pre></td></tr></table></figure>
-<p>基本数据类型复制不会发生引用, 栈中会开辟新的空间存放</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="keyword">let</span> arr1 = arr</span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">3</span></span><br><span class="line"><span class="built_in">console</span>.log(arr) <span class="comment">// [3, 2, 3]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr1) <span class="comment">// [3, 2, 3]</span></span><br></pre></td></tr></table></figure>
-<p>引用数据类型复制是将栈中的地址赋值给变量，指向堆中的同一个空间，所以当改变其中一个时，其实是改变堆中的数据，所有指向这个空间的变量都会发生改变。</p>
-<h3 id="3-深拷贝和浅拷贝"><a href="#3-深拷贝和浅拷贝" class="headerlink" title="3.深拷贝和浅拷贝"></a>3.深拷贝和浅拷贝</h3><ul>
-<li><p>上面的例子其实就是浅拷贝，引用类型的数据复制的是指向地址。</p>
-</li>
-<li><p>深拷贝，堆开辟一个新的空间存放复制的对象。</p>
-</li>
-</ul>
-<blockquote>
-<p>引用类型的浅拷贝会出现很多问题，那么下面来看看引用类型如何实现深拷贝。</p>
-</blockquote>
-<h3 id="4-实现深拷贝的方法"><a href="#4-实现深拷贝的方法" class="headerlink" title="4.实现深拷贝的方法"></a>4.实现深拷贝的方法</h3><ol>
-<li>我最常用的一个是（简单粗暴）序列化反序列化法</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(obj))</span><br></pre></td></tr></table></figure>
-<p>但这个方法存在一些问题 ：</p>
+<p><img src="/2018/03/10/routerLazy/aaa355983dfbfb1d364f714a4b69fc183e63a4b9.gif" alt=""></p>
+  <a id="more"></a>
+<p><a href="https://router.vuejs.org/zh-cn/advanced/lazy-loading.html" target="_blank" rel="noopener">首先贴个官方文档</a></p>
+<h3 id="1-路由配置如下"><a href="#1-路由配置如下" class="headerlink" title="1. 路由配置如下"></a>1. 路由配置如下</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// router 文件夹下的index.js文件</span></span><br><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line">improt VueRouter <span class="keyword">from</span> <span class="string">'vue-router'</span></span><br><span class="line">improt Holly <span class="keyword">from</span> <span class="string">'@/pages/Holly'</span> <span class="comment">// 某页面</span></span><br><span class="line"></span><br><span class="line">Vue.use(VueRouter)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 非懒加载</span></span><br><span class="line"><span class="comment">/* const routes = [</span></span><br><span class="line"><span class="comment">    &#123;</span></span><br><span class="line"><span class="comment">        path: '/',</span></span><br><span class="line"><span class="comment">        name: 'holly',</span></span><br><span class="line"><span class="comment">        component: Holly</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">] */</span></span><br><span class="line"><span class="comment">// 懒加载</span></span><br><span class="line"><span class="keyword">const</span> routes= [</span><br><span class="line">    &#123;</span><br><span class="line">        path: <span class="string">'/'</span>,</span><br><span class="line">        name: <span class="string">'holly'</span>,</span><br><span class="line">        componet: <span class="function"><span class="params">()</span> =&gt;</span> improt(<span class="string">'@/pages/Holly'</span>) <span class="comment">//其实就相当于按需加载</span></span><br><span class="line">    &#125;</span><br><span class="line">] </span><br><span class="line"></span><br><span class="line"><span class="comment">//实例化</span></span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">    routes</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router</span><br></pre></td></tr></table></figure>
 <ul>
-<li>无法复制正则表达式类型、函数类型</li>
-<li>无论构造器是什么都会变成 Object</li>
-<li>undefined 无法复制</li>
-<li>只能深拷贝对象和数组其他类型会失真</li>
+<li>这就是将不同路由对应的组件分割成不同的代码块，然后当路由被访问时才加载对应组件。</li>
 </ul>
-<p>但实际开发中只是复制数据是够用的</p>
-<ol start="2">
-<li>迭代递归法</li>
-</ol>
+<h3 id="2-main-js入口文件关于路由的配置"><a href="#2-main-js入口文件关于路由的配置" class="headerlink" title="2. main.js入口文件关于路由的配置"></a>2. main.js入口文件关于路由的配置</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">improt router <span class="keyword">from</span> <span class="string">'./router'</span> <span class="comment">//引入路由配置文件</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#app'</span>,</span><br><span class="line">    router, <span class="comment">// 注入到根实例中</span></span><br><span class="line">    render: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>对对象进行迭代操作，对它的每个值进行递归深拷贝</p>
+<p>今天把项目做了路由懒加载的优化，首屏快了几秒~ 😄</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepClone</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> copy</span><br><span class="line">  <span class="keyword">if</span> (<span class="literal">null</span> == obj || <span class="string">'object'</span> != <span class="keyword">typeof</span> obj) <span class="keyword">return</span> obj</span><br><span class="line">  <span class="comment">// Date</span></span><br><span class="line">  <span class="keyword">if</span> (obj <span class="keyword">instanceof</span> <span class="built_in">Date</span>) &#123;</span><br><span class="line">    copy = <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line">    copy.setTime(obj.getTime())</span><br><span class="line">    <span class="keyword">return</span> copy</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// Array</span></span><br><span class="line">  <span class="keyword">if</span> (obj <span class="keyword">instanceof</span> <span class="built_in">Array</span>) &#123;</span><br><span class="line">    copy = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; obj.length; i++) &#123;</span><br><span class="line">      copy[i] = clone(obj[i])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> copy</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// Object</span></span><br><span class="line">  <span class="keyword">if</span> (obj <span class="keyword">instanceof</span> <span class="built_in">Object</span>) &#123;</span><br><span class="line">    copy = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">      <span class="keyword">if</span> (obj.hasOwnProperty(key)) &#123;</span><br><span class="line">        copy[key] = clone(obj[key])</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> copy</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'error'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>Object.assign() ES6 的深拷贝方法</li>
-<li>concat 对数组进行深拷贝</li>
-</ol>
-<blockquote>
-<p>应该还有很多方法 或者更深入的思考 关于可枚举不可枚举这些概念我还不太清楚 有待进步</p>
-</blockquote>
-<p><img src="/2018/03/02/copyDeep/lan.gif" alt=""></p>
 
       
     </div>
@@ -495,7 +457,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/每日一坑/" rel="tag"><i class="fa fa-tag"></i> 每日一坑</a>
+            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
+          
+            <a href="/tags/优化/" rel="tag"><i class="fa fa-tag"></i> 优化</a>
           
         </div>
       
@@ -508,8 +472,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/01/moveIos-1/" rel="next" title="Ios系统与Date的Bug">
-                <i class="fa fa-chevron-left"></i> Ios系统与Date的Bug
+              <a href="/2018/03/09/vue-cli-init-project/" rel="next" title="利用vue-cli初始化项目">
+                <i class="fa fa-chevron-left"></i> 利用vue-cli初始化项目
               </a>
             
           </div>
@@ -518,8 +482,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/03/nodeFull/" rel="prev" title="跑Vue项目时服务突然停止(Node内存溢出)">
-                跑Vue项目时服务突然停止(Node内存溢出) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/17/vue音乐demo总结/" rel="prev" title="vue音乐demo总结">
+                vue音乐demo总结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -690,7 +654,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-首先看看-js-基本数据类型和引用类型的区别"><span class="nav-number">1.</span> <span class="nav-text">1.首先看看 js 基本数据类型和引用类型的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-赋值，拷贝"><span class="nav-number">2.</span> <span class="nav-text">2.赋值，拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-深拷贝和浅拷贝"><span class="nav-number">3.</span> <span class="nav-text">3.深拷贝和浅拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-实现深拷贝的方法"><span class="nav-number">4.</span> <span class="nav-text">4.实现深拷贝的方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#路由懒加载优化首屏加载速度"><span class="nav-number">1.</span> <span class="nav-text">路由懒加载优化首屏加载速度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-路由配置如下"><span class="nav-number">2.</span> <span class="nav-text">1. 路由配置如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-main-js入口文件关于路由的配置"><span class="nav-number">3.</span> <span class="nav-text">2. main.js入口文件关于路由的配置</span></a></li></ol></div>
             
 
           </div>
