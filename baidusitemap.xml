@@ -75,13 +75,13 @@
         <title>Vue的bus组件通信时多次触发的问题</title>
         <pubTime>2018-02-07T15:33:10.000Z</pubTime>
         
+        <tag>每日一坑</tag>
+         
         <tag>Vue</tag>
          
         <tag>组件通信</tag>
          
         <tag>bus</tag>
-         
-        <tag>每日一坑</tag>
          
          
            
@@ -149,9 +149,9 @@
         <title>跑Vue项目时服务突然停止(Node内存溢出)</title>
         <pubTime>2018-03-03T04:17:33.000Z</pubTime>
         
-        <tag>Vue</tag>
-         
         <tag>每日一坑</tag>
+         
+        <tag>Vue</tag>
          
         <tag>Node</tag>
          
