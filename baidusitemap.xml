@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>https://www.hollytree.top/2018/03/02/copyDeep/</loc>
+    <lastmod>2018-06-19T11:21:42.285Z</lastmod>
+    <data>
+        <display>
+        <title>深拷贝与浅拷贝</title>
+        <pubTime>2018-03-02T02:11:14.000Z</pubTime>
+        
+        <tag>每日一坑</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="https://www.hollytree.top/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.hollytree.top/2018/03/17/vue%E9%9F%B3%E4%B9%90demo%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2018-06-19T11:16:37.834Z</lastmod>
+    <lastmod>2018-06-19T11:21:22.533Z</lastmod>
     <data>
         <display>
         <title>vue音乐demo总结</title>
@@ -27,7 +47,7 @@
     
   <url>
     <loc>https://www.hollytree.top/2018/03/09/vue-cli-init-project/</loc>
-    <lastmod>2018-06-19T11:16:24.815Z</lastmod>
+    <lastmod>2018-06-19T11:21:20.947Z</lastmod>
     <data>
         <display>
         <title>利用vue-cli初始化项目</title>
@@ -48,16 +68,38 @@
 
     
   <url>
+    <loc>https://www.hollytree.top/2018/03/10/routerLazy/</loc>
+    <lastmod>2018-06-19T11:21:19.387Z</lastmod>
+    <data>
+        <display>
+        <title>Vue首屏优化之路由懒加载</title>
+        <pubTime>2018-03-09T16:16:55.000Z</pubTime>
+        
+        <tag>Vue</tag>
+         
+        <tag>优化</tag>
+         
+         
+           
+             
+              <breadCrumb title="Vue" url="https://www.hollytree.top/categories/Vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.hollytree.top/2018/03/03/nodeFull/</loc>
-    <lastmod>2018-06-19T11:16:11.319Z</lastmod>
+    <lastmod>2018-06-19T11:21:17.556Z</lastmod>
     <data>
         <display>
         <title>跑Vue项目时服务突然停止(Node内存溢出)</title>
         <pubTime>2018-03-03T04:17:33.000Z</pubTime>
         
-        <tag>每日一坑</tag>
-         
         <tag>Vue</tag>
+         
+        <tag>每日一坑</tag>
          
         <tag>Node</tag>
          
@@ -75,7 +117,7 @@
     
   <url>
     <loc>https://www.hollytree.top/2018/03/01/moveIos-1/</loc>
-    <lastmod>2018-06-19T11:15:55.443Z</lastmod>
+    <lastmod>2018-06-19T11:21:15.780Z</lastmod>
     <data>
         <display>
         <title>Ios系统与Date的Bug</title>
@@ -100,14 +142,14 @@
 
     
   <url>
-    <loc>https://www.hollytree.top/2018/03/02/copyDeep/</loc>
-    <lastmod>2018-06-19T11:15:26.793Z</lastmod>
+    <loc>https://www.hollytree.top/2018/03/15/jsonp%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2018-06-19T11:20:58.668Z</lastmod>
     <data>
         <display>
-        <title>深拷贝与浅拷贝</title>
-        <pubTime>2018-03-02T02:11:14.000Z</pubTime>
+        <title>jsonp的原理和使用</title>
+        <pubTime>2018-03-15T14:49:15.000Z</pubTime>
         
-        <tag>每日一坑</tag>
+        <tag>JavaScript</tag>
          
          
            
@@ -121,66 +163,24 @@
     
   <url>
     <loc>https://www.hollytree.top/2018/02/07/busVue/</loc>
-    <lastmod>2018-06-19T11:15:17.665Z</lastmod>
+    <lastmod>2018-06-19T11:20:37.777Z</lastmod>
     <data>
         <display>
         <title>Vue的bus组件通信时多次触发的问题</title>
         <pubTime>2018-02-07T15:33:10.000Z</pubTime>
         
-        <tag>每日一坑</tag>
-         
         <tag>Vue</tag>
          
         <tag>组件通信</tag>
          
         <tag>bus</tag>
          
-         
-           
-             
-              <breadCrumb title="Vue" url="https://www.hollytree.top/categories/Vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hollytree.top/2018/03/10/routerLazy/</loc>
-    <lastmod>2018-06-19T11:15:10.839Z</lastmod>
-    <data>
-        <display>
-        <title>Vue首屏优化之路由懒加载</title>
-        <pubTime>2018-03-09T16:16:55.000Z</pubTime>
-        
-        <tag>Vue</tag>
-         
-        <tag>优化</tag>
+        <tag>每日一坑</tag>
          
          
            
              
               <breadCrumb title="Vue" url="https://www.hollytree.top/categories/Vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hollytree.top/2018/03/15/jsonp%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2018-06-19T11:10:42.642Z</lastmod>
-    <data>
-        <display>
-        <title>jsonp的原理和使用</title>
-        <pubTime>2018-03-15T14:49:15.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaScript" url="https://www.hollytree.top/categories/JavaScript/"/>
           
         </display>
     </data>
