@@ -1177,7 +1177,7 @@ pre .javascript .function {
 .site-nav-toggle button {
   margin-top: 2px;
   padding: 9px 10px;
-  background: transparent;
+  background: #937344;
   border: none;
 }
 @media (max-width: 767px) {
@@ -1958,7 +1958,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffba65;
+  background: #16ffa7;
 }
 .links-of-blogroll {
   font-size: 13px;
