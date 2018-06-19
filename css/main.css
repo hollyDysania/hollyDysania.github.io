@@ -472,7 +472,7 @@ body {
   width: 700px;
 }
 .main-inner a {
-  color: #937344;
+  color: #b98539;
 }
 @media (min-width: 1600px) {
   .container .main-inner {
@@ -1039,7 +1039,7 @@ pre .javascript .function {
 }
 .pagination .page-number.current,
 .algolia-pagination .current .page-number {
-  color: #937344;
+  color: #b98539;
   background: #1c6039;
   border-top-color: #ccc;
 }
@@ -1177,7 +1177,7 @@ pre .javascript .function {
 .site-nav-toggle button {
   margin-top: 2px;
   padding: 9px 10px;
-  background: #937344;
+  background: #b98539;
   border: none;
 }
 @media (max-width: 767px) {
@@ -1223,7 +1223,7 @@ pre .javascript .function {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
-  color: #937344;
+  color: #b98539;
 }
 .menu .menu-item a:hover {
   border-bottom-color: #222;
@@ -1806,7 +1806,7 @@ pre .javascript .function {
   -webkit-transform: translateZ(0);
 }
 .sidebar a {
-  color: #937344;
+  color: #b98539;
   border-bottom-color: #555;
 }
 .sidebar a:hover {
@@ -1825,7 +1825,7 @@ pre .javascript .function {
 .sidebar-inner {
   position: relative;
   padding: 20px 10px;
-  color: #937344;
+  color: #b98539;
   text-align: center;
 }
 .site-overview-wrap {
@@ -1958,7 +1958,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #498e61;
+  background: #0affff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1993,7 +1993,7 @@ pre .javascript .function {
   cursor: pointer;
   border-bottom: 1px solid transparent;
   font-size: 14px;
-  color: #937344;
+  color: #b98539;
 }
 .sidebar-nav li:hover {
   color: #f5f5f5;
@@ -2042,7 +2042,7 @@ pre .javascript .function {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   transition-property: all;
-  color: #937344;
+  color: #b98539;
   border-bottom-color: #555;
 }
 .post-toc ol a:hover {
@@ -2080,7 +2080,7 @@ pre .javascript .function {
 }
 .footer {
   font-size: 14px;
-  color: #937344 !important;
+  color: #b98539 !important;
 }
 .footer img {
   border: none;
@@ -2089,7 +2089,7 @@ pre .javascript .function {
   text-align: center;
 }
 .footer-inner a {
-  color: #937344 !important;
+  color: #b98539 !important;
 }
 .powered-by,
 .theme-info {
@@ -2921,7 +2921,7 @@ hr {
 .site-meta .site-title {
   font-size: 22px;
   font-weight: bolder;
-  color: #937344;
+  color: #b98539;
 }
 @media (max-width: 767px) {
   .site-meta .site-title {
@@ -2946,7 +2946,7 @@ hr {
   position: relative;
   display: block;
   height: 2px;
-  background: #937344;
+  background: #b98539;
 }
 @media (max-width: 767px) {
   .logo-line-before i,
