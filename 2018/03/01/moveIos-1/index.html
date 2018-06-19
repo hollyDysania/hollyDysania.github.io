@@ -102,19 +102,19 @@
 
 
 
-<meta name="description" content="解决办法 （转化为/分隔的就可以）  ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN123var resData = &apos;2017-3-14 10:03:45&apos;;     resData=resData..replace(/-/g, &apos;/&apos;);            console.log(&quot;返回时间：&quot; + resDat">
+<meta name="description" content="解决办法 （转化为/分隔的就可以）  ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN123var resData = &apos;2017-3-14 10:03:45&apos;;     resData=resData..replace(/-/g, &apos;/&apos;);            console.log(&quot;返回时间：&quot; + resDa">
 <meta name="keywords" content="移动,踩坑记,ios,javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ios系统与Date的Bug">
 <meta property="og:url" content="https://www.hollytree.top/2018/03/01/moveIos-1/index.html">
 <meta property="og:site_name" content="Holly blog">
-<meta property="og:description" content="解决办法 （转化为/分隔的就可以）  ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN123var resData = &apos;2017-3-14 10:03:45&apos;;     resData=resData..replace(/-/g, &apos;/&apos;);            console.log(&quot;返回时间：&quot; + resDat">
+<meta property="og:description" content="解决办法 （转化为/分隔的就可以）  ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN123var resData = &apos;2017-3-14 10:03:45&apos;;     resData=resData..replace(/-/g, &apos;/&apos;);            console.log(&quot;返回时间：&quot; + resDa">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://www.hollytree.top/2018/03/01/moveIos-1/7a2fbe229152dc83c16462315859a01bfd4aaa6f.gif">
-<meta property="og:updated_time" content="2018-06-19T11:10:55.460Z">
+<meta property="og:updated_time" content="2018-06-19T11:15:55.443Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ios系统与Date的Bug">
-<meta name="twitter:description" content="解决办法 （转化为/分隔的就可以）  ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN123var resData = &apos;2017-3-14 10:03:45&apos;;     resData=resData..replace(/-/g, &apos;/&apos;);            console.log(&quot;返回时间：&quot; + resDat">
+<meta name="twitter:description" content="解决办法 （转化为/分隔的就可以）  ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN123var resData = &apos;2017-3-14 10:03:45&apos;;     resData=resData..replace(/-/g, &apos;/&apos;);            console.log(&quot;返回时间：&quot; + resDa">
 <meta name="twitter:image" content="https://www.hollytree.top/2018/03/01/moveIos-1/7a2fbe229152dc83c16462315859a01bfd4aaa6f.gif">
 
 
@@ -255,47 +255,9 @@
       
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
-      
     </ul>
   
 
-  
-    <div class="site-search">
-      
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-  </div>
-
-
-
-
-    </div>
   
 </nav>
 
@@ -413,11 +375,11 @@
       
 
       
-        <blockquote>
+        <p><img src="/2018/03/01/moveIos-1/7a2fbe229152dc83c16462315859a01bfd4aaa6f.gif" alt=""></p>
+<blockquote>
 <p>解决办法 （转化为/分隔的就可以）</p>
 </blockquote>
 <h3 id="ios系统-Date-parse-获取时间戳时-ios系统只认得-分隔的时间-其它-分隔或者别的-ios获取的都是NaN"><a href="#ios系统-Date-parse-获取时间戳时-ios系统只认得-分隔的时间-其它-分隔或者别的-ios获取的都是NaN" class="headerlink" title="ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN"></a>ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> resData = <span class="string">'2017-3-14 10:03:45'</span>;  </span><br><span class="line">   resData=resData..replace(<span class="regexp">/-/g</span>, <span class="string">'/'</span>);  </span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">"返回时间："</span> + resData)</span><br></pre></td></tr></table></figure>
-<p><img src="/2018/03/01/moveIos-1/7a2fbe229152dc83c16462315859a01bfd4aaa6f.gif" alt=""></p>
 
       
     </div>
@@ -864,19 +826,6 @@
   
 
 
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 

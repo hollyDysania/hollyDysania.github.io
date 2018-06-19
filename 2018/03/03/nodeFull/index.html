@@ -89,7 +89,7 @@
 
 
 
-  <meta name="keywords" content="Vue,每日一坑,Node,Webpack," />
+  <meta name="keywords" content="每日一坑,Vue,Node,Webpack," />
 
 
 
@@ -103,7 +103,7 @@
 
 
 <meta name="description" content="先描述下现象：vue项目在跑时偶尔出现webpack-dev-server服务停止,需要重新npm run dev.  1FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory">
-<meta name="keywords" content="Vue,每日一坑,Node,Webpack">
+<meta name="keywords" content="每日一坑,Vue,Node,Webpack">
 <meta property="og:type" content="article">
 <meta property="og:title" content="跑Vue项目时服务突然停止(Node内存溢出)">
 <meta property="og:url" content="https://www.hollytree.top/2018/03/03/nodeFull/index.html">
@@ -111,7 +111,7 @@
 <meta property="og:description" content="先描述下现象：vue项目在跑时偶尔出现webpack-dev-server服务停止,需要重新npm run dev.  1FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://www.hollytree.top/2018/03/03/nodeFull/375670145D5D7073D7D7843A1AE5D529069481DAA.jpg">
-<meta property="og:updated_time" content="2018-06-17T10:57:18.851Z">
+<meta property="og:updated_time" content="2018-06-19T11:16:11.319Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跑Vue项目时服务突然停止(Node内存溢出)">
 <meta name="twitter:description" content="先描述下现象：vue项目在跑时偶尔出现webpack-dev-server服务停止,需要重新npm run dev.  1FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory">
@@ -255,47 +255,9 @@
       
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
-      
     </ul>
   
 
-  
-    <div class="site-search">
-      
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-  </div>
-
-
-
-
-    </div>
   
 </nav>
 
@@ -413,7 +375,8 @@
       
 
       
-        <blockquote>
+        <p><img src="/2018/03/03/nodeFull/375670145D5D7073D7D7843A1AE5D529069481DAA.jpg" alt=""></p>
+<blockquote>
 <p><strong>先描述下现象：vue项目在跑时偶尔出现webpack-dev-server服务停止,需要重新npm run dev.</strong></p>
 </blockquote>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FATAL <span class="keyword">ERROR</span>: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap <span class="keyword">out</span> of <span class="keyword">memory</span></span><br></pre></td></tr></table></figure>
@@ -434,7 +397,6 @@
 <li>webpack在每次代码更改保存时都会进行编译然后实刷新页面得到最新的效果，但同时也会占用大量内存，也就是占用node内存。</li>
 <li>node是基于V8构建的，V8对内存的使用是有限制的（老64位系统约1.4G，32位约0.7G，新生代内存64位约32M，32系统下约为16M）在这种限制下，如果不小心触碰到这个界限，<strong>就会造成进程退出</strong>。</li>
 </ul>
-<p><img src="/2018/03/03/nodeFull/375670145D5D7073D7D7843A1AE5D529069481DAA.jpg" alt=""></p>
 
       
     </div>
@@ -481,9 +443,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
-          
             <a href="/tags/每日一坑/" rel="tag"><i class="fa fa-tag"></i> 每日一坑</a>
+          
+            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
           
             <a href="/tags/Node/" rel="tag"><i class="fa fa-tag"></i> Node</a>
           
@@ -881,19 +843,6 @@
   
 
 
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 
