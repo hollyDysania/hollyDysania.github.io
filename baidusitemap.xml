@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://www.hollytree.top/2018/03/17/vue%E9%9F%B3%E4%B9%90demo%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2018-06-18T16:39:27.215Z</lastmod>
+    <lastmod>2018-06-19T11:11:44.072Z</lastmod>
     <data>
         <display>
         <title>vue音乐demo总结</title>
@@ -26,8 +26,56 @@
 
     
   <url>
+    <loc>https://www.hollytree.top/2018/03/09/vue-cli-init-project/</loc>
+    <lastmod>2018-06-19T11:11:34.699Z</lastmod>
+    <data>
+        <display>
+        <title>利用vue-cli初始化项目</title>
+        <pubTime>2018-03-09T11:04:30.000Z</pubTime>
+        
+        <tag>Vue</tag>
+         
+        <tag>开发</tag>
+         
+         
+           
+             
+              <breadCrumb title="Vue" url="https://www.hollytree.top/categories/Vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hollytree.top/2018/03/01/moveIos-1/</loc>
+    <lastmod>2018-06-19T11:10:55.460Z</lastmod>
+    <data>
+        <display>
+        <title>Ios系统与Date的Bug</title>
+        <pubTime>2018-03-01T15:35:26.000Z</pubTime>
+        
+        <tag>移动</tag>
+         
+        <tag>踩坑记</tag>
+         
+        <tag>ios</tag>
+         
+        <tag>javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="每日一坑" url="https://www.hollytree.top/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.hollytree.top/2018/03/15/jsonp%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2018-06-18T16:33:16.382Z</lastmod>
+    <lastmod>2018-06-19T11:10:42.642Z</lastmod>
     <data>
         <display>
         <title>jsonp的原理和使用</title>
@@ -39,6 +87,52 @@
            
              
               <breadCrumb title="JavaScript" url="https://www.hollytree.top/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hollytree.top/2018/03/02/copyDeep/</loc>
+    <lastmod>2018-06-19T11:10:19.133Z</lastmod>
+    <data>
+        <display>
+        <title>深拷贝与浅拷贝</title>
+        <pubTime>2018-03-02T02:11:14.000Z</pubTime>
+        
+        <tag>每日一坑</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="https://www.hollytree.top/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hollytree.top/2018/02/07/busVue/</loc>
+    <lastmod>2018-06-19T11:09:30.484Z</lastmod>
+    <data>
+        <display>
+        <title>Vue的bus组件通信时多次触发的问题</title>
+        <pubTime>2018-02-07T15:33:10.000Z</pubTime>
+        
+        <tag>Vue</tag>
+         
+        <tag>组件通信</tag>
+         
+        <tag>bus</tag>
+         
+        <tag>每日一坑</tag>
+         
+         
+           
+             
+              <breadCrumb title="Vue" url="https://www.hollytree.top/categories/Vue/"/>
           
         </display>
     </data>
@@ -68,80 +162,6 @@
 
     
   <url>
-    <loc>https://www.hollytree.top/2018/02/07/busVue/</loc>
-    <lastmod>2018-06-17T11:52:01.020Z</lastmod>
-    <data>
-        <display>
-        <title>Vue的bus组件通信时多次触发的问题</title>
-        <pubTime>2018-02-07T15:33:10.000Z</pubTime>
-        
-        <tag>Vue</tag>
-         
-        <tag>组件通信</tag>
-         
-        <tag>bus</tag>
-         
-        <tag>每日一坑</tag>
-         
-         
-           
-             
-              <breadCrumb title="Vue" url="https://www.hollytree.top/categories/Vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hollytree.top/2018/03/09/vue-cli-init-project/</loc>
-    <lastmod>2018-06-17T11:51:16.808Z</lastmod>
-    <data>
-        <display>
-        <title>利用vue-cli初始化项目</title>
-        <pubTime>2018-03-09T11:04:30.000Z</pubTime>
-        
-        <tag>Vue</tag>
-         
-        <tag>开发</tag>
-         
-         
-           
-             
-              <breadCrumb title="Vue" url="https://www.hollytree.top/categories/Vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hollytree.top/2018/03/01/moveIos-1/</loc>
-    <lastmod>2018-06-17T10:57:20.441Z</lastmod>
-    <data>
-        <display>
-        <title>Ios系统与Date的Bug</title>
-        <pubTime>2018-03-01T15:35:26.000Z</pubTime>
-        
-        <tag>移动</tag>
-         
-        <tag>踩坑记</tag>
-         
-        <tag>ios</tag>
-         
-        <tag>javascript</tag>
-         
-         
-           
-             
-              <breadCrumb title="每日一坑" url="https://www.hollytree.top/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.hollytree.top/2018/03/03/nodeFull/</loc>
     <lastmod>2018-06-17T10:57:18.851Z</lastmod>
     <data>
@@ -161,26 +181,6 @@
            
              
               <breadCrumb title="Vue" url="https://www.hollytree.top/categories/Vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hollytree.top/2018/03/02/copyDeep/</loc>
-    <lastmod>2018-05-07T15:30:52.129Z</lastmod>
-    <data>
-        <display>
-        <title>深拷贝与浅拷贝</title>
-        <pubTime>2018-03-02T02:11:14.000Z</pubTime>
-        
-        <tag>每日一坑</tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaScript" url="https://www.hollytree.top/categories/JavaScript/"/>
           
         </display>
     </data>

@@ -415,8 +415,7 @@
       
         
           <blockquote>
-<p>最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。</p>
-</blockquote>
+<p>最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。<br><img src="/2018/03/02/copyDeep/lan.gif" alt=""><br></p></blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/02/copyDeep/" rel="contents">
@@ -563,10 +562,10 @@
       
         
           
-            <h3 id="ios系统-Date-parse-获取时间戳时-ios系统只认得-分隔的时间-其它-分隔或者别的-ios获取的都是NaN"><a href="#ios系统-Date-parse-获取时间戳时-ios系统只认得-分隔的时间-其它-分隔或者别的-ios获取的都是NaN" class="headerlink" title="ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN"></a>ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN</h3><blockquote>
+            <blockquote>
 <p>解决办法 （转化为/分隔的就可以）</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> resData = <span class="string">'2017-3-14 10:03:45'</span>;  </span><br><span class="line">   resData=resData..replace(<span class="regexp">/-/g</span>, <span class="string">'/'</span>);  </span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">"返回时间："</span> + resData)</span><br></pre></td></tr></table></figure>
+<h3 id="ios系统-Date-parse-获取时间戳时-ios系统只认得-分隔的时间-其它-分隔或者别的-ios获取的都是NaN"><a href="#ios系统-Date-parse-获取时间戳时-ios系统只认得-分隔的时间-其它-分隔或者别的-ios获取的都是NaN" class="headerlink" title="ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN"></a>ios系统 Date.parse()获取时间戳时 ios系统只认得/分隔的时间 其它-分隔或者别的 ios获取的都是NaN</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> resData = <span class="string">'2017-3-14 10:03:45'</span>;  </span><br><span class="line">   resData=resData..replace(<span class="regexp">/-/g</span>, <span class="string">'/'</span>);  </span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">"返回时间："</span> + resData)</span><br></pre></td></tr></table></figure>
 <p><img src="/2018/03/01/moveIos-1/7a2fbe229152dc83c16462315859a01bfd4aaa6f.gif" alt=""></p>
 
           
@@ -709,11 +708,10 @@
       
         
           
-            <h3 id="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。"><a href="#Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。" class="headerlink" title="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。"></a>Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。</h3><blockquote>
-<p>解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事</p>
+            <blockquote>
+<p>解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事<br><img src="/2018/02/07/busVue/bfd556a757c6e8b489fa183e61246e526183e9ae.gif" alt=""></p>
 </blockquote>
-<p><img src="/2018/02/07/busVue/bfd556a757c6e8b489fa183e61246e526183e9ae.gif" alt=""></p>
-
+<h3 id="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。"><a href="#Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。" class="headerlink" title="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。"></a>Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。</h3>
           
         
       
