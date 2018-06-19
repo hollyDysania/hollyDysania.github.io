@@ -6,6 +6,8 @@
 
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
+
+
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -47,6 +49,25 @@
 
 
 
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
 
 
 
@@ -70,13 +91,13 @@
 
 
 
-  <meta name="keywords" content="Vue,组件通信,bus,每日一坑," />
+  <meta name="keywords" content="每日一坑,Vue,组件通信,bus," />
 
 
 
 
 
-  <link rel="alternate" href="/atom.xml" title="holly blog" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="Holly blog" type="application/atom+xml" />
 
 
 
@@ -84,11 +105,11 @@
 
 
 <meta name="description" content="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。 解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事">
-<meta name="keywords" content="Vue,组件通信,bus,每日一坑">
+<meta name="keywords" content="每日一坑,Vue,组件通信,bus">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue的bus组件通信时多次触发的问题">
 <meta property="og:url" content="https://www.hollytree.top/2018/02/07/busVue/index.html">
-<meta property="og:site_name" content="holly blog">
+<meta property="og:site_name" content="Holly blog">
 <meta property="og:description" content="Vue利用bus进行组件通信时，因为bus是全局的不受页面生命周期控制，所以会发生多次触发的问题。 解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://www.hollytree.top/2018/02/07/busVue/bfd556a757c6e8b489fa183e61246e526183e9ae.gif">
@@ -106,7 +127,7 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -126,13 +147,11 @@
 
 
 
-  <link rel="canonical" href="https://www.hollytree.top/2018/02/07/busVue/"/>
 
 
 
 
-
-  <title>Vue的bus组件通信时多次触发的问题 | holly blog</title>
+  <title>Vue的bus组件通信时多次触发的问题 | Holly blog</title>
   
 
 
@@ -164,7 +183,6 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband">
     </div>
-    <a href="https://github.com/hollyDysania"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -173,7 +191,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">holly blog</span>
+        <span class="site-title">Holly blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -317,7 +335,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="holly blog">
+      <meta itemprop="name" content="Holly blog">
     </span>
 
     
@@ -447,13 +465,13 @@
       
         <div class="post-tags">
           
+            <a href="/tags/每日一坑/" rel="tag"><i class="fa fa-tag"></i> 每日一坑</a>
+          
             <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
           
             <a href="/tags/组件通信/" rel="tag"><i class="fa fa-tag"></i> 组件通信</a>
           
             <a href="/tags/bus/" rel="tag"><i class="fa fa-tag"></i> bus</a>
-          
-            <a href="/tags/每日一坑/" rel="tag"><i class="fa fa-tag"></i> 每日一坑</a>
           
         </div>
       
@@ -611,13 +629,13 @@
                   <span class="links-of-author-item">
                     <a href="https://github.com/hollyDysania" target="_blank" title="GitHub">
                       
-                        <i class="fa fa-fw fa-github"></i></a>
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
                   </span>
                 
                   <span class="links-of-author-item">
                     <a href="holly_dysania@sina.com" target="_blank" title="E-Mail">
                       
-                        <i class="fa fa-fw fa-envelope"></i></a>
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   </span>
                 
             </div>
@@ -892,6 +910,8 @@
   
 
   
+  
+
 
   
 

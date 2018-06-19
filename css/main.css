@@ -226,6 +226,7 @@ h6 {
   margin: 0;
   padding: 0;
   font-weight: bold;
+  color: #145f34;
   line-height: 1.5;
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -469,6 +470,9 @@ body {
 .main-inner {
   margin: 0 auto;
   width: 700px;
+}
+.main-inner a {
+  color: #937344;
 }
 @media (min-width: 1600px) {
   .container .main-inner {
@@ -1035,8 +1039,8 @@ pre .javascript .function {
 }
 .pagination .page-number.current,
 .algolia-pagination .current .page-number {
-  color: #fff;
-  background: #ccc;
+  color: #937344;
+  background: #1c6039;
   border-top-color: #ccc;
 }
 @media (max-width: 767px) {
@@ -1054,7 +1058,7 @@ pre .javascript .function {
   .pagination .prev:hover,
   .pagination .next:hover,
   .pagination .page-number:hover {
-    border-bottom-color: #222;
+    border-bottom-color: withe;
   }
 }
 .comments {
@@ -1219,6 +1223,7 @@ pre .javascript .function {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
+  color: #937344;
 }
 .menu .menu-item a:hover {
   border-bottom-color: #222;
@@ -1796,12 +1801,12 @@ pre .javascript .function {
   bottom: 0;
   width: 0;
   z-index: 1040;
-  box-shadow: inset 0 2px 6px #000;
-  background: #222;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.3);
+  background: #1c6039;
   -webkit-transform: translateZ(0);
 }
 .sidebar a {
-  color: #999;
+  color: #937344;
   border-bottom-color: #555;
 }
 .sidebar a:hover {
@@ -1820,7 +1825,7 @@ pre .javascript .function {
 .sidebar-inner {
   position: relative;
   padding: 20px 10px;
-  color: #999;
+  color: #937344;
   text-align: center;
 }
 .site-overview-wrap {
@@ -1953,7 +1958,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d2ff0f;
+  background: #55625c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1988,7 +1993,7 @@ pre .javascript .function {
   cursor: pointer;
   border-bottom: 1px solid transparent;
   font-size: 14px;
-  color: #555;
+  color: #937344;
 }
 .sidebar-nav li:hover {
   color: #f5f5f5;
@@ -2037,7 +2042,7 @@ pre .javascript .function {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   transition-property: all;
-  color: #999;
+  color: #937344;
   border-bottom-color: #555;
 }
 .post-toc ol a:hover {
@@ -2075,7 +2080,7 @@ pre .javascript .function {
 }
 .footer {
   font-size: 14px;
-  color: #999;
+  color: #937344 !important;
 }
 .footer img {
   border: none;
@@ -2083,9 +2088,8 @@ pre .javascript .function {
 .footer-inner {
   text-align: center;
 }
-.with-love {
-  display: inline-block;
-  margin: 0 5px;
+.footer-inner a {
+  color: #937344 !important;
 }
 .powered-by,
 .theme-info {
@@ -2872,7 +2876,7 @@ hr {
   margin-top: 80px;
 }
 .header {
-  background: #f5f5f5;
+  background: #1c6039;
 }
 .header-inner {
   padding: 25px 0 20px;
@@ -2917,6 +2921,7 @@ hr {
 .site-meta .site-title {
   font-size: 22px;
   font-weight: bolder;
+  color: #937344;
 }
 @media (max-width: 767px) {
   .site-meta .site-title {
@@ -2941,7 +2946,7 @@ hr {
   position: relative;
   display: block;
   height: 2px;
-  background: #222;
+  background: #937344;
 }
 @media (max-width: 767px) {
   .logo-line-before i,
@@ -3056,7 +3061,7 @@ hr {
   }
 }
 .posts-expand .post-title:hover:before {
-  background: #222;
+  background: $blye;
 }
 @media (max-width: 767px) {
   .posts-expand .post-body {
@@ -3156,7 +3161,7 @@ hr {
 .footer {
   margin-top: 80px;
   padding: 10px 0;
-  background: #f5f5f5;
+  background: #1c6039;
   color: #666;
 }
 .footer-inner {
