@@ -912,9 +912,6 @@ pre .javascript .function {
   display: block;
   line-height: 1.8em;
   padding: 0.25em 0.75em;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-out;
-  transition-delay: 0s;
 }
 .post-body .tabs ul.nav-tabs li.tab a i {
   width: 1.285714285714286em;
@@ -1958,7 +1955,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0affff;
+  background: #e73760;
 }
 .links-of-blogroll {
   font-size: 13px;
