@@ -582,6 +582,175 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.hollytree.top/2018/03/24/Vuex的学习及使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="holly">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Holly blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/24/Vuex的学习及使用/" itemprop="url">Vuex的学习及使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-24T17:40:58+08:00">
+                2018-03-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>解决多个组件的状态共享,解决路由间传递复杂数据,便于维护。</p>
+</blockquote>
+<p><img src="/2018/03/24/Vuex的学习及使用/0a4ce86d279e6904e9743440c50427f228bf9933.gif" alt=""></p>
+<h4 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h4><p>通常情况下 我们在src下建立一个store文件夹 具体如下图</p>
+<p><img src="/2018/03/24/Vuex的学习及使用/QQ截图20180624175337.png" alt=""></p>
+<ul>
+<li>state.js里是要用到的状态；</li>
+<li>getters.js是用来映射state里的状态；</li>
+<li>mutations.js是改变state里状态的一些方法，只能同步操作；</li>
+<li>mutations-types.js是统一管理mutaions方法名的一个文件（多人协作时方便管理，也可以不用）；</li>
+<li>actions.js 不直接改变state里的状态，通过commit mutations里的方法进行改变state,并且可以分发多个mutaitons并且可以进行异步操作；</li>
+<li>index.js 入口文件</li>
+</ul>
+<h5 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h5><p>例子中用了export,export default 两种不同的导出语法</p>
+<p>如果不清楚可以查阅另一篇文章 ✌ <a href=""></a></p>
+<p>state.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> state = &#123;</span><br><span class="line">  singer: &#123;&#125;,</span><br><span class="line">  playing: <span class="literal">false</span>,</span><br><span class="line">  fullScreen: <span class="literal">false</span>,</span><br><span class="line">  playList: [],</span><br><span class="line">  sequenceList: [],</span><br><span class="line">  currentIndex: <span class="number">-1</span>,</span><br><span class="line">  <span class="comment">//歌单详细列表</span></span><br><span class="line">  disc: &#123;&#125;,</span><br><span class="line">  <span class="comment">// 排行列表</span></span><br><span class="line">  topList: &#123;&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> state</span><br></pre></td></tr></table></figure>
+<p>getters.js (进行映射state)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> singer = <span class="function"><span class="params">state</span> =&gt;</span> state.singer</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> playing = <span class="function"><span class="params">state</span> =&gt;</span> state.playing</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> fullScreen = <span class="function"><span class="params">state</span> =&gt;</span> state.fullScreen</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> playList = <span class="function"><span class="params">state</span> =&gt;</span> state.playList</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> sequenceList = <span class="function"><span class="params">state</span> =&gt;</span> state.sequenceList</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> currentIndex = <span class="function"><span class="params">state</span> =&gt;</span> state.currentIndex</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> disc = <span class="function"><span class="params">state</span> =&gt;</span> state.disc</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> topList = <span class="function"><span class="params">state</span> =&gt;</span> state.topList</span><br></pre></td></tr></table></figure>
+<p>mutations-types.js (统一管理mutations方法名称常量)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> SET_SINGER = <span class="string">'SET_SINGER'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> SET_PLAYING_STATE = <span class="string">'SET_PLAYING_STATE'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> SET_FULL_SCREEN = <span class="string">'SET_FULL_SCREEN'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> SET_PLAYLIST = <span class="string">'SET_PLAYLIST'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> SET_SEQUENCE_LIST = <span class="string">'SET_SEQUENCE_LIST'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> SET_CURRENT_INDEX = <span class="string">'SET_CURRENT_INDEX'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> SET_DISC = <span class="string">'SET_DISC'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> SET_TOP_LIST = <span class="string">'SET_TOP_LIST'</span></span><br></pre></td></tr></table></figure>
+<p>mutations.js (改变state的一些方法)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> types <span class="keyword">from</span> <span class="string">'./mutations-types'</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">const</span> mutations = &#123;</span><br><span class="line">    [types.SET_SINGER] (state, singer) &#123;</span><br><span class="line">        state.singer = singer</span><br><span class="line">    &#125;,</span><br><span class="line">    [types.SET_PLAYING_STATE](state, flag) &#123;</span><br><span class="line">      state.playing = flag</span><br><span class="line">    &#125;,</span><br><span class="line">    [types.SET_FULL_SCREEN](state, flag) &#123;</span><br><span class="line">      state.fullScreen = flag</span><br><span class="line">    &#125;,</span><br><span class="line">    [types.SET_PLAYLIST](state, list) &#123;</span><br><span class="line">      state.playList = list</span><br><span class="line">    &#125;,</span><br><span class="line">    [types.SET_SEQUENCE_LIST](state, list) &#123;</span><br><span class="line">      state.sequenceList = list</span><br><span class="line">    &#125;,</span><br><span class="line">    [types.SET_CURRENT_INDEX](state, index) &#123;</span><br><span class="line">      state.currentIndex = index</span><br><span class="line">    &#125;,</span><br><span class="line">    [types.SET_DISC](state, disc) &#123;</span><br><span class="line">      state.disc = disc</span><br><span class="line">    &#125;,</span><br><span class="line">    [types.SET_TOP_LIST](state, topList) &#123;</span><br><span class="line">      state.topList = topList</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> mutations</span><br></pre></td></tr></table></figure>
+<p>actions.js(派发多个mutations或异步操作)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> types <span class="keyword">from</span> <span class="string">'./mutations-types'</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 清空播放列表</span></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">const</span> deleteSongLits = <span class="function"><span class="keyword">function</span>(<span class="params">&#123;commit&#125;</span>) </span>&#123;</span><br><span class="line">    commit(types.SET_PLAYLIST, [])</span><br><span class="line">    commit(types.SET_SEQUENCE_LIST, [])</span><br><span class="line">    commit(types.SET_CURRENT_INDEX, <span class="number">-1</span>)</span><br><span class="line">    commit(types.SET_PLAYING_STATE, <span class="literal">false</span>)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>index.js (vuex入口文件)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> actions <span class="keyword">from</span> <span class="string">'./actions'</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> getters <span class="keyword">from</span> <span class="string">'./getters'</span></span><br><span class="line"><span class="keyword">import</span> state <span class="keyword">from</span> <span class="string">'./state'</span></span><br><span class="line"><span class="keyword">import</span> mutations <span class="keyword">from</span> <span class="string">'./mutations'</span></span><br><span class="line"><span class="keyword">import</span> createLogger <span class="keyword">from</span> <span class="string">'vuex/dist/logger'</span></span><br><span class="line"></span><br><span class="line">Vue.use(Vuex)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> debug = process.env.NODE_EN !== <span class="string">'production'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">    actions,</span><br><span class="line">    getters,</span><br><span class="line">    state,</span><br><span class="line">    mutations,</span><br><span class="line">    strict: debug,</span><br><span class="line">    plugins: debug ? [createLogger()] : []</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.hollytree.top/2018/03/15/jsonp的原理和使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -867,155 +1036,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.hollytree.top/2018/03/09/vue-cli-init-project/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="holly">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Holly blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/09/vue-cli-init-project/" itemprop="url">利用vue-cli初始化项目</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-09T19:04:30+08:00">
-                2018-03-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vue/" itemprop="url" rel="index">
-                    <span itemprop="name">Vue</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>可以快速初始化vue项目，提供一套本地node测试服务器，集成打包上线方案</p>
-</blockquote>
-<p><img src="/2018/03/09/vue-cli-init-project/2821554ce9fde44f787bbae127e5079742933935.gif" alt=""><br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/09/vue-cli-init-project/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1070,7 +1090,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1092,7 +1112,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
