@@ -225,7 +225,7 @@ h6 {
   margin: 0;
   padding: 0;
   font-weight: bold;
-  color: #145f34;
+  color: #d21d56;
   line-height: 1.5;
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -318,7 +318,7 @@ hr {
 blockquote {
   padding: 0 15px;
   color: #666;
-  border-left: 4px solid #379c76;
+  border-left: 4px solid #282a89;
 }
 blockquote cite::before {
   content: "-";
@@ -471,7 +471,7 @@ body {
   width: 700px;
 }
 .main-inner a {
-  color: #b98539;
+  color: #d21d56;
 }
 @media (min-width: 1600px) {
   .container .main-inner {
@@ -1017,6 +1017,8 @@ pre .javascript .function {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
+  background: #282a89;
+  color: #fefefe;
 }
 .pagination .prev:hover,
 .pagination .next:hover,
@@ -1034,8 +1036,7 @@ pre .javascript .function {
   margin-right: 0;
 }
 .pagination .page-number.current {
-  color: #b98539;
-  background: #1c6039;
+  background: #d21d56;
   border-top-color: #ccc;
 }
 @media (max-width: 767px) {
@@ -1172,7 +1173,7 @@ pre .javascript .function {
 .site-nav-toggle button {
   margin-top: 2px;
   padding: 9px 10px;
-  background: #b98539;
+  background: #fefefe;
   border: none;
 }
 @media (max-width: 767px) {
@@ -1218,16 +1219,13 @@ pre .javascript .function {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
-  color: #b98539;
+  color: #fefefe;
 }
 .menu .menu-item a:hover {
   border-bottom-color: #222;
 }
 .menu .menu-item .fa {
   margin-right: 5px;
-}
-.use-motion .menu-item {
-  opacity: 0;
 }
 .post-body {
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -1471,7 +1469,7 @@ pre .javascript .function {
 .posts-expand .post-title-link {
   display: inline-block;
   position: relative;
-  color: #145f34;
+  color: #d21d56;
   border-bottom: none;
   line-height: 1.2;
   vertical-align: top;
@@ -1797,11 +1795,11 @@ pre .javascript .function {
   width: 0;
   z-index: 1040;
   box-shadow: inset 0 2px 6px rgba(0,0,0,0.3);
-  background: #1c6039;
+  background: #282a89;
   -webkit-transform: translateZ(0);
 }
 .sidebar a {
-  color: #b98539;
+  color: #fefefe;
   border-bottom-color: #555;
 }
 .sidebar a:hover {
@@ -1820,7 +1818,7 @@ pre .javascript .function {
 .sidebar-inner {
   position: relative;
   padding: 20px 10px;
-  color: #b98539;
+  color: #fefefe;
   text-align: center;
 }
 .site-overview-wrap {
@@ -1953,7 +1951,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff0fc2;
+  background: #ff5d79;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1988,7 +1986,7 @@ pre .javascript .function {
   cursor: pointer;
   border-bottom: 1px solid transparent;
   font-size: 14px;
-  color: #b98539;
+  color: #fefefe;
 }
 .sidebar-nav li:hover {
   color: #f5f5f5;
@@ -2037,7 +2035,7 @@ pre .javascript .function {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   transition-property: all;
-  color: #b98539;
+  color: #fefefe;
   border-bottom-color: #555;
 }
 .post-toc ol a:hover {
@@ -2075,7 +2073,7 @@ pre .javascript .function {
 }
 .footer {
   font-size: 14px;
-  color: #b98539 !important;
+  color: #fefefe !important;
 }
 .footer img {
   border: none;
@@ -2084,7 +2082,7 @@ pre .javascript .function {
   text-align: center;
 }
 .footer-inner a {
-  color: #b98539 !important;
+  color: #fefefe !important;
 }
 .powered-by,
 .theme-info {
@@ -2737,7 +2735,7 @@ hr {
   margin-top: 80px;
 }
 .header {
-  background: #1c6039;
+  background: #282a89;
 }
 .header-inner {
   padding: 25px 0 20px;
@@ -2782,7 +2780,7 @@ hr {
 .site-meta .site-title {
   font-size: 22px;
   font-weight: bolder;
-  color: #b98539;
+  color: #fefefe;
 }
 @media (max-width: 767px) {
   .site-meta .site-title {
@@ -2807,7 +2805,7 @@ hr {
   position: relative;
   display: block;
   height: 2px;
-  background: #b98539;
+  background: #fefefe;
 }
 @media (max-width: 767px) {
   .logo-line-before i,
@@ -2862,7 +2860,7 @@ hr {
   }
 }
 .menu .menu-item a:hover {
-  background: #e1e1e1;
+  background: #d21d56;
 }
 .menu a::before {
   display: none;
@@ -3022,7 +3020,7 @@ hr {
 .footer {
   margin-top: 80px;
   padding: 10px 0;
-  background: #1c6039;
+  background: #282a89;
   color: #666;
 }
 .footer-inner {
