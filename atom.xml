@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Holly blog</title>
+  
+  <subtitle>holly blog</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.hollytree.top/"/>
+  <updated>2018-06-25T08:02:44.104Z</updated>
+  <id>https://www.hollytree.top/</id>
+  
+  <author>
+    <name>holly</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>javascript的模块化</title>
+    <link href="https://www.hollytree.top/2018/05/24/javascript%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    <id>https://www.hollytree.top/2018/05/24/javascript的模块化/</id>
+    <published>2018-05-24T12:33:43.000Z</published>
+    <updated>2018-06-25T08:02:44.104Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;由于现在的网页可以看作是一个功能丰富的应用，需要对代码进行分割、作用域隔离、模块之间的依赖管理以及发布到生产环境时的自动化打包与处理等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/05/24/javascript的模块化/bf2c253c8bd197bd89d5db437a45d0a5c3af68fd.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="https://www.hollytree.top/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="https://www.hollytree.top/tags/JavaScript/"/>
+    
+      <category term="ES6" scheme="https://www.hollytree.top/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue音乐demo总结</title>
+    <link href="https://www.hollytree.top/2018/05/17/vue%E9%9F%B3%E4%B9%90demo%E6%80%BB%E7%BB%93/"/>
+    <id>https://www.hollytree.top/2018/05/17/vue音乐demo总结/</id>
+    <published>2018-05-17T10:39:33.000Z</published>
+    <updated>2018-06-25T18:05:11.929Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;很敬佩黄轶老师，涵盖了非常多的知识点。跟着敲还是需要一些vue基础的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/05/17/vue音乐demo总结/99fe6dee6d7c90e2b6ad37420a58fb724332f323.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="https://www.hollytree.top/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
+    
+      <category term="开发" scheme="https://www.hollytree.top/tags/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue中混入的使用（Mixin）</title>
+    <link href="https://www.hollytree.top/2018/04/25/Vue%E4%B8%AD%E6%B7%B7%E5%85%A5%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%88Mixins%EF%BC%89/"/>
+    <id>https://www.hollytree.top/2018/04/25/Vue中混入的使用（Mixins）/</id>
+    <published>2018-04-25T15:41:06.000Z</published>
+    <updated>2018-06-25T17:32:56.337Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;当出现类似组件，功能又有重叠的地方，但又具有比较大的差异时可以使用Mixin，只提取公共的部分。然后混入到多个组件中。（写法与组件非常类似，很容易上手）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/04/25/Vue中混入的使用（Mixins）/e823417ca4174941ddac43613ca80f857efd051e.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="https://www.hollytree.top/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
+    
+      <category term="mixin" scheme="https://www.hollytree.top/tags/mixin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>better-scoll的封装与使用</title>
+    <link href="https://www.hollytree.top/2018/04/19/better-scoll%E7%9A%84%E5%B0%81%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+    <id>https://www.hollytree.top/2018/04/19/better-scoll的封装与使用/</id>
+    <published>2018-04-19T13:07:23.000Z</published>
+    <updated>2018-06-24T09:28:43.438Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;better-scroll是解决各种滚动场景需求的插件，由于一般移动端项目滚动的场景特别多，所以会对其进行封装复用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/04/19/better-scoll的封装与使用/bb823d5639d3142d7ec69d1ef61f884fe1842de0.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="https://www.hollytree.top/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
+    
+      <category term="组件" scheme="https://www.hollytree.top/tags/%E7%BB%84%E4%BB%B6/"/>
+    
+      <category term="封装" scheme="https://www.hollytree.top/tags/%E5%B0%81%E8%A3%85/"/>
+    
+      <category term="开发" scheme="https://www.hollytree.top/tags/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vuex的学习及使用</title>
+    <link href="https://www.hollytree.top/2018/03/24/Vuex%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
+    <id>https://www.hollytree.top/2018/03/24/Vuex的学习及使用/</id>
+    <published>2018-03-24T09:40:58.000Z</published>
+    <updated>2018-06-24T18:52:30.621Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;解决多个组件的状态共享,解决路由间传递复杂数据,便于维护。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/03/24/Vuex的学习及使用/0a4ce86d279e6904e9743440c50427f228bf9933.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="https://www.hollytree.top/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
+    
+      <category term="Vuex" scheme="https://www.hollytree.top/tags/Vuex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jsonp的原理和使用</title>
+    <link href="https://www.hollytree.top/2018/03/15/jsonp%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E4%BD%BF%E7%94%A8/"/>
+    <id>https://www.hollytree.top/2018/03/15/jsonp的原理和使用/</id>
+    <published>2018-03-15T14:49:15.000Z</published>
+    <updated>2018-06-19T11:20:58.668Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;浏览器的同源策略不允许跨域，jsonp是解决跨域的一种方法。但也存在一些缺点，所以跨域最好还是后台进行设置.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/03/15/jsonp的原理和使用/喷了.gif&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="https://www.hollytree.top/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="https://www.hollytree.top/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue首屏优化之路由懒加载</title>
+    <link href="https://www.hollytree.top/2018/03/10/routerLazy/"/>
+    <id>https://www.hollytree.top/2018/03/10/routerLazy/</id>
+    <published>2018-03-09T16:16:55.000Z</published>
+    <updated>2018-06-19T11:21:19.387Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;项目比较大时build后首次加载会有很慢的问题,路由懒加载就是优化加载速度的方法之一&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/03/10/routerLazy/aaa355983dfbfb1d364f714a4b69fc183e63a4b9.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="https://www.hollytree.top/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
+    
+      <category term="优化" scheme="https://www.hollytree.top/tags/%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用vue-cli初始化项目</title>
+    <link href="https://www.hollytree.top/2018/03/09/vue-cli-init-project/"/>
+    <id>https://www.hollytree.top/2018/03/09/vue-cli-init-project/</id>
+    <published>2018-03-09T11:04:30.000Z</published>
+    <updated>2018-06-19T11:21:20.947Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;可以快速初始化vue项目，提供一套本地node测试服务器，集成打包上线方案&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/03/09/vue-cli-init-project/2821554ce9fde44f787bbae127e5079742933935.gif&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="https://www.hollytree.top/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
+    
+      <category term="开发" scheme="https://www.hollytree.top/tags/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深拷贝与浅拷贝</title>
+    <link href="https://www.hollytree.top/2018/03/02/copyDeep/"/>
+    <id>https://www.hollytree.top/2018/03/02/copyDeep/</id>
+    <published>2018-03-02T02:11:14.000Z</published>
+    <updated>2018-06-19T11:21:42.285Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/03/02/copyDeep/lan.gif&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="https://www.hollytree.top/categories/JavaScript/"/>
+    
+    
+      <category term="每日一坑" scheme="https://www.hollytree.top/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ios系统与Date的Bug</title>
+    <link href="https://www.hollytree.top/2018/03/01/moveIos-1/"/>
+    <id>https://www.hollytree.top/2018/03/01/moveIos-1/</id>
+    <published>2018-03-01T15:35:26.000Z</published>
+    <updated>2018-06-24T09:45:18.454Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;解决办法 （转化为/分隔的就可以）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/03/01/moveIos-1/7a2fbe229152dc83c16462315859a01bfd4aaa6f.gif&quot; alt=&quot;&quot;&gt;
+      
+    
+    </summary>
+    
+      <category term="每日一坑" scheme="https://www.hollytree.top/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
+    
+    
+      <category term="移动" scheme="https://www.hollytree.top/tags/%E7%A7%BB%E5%8A%A8/"/>
+    
+      <category term="踩坑记" scheme="https://www.hollytree.top/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0/"/>
+    
+      <category term="ios" scheme="https://www.hollytree.top/tags/ios/"/>
+    
+      <category term="javascript" scheme="https://www.hollytree.top/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>跑Vue项目时服务突然停止(Node内存溢出)</title>
+    <link href="https://www.hollytree.top/2018/02/03/nodeFull/"/>
+    <id>https://www.hollytree.top/2018/02/03/nodeFull/</id>
+    <published>2018-02-03T04:17:33.000Z</published>
+    <updated>2018-06-24T09:44:52.201Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;先描述下现象：vue项目在跑时偶尔出现webpack-dev-server服务停止,需要重新npm run dev.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/02/03/nodeFull/375670145D5D7073D7D7843A1AE5D529069481DAA.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight stata&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;FATAL &lt;span class=&quot;keyword&quot;&gt;ERROR&lt;/span&gt;: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap &lt;span class=&quot;keyword&quot;&gt;out&lt;/span&gt; of &lt;span class=&quot;keyword&quot;&gt;memory&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="https://www.hollytree.top/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
+    
+      <category term="每日一坑" scheme="https://www.hollytree.top/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
+    
+      <category term="Node" scheme="https://www.hollytree.top/tags/Node/"/>
+    
+      <category term="Webpack" scheme="https://www.hollytree.top/tags/Webpack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue的bus组件通信时多次触发的问题</title>
+    <link href="https://www.hollytree.top/2018/01/07/busVue/"/>
+    <id>https://www.hollytree.top/2018/01/07/busVue/</id>
+    <published>2018-01-07T15:33:10.000Z</published>
+    <updated>2018-06-24T09:44:37.191Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/01/07/busVue/bfd556a757c6e8b489
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="https://www.hollytree.top/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
+    
+      <category term="组件通信" scheme="https://www.hollytree.top/tags/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
+    
+      <category term="bus" scheme="https://www.hollytree.top/tags/bus/"/>
+    
+      <category term="每日一坑" scheme="https://www.hollytree.top/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
+    
+  </entry>
+  
+</feed>
