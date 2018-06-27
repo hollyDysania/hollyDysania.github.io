@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://www.hollytree.top/2018/06/01/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E7%AC%A6/</loc>
-    <lastmod>2018-06-27T06:50:12.375Z</lastmod>
+    <lastmod>2018-06-27T07:21:50.262Z</lastmod>
     <data>
         <display>
         <title>javascript对象的属性描述符</title>
@@ -217,11 +217,11 @@
         
         <tag>Vue</tag>
          
+        <tag>每日一坑</tag>
+         
         <tag>组件通信</tag>
          
         <tag>bus</tag>
-         
-        <tag>每日一坑</tag>
          
          
            
