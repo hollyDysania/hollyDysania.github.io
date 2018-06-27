@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.hollytree.top/"/>
-  <updated>2018-06-26T15:20:56.912Z</updated>
+  <updated>2018-06-27T06:37:55.313Z</updated>
   <id>https://www.hollytree.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>javascript对象的属性描述符</title>
+    <link href="https://www.hollytree.top/2018/06/01/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E7%AC%A6/"/>
+    <id>https://www.hollytree.top/2018/06/01/javascript对象的属性描述符/</id>
+    <published>2018-06-01T04:45:37.000Z</published>
+    <updated>2018-06-27T06:37:55.313Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;经常会看到一些技术文章说，可枚举不可枚举，一直很懵。其实就是对象属性描述符中的Enumerable(可没举性)。下面来看看有哪些对象属性描述符~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/06/01/javascri
+      
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="https://www.hollytree.top/categories/JavaScript/"/>
+    
+    
+      <category term="javascript" scheme="https://www.hollytree.top/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>移动端前端开发调试工具-vConsole</title>
@@ -313,13 +339,13 @@
       <category term="每日一坑" scheme="https://www.hollytree.top/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
     
     
+      <category term="javascript" scheme="https://www.hollytree.top/tags/javascript/"/>
+    
       <category term="移动" scheme="https://www.hollytree.top/tags/%E7%A7%BB%E5%8A%A8/"/>
     
       <category term="踩坑记" scheme="https://www.hollytree.top/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0/"/>
     
       <category term="ios" scheme="https://www.hollytree.top/tags/ios/"/>
-    
-      <category term="javascript" scheme="https://www.hollytree.top/tags/javascript/"/>
     
   </entry>
   
@@ -377,11 +403,11 @@
     
       <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
     
+      <category term="每日一坑" scheme="https://www.hollytree.top/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
+    
       <category term="组件通信" scheme="https://www.hollytree.top/tags/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
     
       <category term="bus" scheme="https://www.hollytree.top/tags/bus/"/>
-    
-      <category term="每日一坑" scheme="https://www.hollytree.top/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
     
   </entry>
   

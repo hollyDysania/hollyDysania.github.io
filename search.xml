@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[javascript对象的属性描述符]]></title>
+    <url>%2F2018%2F06%2F01%2Fjavascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E7%AC%A6%2F</url>
+    <content type="text"><![CDATA[经常会看到一些技术文章说，可枚举不可枚举，一直很懵。其实就是对象属性描述符中的Enumerable(可没举性)。下面来看看有哪些对象属性描述符~ 描述符类型 分为两种 数据属性(data property) 包含一个数据值的位置，在这个位置可以读取和写入值,有四个特性 访问器属性(accessor poperty) 名字、值和一组属性描述符构成的。而属性值可以用一个或两个方法替代，这两个方法就是getter和setter 他们共同的特性 configurable(可配置性) 可配置性决定是否可以使用delete删除属性，以及是否可以修改属性描述符的特性，默认true; 设置为false后无法使用delete删除属性，严格模式下直接报错；并且不能使用defineProperty()方法来修改属性描述符，但可以用使用defineProperty()方法将writable的状态从true改为false（只有这一种情况可以修改）；var声明变量时默认为false; enumerable(可枚举性) 可枚举性决定属性是否出现在对象的属性枚举中。 用户定义的普通属性默认是可枚举的，而原生继承的属性默认是不可枚举的。 propertyIsEnumerable() 可以判断对象的属性是否可枚举 123456var o = &#123;a:1&#125;;console.log(o.propertyIsEnumerable('a'))//trueObject.defineProperty(o,'a',&#123;enumerable:false&#125;)console.log(o.propertyIsEnumerable('a'))//false ​ 具体来说，比如 fon in 循环是否能遍历到该属性 Object.keys方法是否能取到该属性 JSON.stringify方法是否能取到该属性 不同的特性数据属性 ： value (属性值) 属性值包含这个属性的数据值，读取属性值的时候，从这个位置读，写入属性值的时候，把新值保存在这个位置。默认undefined。 writable (可写性) 可鞋型决定是否可以修改属性的值，默认为true;设置为false后赋值语句会静默失败，严格模式赋值直接报错； 通过Object.defineProperty()方法改变属性value的值不会受影响，因为这也意味着在重置writable的属性值为false 访问器属性： getter 在读取属性时调用的函数。默认undefined setter 在写入属性时调用的函数。默认undefined 1234567891011121314151617181920212223242526// getter 和 setter 取代了数据属性中的value和writable属性// 只设置get方法没有set方法 对象的赋值会静默失败 严格模式下会报错// 只设置set方法而不设置get方法 对象的属性值为undefined// 所以一般都是成对出现的var o =&#123; get a()&#123; return this._a; &#125;, set a(val)&#123; this._a = val*2; &#125;&#125;o.a = 1;console.log(o.a);//2// 可读可取// 利用Object.defineProperty()对o的属性a的getter和setter进行配置Object.defineProperty(o,'a',&#123; get: function()&#123; return this._a; &#125;, set :function(val)&#123; this._a = val*2; &#125;&#125;)o.a = 1;console.log(o.a);//2 ​ 描述符方法 Object.getOwnPropertyDescriptor() 第一个参数是该对象，第二个参数时对象的某一个属性。用于查询一个属性的描述符，并以对象的形式返回 123let obj = &#123;holly: 'nice'&#125;console.log(Object.getOwnPropertyDescriptor(obj, 'holly'))// &#123;value: "nice", writable: true, enumerable: true, configurable: true&#125; ​ Object.defineProperty() 第一个参数时对象，第二个参数是对象的某一个属性，第三个参数是要修改的配置；用于创建或配置对象的一个属性的描述符，返回配置后的对象（创建时，如果不针对描述符配置，则该项描述符默认false） 123456789let holly = &#123;&#125;console.log(Object.defineProperty(holly, 'name', &#123; value: 'holly', writable: true&#125;))// &#123;name: "holly"&#125; 返回该对象console.log(Object.getOwnPropertyDescriptor(holly, 'name'))// &#123;value: "holly", writable: true, enumerable: false, configurable: false&#125;// 由于没有配置 enumerable和configurable 为false Object.defineProperties() 第一个参数是该对象，第二个是要修改的属性为键 特性为值组成的对象；用于创建或配置对象的多个属性的描述符，返回配置后的对象。 12345678910111213let desc = &#123;a: 1, b: 2&#125;console.log(Object.defineProperties(desc, &#123; a: &#123; value: 3, enumerable: false &#125;, b: &#123;writable: true&#125;&#125;))// &#123;b: 2, a: 3&#125;console.log(console.log(Object.getOwnPropertyDescriptor(desc, 'a')))// &#123;value: 3, writable: true, enumerable: false, configurable: true&#125;console.log(Object.getOwnPropertyDescriptor(desc, 'b'))// &#123;value: 2, writable: true, enumerable: true, configurable: true&#125; Object.create() 第一个参数指定原型，第二个参数属性和描述符对象；用于指定原型和属性来创建一个对象 1234567let newOne = Object.create(Object.prototype, &#123; a: &#123;value: 'hello', enumerable: true&#125;&#125;)console.log(newOne)// &#123;a: "hello"&#125;console.log(Object.getOwnPropertyDescriptor(newOne,'a'))// &#123;value: "hello", writable: false, enumerable: true, configurable: false&#125; ​ 应用场景 大部分是框架才会用到，比如Vue.js的双向数据绑定]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[移动端前端开发调试工具-vConsole]]></title>
     <url>%2F2018%2F05%2F26%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7-vConsole%2F</url>
     <content type="text"><![CDATA[在写移动网页时，手机上调试可以使用vConsole，类似于谷歌浏览器的f12调试工具。 github地址传送✌ 效果图 console日志 网络请求 页面结构 cookie及本地存储 也可执行输入的js代码 使用方法 装包 1cnpm install vconsole --save-dev main.js中引入并创建实例 12import VConeole from 'vconsole'const vConsole = new VConsole() 由于vConsole只在开发时使用，所以可以根据环境变量进行实例化 12345process.env.NODE_ENV === 'production' ? '' : dev()function dev() &#123; const vConsole = new VConsole() console.log('开发环境启用vconsole')&#125; 遇到的一个小问题当在vue项目中利用vConsole 打印 $refs获取dom就会出现报错 代码如下： 1console.log(this.$refs.app, 555) 报错信息： 最终也打印出来了，不影响功能。 issues 152 提了这个问题 暂时还没有解决]]></content>
@@ -140,10 +151,10 @@
         <category>每日一坑</category>
       </categories>
       <tags>
+        <tag>javascript</tag>
         <tag>移动</tag>
         <tag>踩坑记</tag>
         <tag>ios</tag>
-        <tag>javascript</tag>
       </tags>
   </entry>
   <entry>
@@ -169,9 +180,9 @@
       </categories>
       <tags>
         <tag>Vue</tag>
+        <tag>每日一坑</tag>
         <tag>组件通信</tag>
         <tag>bus</tag>
-        <tag>每日一坑</tag>
       </tags>
   </entry>
 </search>
