@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.hollytree.top/"/>
-  <updated>2018-06-27T06:37:55.313Z</updated>
+  <updated>2018-06-27T06:43:43.089Z</updated>
   <id>https://www.hollytree.top/</id>
   
   <author>
@@ -21,17 +21,14 @@
     <link href="https://www.hollytree.top/2018/06/01/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E7%AC%A6/"/>
     <id>https://www.hollytree.top/2018/06/01/javascript对象的属性描述符/</id>
     <published>2018-06-01T04:45:37.000Z</published>
-    <updated>2018-06-27T06:37:55.313Z</updated>
+    <updated>2018-06-27T06:43:43.089Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;blockquote&gt;
+      &lt;blockquote&gt;
 &lt;p&gt;经常会看到一些技术文章说，可枚举不可枚举，一直很懵。其实就是对象属性描述符中的Enumerable(可没举性)。下面来看看有哪些对象属性描述符~&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/2018/06/01/javascri
-      
+&lt;p&gt;&lt;img src=&quot;/2018/06/01/javascript对象的属性描述符/52ba7205d4c6657a2aabb9f90759393ebda1f88c.gif&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
