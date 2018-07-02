@@ -185,11 +185,11 @@
     
       <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
     
-      <category term="开发" scheme="https://www.hollytree.top/tags/%E5%BC%80%E5%8F%91/"/>
-    
       <category term="组件" scheme="https://www.hollytree.top/tags/%E7%BB%84%E4%BB%B6/"/>
     
       <category term="封装" scheme="https://www.hollytree.top/tags/%E5%B0%81%E8%A3%85/"/>
+    
+      <category term="开发" scheme="https://www.hollytree.top/tags/%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
@@ -413,18 +413,14 @@
     <link href="https://www.hollytree.top/2016/01/02/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E6%A2%B3%E7%90%86/"/>
     <id>https://www.hollytree.top/2016/01/02/前端面试题梳理/</id>
     <published>2016-01-02T02:12:29.000Z</published>
-    <updated>2018-07-02T08:09:30.420Z</updated>
+    <updated>2018-07-02T08:17:16.528Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;blockquote&gt;
+      &lt;blockquote&gt;
 &lt;p&gt;准备面试，个人梳理，比较乱；&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/2016/01/02/前端面试题梳理/d3829b12c8fcc3ced53d04229545d688d53f20b0.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-      
+&lt;p&gt;&lt;img src=&quot;/2016/01/02/前端面试题梳理/d3829b12c8fcc3ced53d04229545d688d53f20b0.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
