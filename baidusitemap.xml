@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://www.hollytree.top/2016/01/02/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E6%A2%B3%E7%90%86/</loc>
+    <lastmod>2018-07-02T08:09:30.420Z</lastmod>
+    <data>
+        <display>
+        <title>前端面试题梳理</title>
+        <pubTime>2016-01-02T02:12:29.000Z</pubTime>
+        
+        <tag>面试题</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.hollytree.top/2018/06/01/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E7%AC%A6/</loc>
     <lastmod>2018-06-27T07:21:50.262Z</lastmod>
     <data>
@@ -217,11 +234,11 @@
         
         <tag>Vue</tag>
          
-        <tag>每日一坑</tag>
-         
         <tag>组件通信</tag>
          
         <tag>bus</tag>
+         
+        <tag>每日一坑</tag>
          
          
            
@@ -243,11 +260,11 @@
         
         <tag>Vue</tag>
          
+        <tag>开发</tag>
+         
         <tag>组件</tag>
          
         <tag>封装</tag>
-         
-        <tag>开发</tag>
          
          
            
