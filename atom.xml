@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.hollytree.top/"/>
-  <updated>2018-06-27T07:21:50.262Z</updated>
+  <updated>2018-07-04T15:46:51.875Z</updated>
   <id>https://www.hollytree.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue项目中的某些webpack配置</title>
+    <link href="https://www.hollytree.top/2018/07/04/Vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E6%9F%90%E4%BA%9Bwebpack%E9%85%8D%E7%BD%AE/"/>
+    <id>https://www.hollytree.top/2018/07/04/Vue项目中的某些webpack配置/</id>
+    <published>2018-07-04T14:47:47.000Z</published>
+    <updated>2018-07-04T15:46:51.875Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;常会用到的一些修改的地方，例如打包忽略console.log,以及为了大小去掉map文件等；&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/07/04/Vue项目中的某些webpack配置/45caeebf6c81800a6380c901b63533fa838b47ee.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="https://www.hollytree.top/categories/Vue/"/>
+    
+    
+      <category term="vue" scheme="https://www.hollytree.top/tags/vue/"/>
+    
+      <category term="webpack" scheme="https://www.hollytree.top/tags/webpack/"/>
+    
+  </entry>
   
   <entry>
     <title>javascript对象的属性描述符</title>
@@ -198,7 +223,7 @@
     <link href="https://www.hollytree.top/2018/03/24/Vuex%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
     <id>https://www.hollytree.top/2018/03/24/Vuex的学习及使用/</id>
     <published>2018-03-24T09:40:58.000Z</published>
-    <updated>2018-06-24T18:52:30.621Z</updated>
+    <updated>2018-07-04T15:50:25.984Z</updated>
     
     <summary type="html">
     
@@ -336,13 +361,13 @@
       <category term="每日一坑" scheme="https://www.hollytree.top/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
     
     
-      <category term="javascript" scheme="https://www.hollytree.top/tags/javascript/"/>
-    
       <category term="移动" scheme="https://www.hollytree.top/tags/%E7%A7%BB%E5%8A%A8/"/>
     
       <category term="踩坑记" scheme="https://www.hollytree.top/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0/"/>
     
       <category term="ios" scheme="https://www.hollytree.top/tags/ios/"/>
+    
+      <category term="javascript" scheme="https://www.hollytree.top/tags/javascript/"/>
     
   </entry>
   
