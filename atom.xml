@@ -400,11 +400,11 @@
     
       <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
     
-      <category term="每日一坑" scheme="https://www.hollytree.top/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
-    
       <category term="组件通信" scheme="https://www.hollytree.top/tags/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
     
       <category term="bus" scheme="https://www.hollytree.top/tags/bus/"/>
+    
+      <category term="每日一坑" scheme="https://www.hollytree.top/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
     
   </entry>
   
@@ -413,7 +413,7 @@
     <link href="https://www.hollytree.top/2016/01/02/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E6%A2%B3%E7%90%86/"/>
     <id>https://www.hollytree.top/2016/01/02/前端面试题梳理/</id>
     <published>2016-01-02T02:12:29.000Z</published>
-    <updated>2018-07-03T15:46:15.783Z</updated>
+    <updated>2018-07-03T17:04:16.995Z</updated>
     
     <summary type="html">
     
