@@ -163,10 +163,10 @@
         <category>每日一坑</category>
       </categories>
       <tags>
+        <tag>javascript</tag>
         <tag>移动</tag>
         <tag>踩坑记</tag>
         <tag>ios</tag>
-        <tag>javascript</tag>
       </tags>
   </entry>
   <entry>
@@ -192,9 +192,9 @@
       </categories>
       <tags>
         <tag>Vue</tag>
+        <tag>每日一坑</tag>
         <tag>组件通信</tag>
         <tag>bus</tag>
-        <tag>每日一坑</tag>
       </tags>
   </entry>
   <entry>
