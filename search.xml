@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[vue风格规范梳理]]></title>
+    <url>%2F2018%2F07%2F14%2Fvue%E9%A3%8E%E6%A0%BC%E8%A7%84%E8%8C%83%E6%A2%B3%E7%90%86%2F</url>
+    <content type="text"><![CDATA[有助于规避冲突，及团队开发。 vue规范梳理 必须的（避免错误冲突） 组件名为多个单词（避免冲突）； 组件中data必须为一个函数，根实例new Vue时可以使用对象的写法； prop定义尽量详细 123456789101112131415161718// 一般规范写法props: &#123; status: String&#125;// 更好的写法 （一般常用的就是type，default 根据实际需求来）props: &#123; sattus:&#123; type: String, // 类型 required: true, // 是否必传 default: '', // 默认值 //default: function() &#123; return &#123;message: 'hello'&#125; &#125;, // 带默认值的对象或数组 validator: function(value) &#123; return ['success', 'warning', 'danger'].indexOf(value) !== -1 &#125; // 自定义验证函数 &#125;&#125; v-for必须配合key (key保证唯一就可以了)； 避免v-if和v-for用在同一个元素上； 实际应用如果需要这样做可以将v-if移至父元素上； 或者将v-for的对象替换为计算属性，返回已经过滤掉后的数据（computed）； 为组件样式设置作用域 也就是style标签上加scoped(只作用于当前组件)，或者class策略； mixin和插件等扩展中的私有属性命名，推荐使用$_前缀； 强烈推荐（增强可读性） 组件单独用一个文件分开，方便查找使用； 单文件组件命名单词大写开头或者-分隔（HollyTree or holly-tree）; 基础组件命名以特定的前缀开头 如Base V 等； 单例组件名（每个页面只使用一次不接受prop）用 The前缀； 与父组件紧密耦合的子组件应以父组件名为前缀； 组件名中单词顺序，以高级别单词开头，描述性修饰词结尾； 组件名大小写 (分不清各种模板暂时都这样写也没问题) js中组件名首字母大写驼峰MyComponent; prop名大小写js中使用驼峰,html中-分隔； 12345678props: &#123; hollyTree: &#123; type: String, default: '' &#125;&#125;// 组件上使用时holly-tree 多个特性的元素上，每个特性一行（易读）； 12345&lt;holly-tree :type="a" :flag="true" :status="200"&gt;&lt;/holly-tree&gt; 模板中只包含简单的表达式，复杂的逻辑则应该写在方法或计算属性里； 复杂的计算属性分割为多个简单的属性； 标签上的属性值带“” 或 ‘’； 缩写 用：表示v-bing @表示v-on: ； 推荐 组件/实例的顺序；（所有的都放一个实例里了，实际使用时不可能这样） 123456789101112131415161718192021222324252627282930313233343536373839export default(&#123; el: '', name: '', parent: '', functional: true, delimiters: ['$&#123;', '&#125;'], comments: true, components: &#123;&#125;, directives: &#123;&#125;, filters: &#123;&#125;, extends: &#123;&#125;, mixins: [], inheritAttrs: true, model: &#123;&#125;, props: &#123;&#125;, data()&#123; return &#123; &#125; &#125;, computed: &#123;&#125;, watch: &#123;&#125;, //生命周期 beforeCreate() &#123;&#125;, created()&#123;&#125;, beforeMount()&#123;&#125;, mounted()&#123;&#125;, beforeUpdate()&#123;&#125;, updated()&#123;&#125;, activated()&#123;&#125;, deactivated()&#123;&#125;, beforeDestory()&#123;&#125;, destroyed()&#123;&#125; //非响应式属性 methods: &#123;&#125;, // 渲染 template/render()&#123;&#125;, renderError()&#123;&#125; ) 元素特性顺序； 定义 is 列表渲染 v-for 条件渲染 v-if,v-else-if,v-else,v-show,-v-cloak 渲染方式 v-pre,v-once 全局 id 唯一特性 ref,key,slot 双向绑定 v-model 其他特性 事件 v-on 内容 v-html,v-text 实例中空行（易读）； 顶级元素顺序 template script style 或12互换 保持一致； 谨慎使用 v-if,v-else使用时最好都加key,避免莫名其妙的问题； scoped中避免使用元素选择器，用类选择器； 优先使用prop和事件进行父子组件通信，避免使用this.$parent 优先使用vuex做全局状态管理而不是this.$root或全局事件总栈]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>规范</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS:高度自适应的方法]]></title>
+    <url>%2F2018%2F07%2F05%2FCSS-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>高度自适应</tag>
+        <tag>布局</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Vue项目中的某些webpack配置]]></title>
     <url>%2F2018%2F07%2F04%2FVue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E6%9F%90%E4%BA%9Bwebpack%E9%85%8D%E7%BD%AE%2F</url>
     <content type="text"><![CDATA[常会用到的一些修改的地方，例如打包忽略console.log,以及为了大小去掉map文件等； webpack配置开发与打包后请求接口 本地开发时和部署项目时我们的请求接口是不一样的，除了定义一个常量手动修改，webpack可以配置吗，可以的！ ​ 1.修改开发环境以及正式环境的配置 config文件夹下有两个文件 dev.env.js ：这里可以配置开发环境的接口 123456module.export = merge(prodEnv, &#123; NODE_ENV: '"development"', // 加上下面这句 HOST_API: '"http://localhost:8080"' // 这里写你自己定义的属性 后面是本地开发时请求的接口&#125;) ​ prod.env.js 12// 也是加上HOST_API: "'http://localhost:8888"' ​ 最后 axios.defaults.baseURL = HOST_API 就可以了 2.通过 process.env.NODE_ENV来写判断123process.env.NODE_ENV === "development" // 开发环境process.env.NODE_ENV === "production" //配置环境// development production 与 config/dev.env.js 和 config/prod.env.js 是对应的 webpack打包去掉console.log以及map文件 去掉conosle.log以及debuger 123456789// 在build/webpack.prod.conf.js里 new webpack.optimize.UglifyJsPlugin(&#123; compress: &#123; warnings: false, drop_debugger: true, / drop_console: true &#125;, sourceMap: true &#125;), 去掉打包后的map文件 12345// 在config/index.js文件里build&#123; productionSourceMap: false&#125;// 但其实线上map文件可以定位错误 如果需要定位问题可以设为true ​ webpack中添加引入文件的别名 build/webpack.base.conf.js里 123456789 resolve: &#123; extensions: ['.js', '.vue', '.json'], alias: &#123; 'vue$': 'vue/dist/vue.esm.js', '@': resolve('src'), 'common': resolve('src/common') &#125; &#125;// 这样import from时 common可以代替src/common ,@可以代替src 配置本地开发转发代理 config/index.js中的dev队形中 12345678910111213dev: &#123; proxyTable: &#123; '/api': &#123; target: 'http://www.baidu.com', changeOrigin: true, pathRewrite: &#123; '^/api' &#125; &#125; &#125;&#125;// 当请求的url为api时 会转发到target// 最终实际发出的请求时target 局域网内通过ip访问本地vue-cli搭建的项目 在config/index.js中奖默认的host:localhost修改为‘0.0.0.0’ 在package.json中是script下的dev的值，后面加上 –host 0.0.0.0 这样通过localhost和ip都可以访问到，直接修改为ip的方式localhost是访问不到的]]></content>
@@ -163,10 +187,10 @@
         <category>每日一坑</category>
       </categories>
       <tags>
-        <tag>javascript</tag>
         <tag>移动</tag>
         <tag>踩坑记</tag>
         <tag>ios</tag>
+        <tag>javascript</tag>
       </tags>
   </entry>
   <entry>
@@ -192,9 +216,9 @@
       </categories>
       <tags>
         <tag>Vue</tag>
-        <tag>每日一坑</tag>
         <tag>组件通信</tag>
         <tag>bus</tag>
+        <tag>每日一坑</tag>
       </tags>
   </entry>
   <entry>
