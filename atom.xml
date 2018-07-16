@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.hollytree.top/"/>
-  <updated>2018-07-16T13:56:06.398Z</updated>
+  <updated>2018-07-16T14:08:43.510Z</updated>
   <id>https://www.hollytree.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.hollytree.top/2018/07/16/CSS%E6%8F%AD%E7%A7%98-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     <id>https://www.hollytree.top/2018/07/16/CSS揭秘-读书笔记/</id>
     <published>2018-07-16T05:27:11.000Z</published>
-    <updated>2018-07-16T13:56:06.398Z</updated>
+    <updated>2018-07-16T14:08:43.510Z</updated>
     
     <summary type="html">
     
@@ -33,6 +33,12 @@
     
     </summary>
     
+      <category term="CSS" scheme="https://www.hollytree.top/categories/CSS/"/>
+    
+    
+      <category term="css" scheme="https://www.hollytree.top/tags/css/"/>
+    
+      <category term="读书笔记" scheme="https://www.hollytree.top/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
