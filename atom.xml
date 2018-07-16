@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.hollytree.top/"/>
-  <updated>2018-07-15T16:05:04.902Z</updated>
+  <updated>2018-07-16T13:56:06.398Z</updated>
   <id>https://www.hollytree.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS揭秘-读书笔记</title>
+    <link href="https://www.hollytree.top/2018/07/16/CSS%E6%8F%AD%E7%A7%98-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>https://www.hollytree.top/2018/07/16/CSS揭秘-读书笔记/</id>
+    <published>2018-07-16T05:27:11.000Z</published>
+    <updated>2018-07-16T13:56:06.398Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;CSS如今面临的挑战是：在保证DRY、可维护、灵活性、轻量级并且尽可能符合标准的前提下，把我们手中的这些css特性转化为网易中的各种创意。（作者为W3C特邀专家，强调 CSS 代码的 DRY 原则是一个贯穿本书的主题，提供了很多css技巧）&lt;/p&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>vue风格规范梳理</title>
@@ -38,26 +58,6 @@
       <category term="vue" scheme="https://www.hollytree.top/tags/vue/"/>
     
       <category term="规范" scheme="https://www.hollytree.top/tags/%E8%A7%84%E8%8C%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS:高度自适应的方法</title>
-    <link href="https://www.hollytree.top/2018/07/05/CSS-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94/"/>
-    <id>https://www.hollytree.top/2018/07/05/CSS-如何实现高度自适应/</id>
-    <published>2018-07-04T16:03:59.000Z</published>
-    <updated>2018-07-04T17:05:13.475Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="CSS" scheme="https://www.hollytree.top/categories/CSS/"/>
-    
-    
-      <category term="高度自适应" scheme="https://www.hollytree.top/tags/%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94/"/>
-    
-      <category term="布局" scheme="https://www.hollytree.top/tags/%E5%B8%83%E5%B1%80/"/>
     
   </entry>
   
@@ -255,11 +255,11 @@
     
       <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
     
+      <category term="开发" scheme="https://www.hollytree.top/tags/%E5%BC%80%E5%8F%91/"/>
+    
       <category term="组件" scheme="https://www.hollytree.top/tags/%E7%BB%84%E4%BB%B6/"/>
     
       <category term="封装" scheme="https://www.hollytree.top/tags/%E5%B0%81%E8%A3%85/"/>
-    
-      <category term="开发" scheme="https://www.hollytree.top/tags/%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
@@ -406,13 +406,13 @@
       <category term="每日一坑" scheme="https://www.hollytree.top/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
     
     
+      <category term="javascript" scheme="https://www.hollytree.top/tags/javascript/"/>
+    
       <category term="移动" scheme="https://www.hollytree.top/tags/%E7%A7%BB%E5%8A%A8/"/>
     
       <category term="踩坑记" scheme="https://www.hollytree.top/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0/"/>
     
       <category term="ios" scheme="https://www.hollytree.top/tags/ios/"/>
-    
-      <category term="javascript" scheme="https://www.hollytree.top/tags/javascript/"/>
     
   </entry>
   
