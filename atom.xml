@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.hollytree.top/"/>
-  <updated>2018-07-16T14:16:02.652Z</updated>
+  <updated>2018-07-17T16:04:28.766Z</updated>
   <id>https://www.hollytree.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>生成SSH密钥添加到github</title>
+    <link href="https://www.hollytree.top/2018/07/17/%E7%94%9F%E6%88%90SSH%E5%AF%86%E9%92%A5%E6%B7%BB%E5%8A%A0%E5%88%B0github/"/>
+    <id>https://www.hollytree.top/2018/07/17/生成SSH密钥添加到github/</id>
+    <published>2018-07-17T01:56:20.000Z</published>
+    <updated>2018-07-17T16:04:28.766Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;一个新项目git push推送到GitHub远程仓库时偶尔会遇到需要输入账号密码登陆的情况。可以生成SSH密钥添加到GitHub，免密推送。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/07/17/生成SSH密钥添加到
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://www.hollytree.top/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="github" scheme="https://www.hollytree.top/tags/github/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS揭秘-读书笔记</title>
