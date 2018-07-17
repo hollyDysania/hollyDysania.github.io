@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[生成SSH密钥添加到github]]></title>
     <url>%2F2018%2F07%2F17%2F%E7%94%9F%E6%88%90SSH%E5%AF%86%E9%92%A5%E6%B7%BB%E5%8A%A0%E5%88%B0github%2F</url>
-    <content type="text"><![CDATA[一个新项目git push推送到GitHub远程仓库时偶尔会遇到需要输入账号密码登陆的情况。可以生成SSH密钥添加到GitHub，免密推送。 Step1检查本机现有的SSH密钥1$ ls -al ~/.ssh 如果有以下任意文件： id_dsa.pub id_ecdsa.pub id_ed25519.pub id_rsa.pub 直接跳至Step3 Step2创建一个新的SSH密钥1$ ssh-keygen -t rsa -C "注册Github用的邮箱" 一路回车 Step3复制SSH密钥1$ clip &lt; ~/.ssh/id_rsa.pub 这段命令是复制到剪切板 也可以手动复制 路径为C:\Users\Administrator.ssh\id_rsa.pub Step4添加到GitHubGitHub 在页面的用户栏的右上角，单击 Settings ； 在左侧边栏点击 SSH and GPG keys.； 点击 New SSH key ； 写个title 粘贴您的钥匙插入 Key 区域中； 点击 Add SSH key ； 确认通过输入操作GitHub的密码。]]></content>
+    <content type="text"><![CDATA[一个新项目git push推送到GitHub远程仓库时偶尔会遇到需要输入账号密码登陆的情况。可以生成SSH密钥添加到GitHub，免密推送。 1.检查本机现有的SSH密钥1$ ls -al ~/.ssh 如果有以下任意文件： id_dsa.pub id_ecdsa.pub id_ed25519.pub id_rsa.pub 直接跳至Step3 2.创建一个新的SSH密钥1$ ssh-keygen -t rsa -C "注册Github用的邮箱" 一路回车 3.复制SSH密钥1$ clip &lt; ~/.ssh/id_rsa.pub 这段命令是复制到剪切板 也可以手动复制 路径为C:\Users\Administrator.ssh\id_rsa.pub 4.添加到GitHubGitHub 在页面的用户栏的右上角，单击 Settings ； 在左侧边栏点击 SSH and GPG keys.； 点击 New SSH key ； 写个title 粘贴您的钥匙插入 Key 区域中； 点击 Add SSH key ； 确认通过输入操作GitHub的密码。]]></content>
       <categories>
         <category>工具</category>
       </categories>
