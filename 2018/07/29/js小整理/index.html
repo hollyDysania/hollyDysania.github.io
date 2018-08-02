@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+
+
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="CaEqZw1UZQsCqgsS" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo@2x.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo@2x.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo@2x.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo@2x.png?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="小记," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Holly-小站" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="偶尔过一遍js知识">
+<meta name="keywords" content="小记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js小整理">
+<meta property="og:url" content="https://www.hollytree.top/2018/07/29/js小整理/index.html">
+<meta property="og:site_name" content="Holly-小站">
+<meta property="og:description" content="偶尔过一遍js知识">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://www.hollytree.top/2018/07/29/js小整理/5c07f343ad4bd1136db9914a5dafa40f4afb05e7.jpg">
+<meta property="og:updated_time" content="2018-08-02T16:02:45.839Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js小整理">
+<meta name="twitter:description" content="偶尔过一遍js知识">
+<meta name="twitter:image" content="https://www.hollytree.top/2018/07/29/js小整理/5c07f343ad4bd1136db9914a5dafa40f4afb05e7.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+
+
+
+
+  <title>js小整理 | Holly-小站</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?18e73a1d2b1353bbdc9d30039a704270";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband">
+    </div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">{ Holly-小站 }</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">holly blog</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.hollytree.top/2018/07/29/js小整理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="holly">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Holly-小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">js小整理</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-29T10:35:57+08:00">
+                2018-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/温故/" itemprop="url" rel="index">
+                    <span itemprop="name">温故</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,794 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>偶尔过一遍js知识</p>
+</blockquote>
+<p><img src="/2018/07/29/js小整理/5c07f343ad4bd1136db9914a5dafa40f4afb05e7.jpg" alt=""></p>
+  <a id="more"></a>
+<h3 id="1-typeof"><a href="#1-typeof" class="headerlink" title="1.typeof"></a>1.typeof</h3><ul>
+<li>对于基本类型除了null都可以显示正确的类型</li>
+<li>对于对象，除了函数都会显示object</li>
+<li>对于null会显示object</li>
+</ul>
+<p><code>可以使用Object.prototype.toString.call(xxx)获得正确类型</code>返回类似[Object Type]的字符串</p>
+<h3 id="2-类型转换"><a href="#2-类型转换" class="headerlink" title="2.类型转换"></a>2.类型转换</h3><ul>
+<li><p>转Boolean</p>
+<p>条件判断除了undefined,null,false,NaN,’’,0,-0 其他所有值都转为true</p>
+</li>
+<li><p>对象转基本类型：首先会调用valueOf然后调用toString。并且这两个方法可以重写。</p>
+<p>Symbol.toPrimitive 也可以重写,该方法在转基本类型时调用优先级最高。</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = &#123;</span><br><span class="line">  valueOf() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  toString() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'1'</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  [<span class="built_in">Symbol</span>.toPrimitive]() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">num </span><br><span class="line"><span class="comment">// &#123;valueOf: ƒ, toString: ƒ, Symbol(Symbol.toPrimitive): ƒ&#125;</span></span><br><span class="line"><span class="number">1</span>+num </span><br><span class="line"><span class="comment">// 3</span></span><br><span class="line"><span class="string">'1'</span>+num </span><br><span class="line"><span class="comment">// '12'</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>四则运算符：加法运算时，其中一方时字符串类型就会把另一个也转化为字符串类型。</p>
+<p>其他运算只要其中一方是数字，那么另一方就转为数字。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>,<span class="number">2</span>] + [<span class="number">2</span>,<span class="number">1</span>] <span class="comment">// '1,22,1'</span></span><br><span class="line"><span class="comment">// 加法会触发三种类型转换：将值转换为原始值，转换为数字，转换为字符串</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="3-原型"><a href="#3-原型" class="headerlink" title="3.原型"></a>3.原型</h3><h4 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h4><p><code>基本上所有的函数都有这个属性，除了Function.prototype.bind()创建的对象</code></p>
+<ul>
+<li><p>声明一个函数时，这个属性就被自动创建了</p>
+</li>
+<li><p>这个属性的值是一个对象（也就是原型），只有一个属性constructor</p>
+</li>
+<li><p>constructor对应构造函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fn</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">Fn.prototype <span class="comment">// &#123;constructor: ƒ&#125;</span></span><br></pre></td></tr></table></figure>
+<p>constructor是一个共有且不可枚举的属性。一旦我们改变了函数的prototype，那么这个对象就没有这个属性了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Fn.prototype = &#123;<span class="attr">a</span>: <span class="number">1</span>&#125;</span><br><span class="line">Fn.prototype <span class="comment">// &#123;a: 1&#125;</span></span><br></pre></td></tr></table></figure>
+<p>constructor属性的作用</p>
+<ul>
+<li>让实例对象知道是什么函数构造了它</li>
+<li>如果想给某类库中的构造函数增加一些自定义的方法，就可以通过xx.constructor.method来扩展</li>
+</ul>
+</li>
+</ul>
+<h4 id="proto"><a href="#proto" class="headerlink" title=" proto "></a><strong> proto </strong></h4><p><code>这是每个对象都有的隐式原型，指向创建该对象的构造函数原型</code></p>
+<p>因为在js中没有类的概念，为了实现类似继承的方式，通过<strong> proto </strong>将对象的原型联系起来组成原型链，得以让对象可以访问到不属于自己的属性。</p>
+<ul>
+<li><p>实例对象<strong> proto </strong>的 产生: 使用new操作符时，生成的实例对象拥有<strong> </strong> proto __属性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fn</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="comment">// 这个函数是Function的实例对象 function是个语法糖 内部调用了 new Function</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
+<li>Object是所有对象的爸爸，所有对象都可以通过<strong> proto</strong> 找到它</li>
+<li>Function是所有函数的爸爸，同上</li>
+<li>Function.prototype和Object.prototype是两个特殊的对象，他们由引擎创建</li>
+<li>除了以上两个特殊对象，其他对象都是通过构造器new出来的</li>
+<li>函数的prototype是一个对象也就是原型</li>
+<li>对象的<strong> proto </strong>指向原型，<strong> </strong> proto __将对象和原型链接起来组成原型链</li>
+</ul>
+<h3 id="4-New"><a href="#4-New" class="headerlink" title="4.New"></a>4.New</h3><ul>
+<li>new的过程<ul>
+<li>新生成一个对象</li>
+<li>链接到原型</li>
+<li>绑定this</li>
+<li>返回新对象</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 调用new时发生的四件事，试着实现一个new</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">create</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 创建一个空对象</span></span><br><span class="line">    <span class="keyword">let</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>()</span><br><span class="line">    <span class="comment">// 获得构造函数 也就是传进来的第一个参数</span></span><br><span class="line">    <span class="keyword">let</span> Con = [].shift.call(<span class="built_in">arguments</span>)</span><br><span class="line">   	<span class="comment">// 链接到原型</span></span><br><span class="line">    obj.__proto__ = Con.prototype</span><br><span class="line">    <span class="comment">// 绑定this执行构造函数</span></span><br><span class="line">    <span class="keyword">let</span> result = Con.apply(obj, <span class="built_in">arguments</span>)</span><br><span class="line">    <span class="comment">// 确保new出来的是一个对象</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">typeof</span> result === <span class="string">'object'</span> ? result : obj</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>new 运算符优先级</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span></span><br><span class="line">&#125;</span><br><span class="line">Fn.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'1'</span>)</span><br><span class="line">&#125;</span><br><span class="line">Fn.prototype.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'2'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">new</span> Fn.getName() <span class="comment">// 1</span></span><br><span class="line"><span class="keyword">new</span> Fn().getName() <span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line">-------------执行顺序-------------</span><br><span class="line"><span class="keyword">new</span> (Fn.getName())</span><br><span class="line">(<span class="keyword">new</span> Fn()).getName()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="5-Instanceof"><a href="#5-Instanceof" class="headerlink" title="5.Instanceof"></a>5.Instanceof</h3><p><code>可以正确判断对象的类型，内部机制是通过判断对象的原型链中是不是能找到类型的prototype.</code></p>
+<h3 id="6-this"><a href="#6-this" class="headerlink" title="6.this"></a>6.this</h3><ul>
+<li>有对象调用: 指向调用它的对象</li>
+<li>没有对象调用: 指向window</li>
+<li>new出来的实例: 指向实例</li>
+<li>call apply bind 改变指向传入的对象</li>
+<li><code>箭头函数没有this，this指向取决于箭头函数外第一个不是箭头函数的函数</code></li>
+</ul>
+<h3 id="7-闭包"><a href="#7-闭包" class="headerlink" title="7.闭包"></a>7.闭包</h3><p>函数A返回一个函数B，并且B中使用了函数A的变量，函数B就被称为闭包</p>
+<h3 id="8-深拷贝浅拷贝"><a href="#8-深拷贝浅拷贝" class="headerlink" title="8.深拷贝浅拷贝"></a>8.深拷贝浅拷贝</h3><p>一个变量赋值一个对象，那么两者的值引用同一个，其中一方改变，另一个相应改变。实际业务重要解决这个问题</p>
+<h4 id="1-浅拷贝-assign"><a href="#1-浅拷贝-assign" class="headerlink" title="1.浅拷贝 assign"></a>1.浅拷贝 assign</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#123;</span><br><span class="line">    age: <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> b = <span class="built_in">Object</span>.assign(&#123;&#125;, a)</span><br><span class="line">a.age = <span class="number">2</span></span><br><span class="line"><span class="built_in">console</span>.log(b.age) <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>扩展运算符 …</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#123;</span><br><span class="line">    age: <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> b = &#123;...a&#125;</span><br><span class="line">a.age = <span class="number">2</span></span><br><span class="line"><span class="built_in">console</span>.log(b.age) <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p><code>浅拷贝只能解决第一层问题，如果接下去的值里还有对象，就需要深拷贝</code></p>
+<h4 id="2-深拷贝-JSON-parse-JSON-stringify-object"><a href="#2-深拷贝-JSON-parse-JSON-stringify-object" class="headerlink" title="2.深拷贝 JSON.parse(JSON.stringify(object))"></a>2.深拷贝 JSON.parse(JSON.stringify(object))</h4><p>局限</p>
+<ul>
+<li>忽略undefined</li>
+<li>不能序列化函数</li>
+<li>不能解决循环引用的对象</li>
+</ul>
+<p>如果有以上三种情况 可以使用<code>lodash</code>的深拷贝函数</p>
+<h3 id="9-防抖和继承"><a href="#9-防抖和继承" class="headerlink" title="9.防抖和继承"></a>9.防抖和继承</h3><p>防抖多次执行变为最后一次执行，节流每隔一段时间执行，不频繁执行</p>
+<h3 id="10-继承"><a href="#10-继承" class="headerlink" title="10.继承"></a>10.继承</h3><p>ES5 Object.create()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Super</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">Super.prototype.getNumber = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Sub</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="keyword">let</span> s = <span class="keyword">new</span> Sub()</span><br><span class="line">Sub.prototype = <span class="built_in">Object</span>.create(Super.prototype, &#123;</span><br><span class="line">  <span class="keyword">constructor</span>: &#123;</span><br><span class="line">    value: Sub,</span><br><span class="line">    enumerable: <span class="literal">false</span>,</span><br><span class="line">    writable: <span class="literal">true</span>,</span><br><span class="line">    configurable: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 以Sub为构造函数以Super为原型</span></span><br></pre></td></tr></table></figure>
+<h2 id="浏览器小结"><a href="#浏览器小结" class="headerlink" title="浏览器小结"></a>浏览器小结</h2><h3 id="1-Event-loop"><a href="#1-Event-loop" class="headerlink" title="1.Event loop"></a>1.Event loop</h3><p><code>js执行过程中产生执行环境，这些执行环境会被顺序的加入到执行栈中。如果遇到异步代码，会被挂起并加入到Task队列中。一旦执行栈为空，Event Loop 就会从Task队列中拿出需要执行的代码并放入执行栈中执行</code></p>
+<ul>
+<li><p>不同的任务源会被分配到不同的Task队列中，任务源可以分为</p>
+<ul>
+<li><p>微任务（microtask） ES6中称为jobs 包括：</p>
+<ul>
+<li>process.nextTick</li>
+<li>promise </li>
+<li>Object.observe </li>
+<li>MutationObserver</li>
+</ul>
+</li>
+<li><p>宏任务（macrotask）ES6中称为task</p>
+<ul>
+<li>script</li>
+<li>setTimeout</li>
+<li>setInterval</li>
+<li>setImmediate</li>
+<li>I/O</li>
+<li>UI rendering</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Event loop顺序</p>
+<ul>
+<li>执行同步代码，这属于宏任务</li>
+<li>执行栈为空，查询是否有微任务需要执行</li>
+<li>执行所有微任务</li>
+<li>必要的话渲染UI</li>
+<li>然后开始下一轮Event loop，执行红任务中的异步代码</li>
+</ul>
+<h3 id="2-渲染机制"><a href="#2-渲染机制" class="headerlink" title="2.渲染机制"></a>2.渲染机制</h3><ul>
+<li>处理html并构建dom树</li>
+<li>处理css构建cssdom树</li>
+<li>将dom和cssdom合并成一个渲染树</li>
+<li>根据渲染树的布局，计算每个节点的位置</li>
+<li>调用GPU绘制， 合成图层，显示在屏幕上</li>
+</ul>
+<h3 id="3-重绘（Repaint）和回流-Reflow"><a href="#3-重绘（Repaint）和回流-Reflow" class="headerlink" title="3.重绘（Repaint）和回流(Reflow)"></a>3.重绘（Repaint）和回流(Reflow)</h3><ul>
+<li><p>重绘是当前节点需要更改外观而不会影响布局，比如改变color就称为重绘</p>
+</li>
+<li><p>回流是布局或者几何属性需要改变</p>
+<p><code>回流必定发生重绘，重绘不一定引发回流。回流所需的成本比重绘高的多，改变深层次的节点很有可能导致父节点一些了回流。</code></p>
+</li>
+<li><p>导致性能问题的几个点</p>
+<ul>
+<li>改变 window 大小</li>
+<li>改变字体</li>
+<li>添加或删除样式</li>
+<li>文字改变</li>
+<li>定位或者浮动</li>
+<li>盒模型</li>
+</ul>
+</li>
+</ul>
+<p>  参考链接: <a href="https://yuchengkai.cn/docs/zh/frontend/" target="_blank" rel="noopener">https://yuchengkai.cn/docs/zh/frontend/</a></p>
+
+      
+    </div>
+    
+    
+    
+    
+      <div> 
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束------</div>
+    
+</div>
+
+      </div>
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.jpg" alt="holly 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="holly 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    holly
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.hollytree.top/2018/07/29/js小整理/" title="js小整理">https://www.hollytree.top/2018/07/29/js小整理/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/小记/" rel="tag"><i class="fa fa-tag"></i> 小记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/16/CSS揭秘-读书笔记/" rel="next" title="CSS揭秘-读书笔记">
+                <i class="fa fa-chevron-left"></i> CSS揭秘-读书笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/30/javaScript高级程序设计-读书笔记/" rel="prev" title="javaScript高级程序设计-读书笔记">
+                javaScript高级程序设计-读书笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNTYzNS8xMjE3MQ=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="holly" />
+            
+              <p class="site-author-name" itemprop="name">holly</p>
+              <p class="site-description motion-element" itemprop="description">加油</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/hollyDysania" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="holly_dysania@sina.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/search?q=vue" title="segmentfault-vue" target="_blank">segmentfault-vue</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://juejin.im/search?query=vue" title="掘金-vue" target="_blank">掘金-vue</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.xiuyuan.info/" title="漫步编程" target="_blank">漫步编程</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-typeof"><span class="nav-number">1.</span> <span class="nav-text">1.typeof</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-类型转换"><span class="nav-number">2.</span> <span class="nav-text">2.类型转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-原型"><span class="nav-number">3.</span> <span class="nav-text">3.原型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#prototype"><span class="nav-number">3.1.</span> <span class="nav-text">prototype</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#proto"><span class="nav-number">3.2.</span> <span class="nav-text"> proto </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">3.3.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-New"><span class="nav-number">4.</span> <span class="nav-text">4.New</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Instanceof"><span class="nav-number">5.</span> <span class="nav-text">5.Instanceof</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-this"><span class="nav-number">6.</span> <span class="nav-text">6.this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-闭包"><span class="nav-number">7.</span> <span class="nav-text">7.闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-深拷贝浅拷贝"><span class="nav-number">8.</span> <span class="nav-text">8.深拷贝浅拷贝</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-浅拷贝-assign"><span class="nav-number">8.1.</span> <span class="nav-text">1.浅拷贝 assign</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-深拷贝-JSON-parse-JSON-stringify-object"><span class="nav-number">8.2.</span> <span class="nav-text">2.深拷贝 JSON.parse(JSON.stringify(object))</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-防抖和继承"><span class="nav-number">9.</span> <span class="nav-text">9.防抖和继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-继承"><span class="nav-number">10.</span> <span class="nav-text">10.继承</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器小结"><span class="nav-number"></span> <span class="nav-text">浏览器小结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Event-loop"><span class="nav-number">1.</span> <span class="nav-text">1.Event loop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-渲染机制"><span class="nav-number">2.</span> <span class="nav-text">2.渲染机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-重绘（Repaint）和回流-Reflow"><span class="nav-number">3.</span> <span class="nav-text">3.重绘（Repaint）和回流(Reflow)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">holly</span>
+  <span class="post-meta-divider">|</span>
+  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">37.7k</span>
+  
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>

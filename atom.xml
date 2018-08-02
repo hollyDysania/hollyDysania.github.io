@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.hollytree.top/"/>
-  <updated>2018-07-17T16:12:45.054Z</updated>
+  <updated>2018-08-02T15:58:47.988Z</updated>
   <id>https://www.hollytree.top/</id>
   
   <author>
@@ -17,25 +17,169 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>生成SSH密钥添加到github</title>
-    <link href="https://www.hollytree.top/2018/07/17/%E7%94%9F%E6%88%90SSH%E5%AF%86%E9%92%A5%E6%B7%BB%E5%8A%A0%E5%88%B0github/"/>
-    <id>https://www.hollytree.top/2018/07/17/生成SSH密钥添加到github/</id>
-    <published>2018-07-17T01:56:20.000Z</published>
-    <updated>2018-07-17T16:12:45.054Z</updated>
+    <title>手机端判断滚动条到达底部</title>
+    <link href="https://www.hollytree.top/2018/08/02/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%88%A4%E6%96%AD%E6%BB%9A%E5%8A%A8%E6%9D%A1%E5%88%B0%E8%BE%BE%E5%BA%95%E9%83%A8%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://www.hollytree.top/2018/08/02/移动端判断滚动条到达底部遇到的问题/</id>
+    <published>2018-08-02T06:12:41.000Z</published>
+    <updated>2018-08-02T15:58:47.988Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;一个新项目git push推送到GitHub远程仓库时偶尔会遇到需要输入账号密码登陆的情况。可以生成SSH密钥添加到GitHub，免密推送。&lt;/p&gt;
+&lt;p&gt;最近项目里要做一个滚动条滑动到底部再上垃就翻页的效果，手机谷歌浏览器判断出现偏差，原因是因为获取视窗高度时与其他浏览器不同，需要兼容写法。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/2018/07/17/生成SSH密钥添加到github/d7ba9c4bd660ec09ac68e78d5ac47c1d10257d7b.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/08/02/移动端判断滚动条到达底部遇到的问题/7383b2ef76c6a7efae47ed2afafaaf51f2de66ef.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
     
     </summary>
     
-      <category term="工具" scheme="https://www.hollytree.top/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="每日一坑" scheme="https://www.hollytree.top/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
     
     
-      <category term="github" scheme="https://www.hollytree.top/tags/github/"/>
+      <category term="移动端，javascript" scheme="https://www.hollytree.top/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%EF%BC%8Cjavascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vuex持久化插件-解决刷新数据消失的问题</title>
+    <link href="https://www.hollytree.top/2018/08/02/Vuex%E6%8C%81%E4%B9%85%E5%8C%96%E6%8F%92%E4%BB%B6-%E8%A7%A3%E5%86%B3%E5%88%B7%E6%96%B0%E6%95%B0%E6%8D%AE%E6%B6%88%E5%A4%B1%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://www.hollytree.top/2018/08/02/Vuex持久化插件-解决刷新数据消失的问题/</id>
+    <published>2018-08-02T05:13:15.000Z</published>
+    <updated>2018-08-02T15:52:25.369Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;vuex可以进行全局的状态管理，但刷新后刷新后数据会消失，这是我们不愿意看到的。怎么解决呢，我们可以结合本地存储做到数据持久化，也可以通过插件-&lt;strong&gt;vuex-persistedstate&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/08/02/Vuex持久化插件-解决刷新数据消失的问题/0105560c89d1453d3f9653e92450e0d7a9738415.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="vuex" scheme="https://www.hollytree.top/categories/vuex/"/>
+    
+    
+      <category term="插件" scheme="https://www.hollytree.top/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图解HTTP读书笔记</title>
+    <link href="https://www.hollytree.top/2018/08/01/%E5%9B%BE%E8%A7%A3HTTP%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>https://www.hollytree.top/2018/08/01/图解HTTP读书笔记/</id>
+    <published>2018-08-01T02:12:29.000Z</published>
+    <updated>2018-08-02T15:17:38.091Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;一起来系统的学习一下http协议吧~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/08/01/图解HTTP读书笔记/20180801093326.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="网络协议" scheme="https://www.hollytree.top/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"/>
+    
+      <category term="HTTP" scheme="https://www.hollytree.top/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/HTTP/"/>
+    
+    
+      <category term="HTTP" scheme="https://www.hollytree.top/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>横向滑动以及图片拼凑遮罩</title>
+    <link href="https://www.hollytree.top/2018/07/31/css%E5%B0%8F%E8%AE%B0-%E6%A8%AA%E5%90%91%E6%BB%91%E5%9D%97%E5%8F%8A%E6%8B%BC%E5%87%91%E9%81%AE%E7%BD%A9%E5%9B%BE/"/>
+    <id>https://www.hollytree.top/2018/07/31/css小记-横向滑块及拼凑遮罩图/</id>
+    <published>2018-07-31T09:43:27.000Z</published>
+    <updated>2018-08-02T15:17:38.063Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;css小记：横向滑动以及图片拼凑遮罩&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;横向滑动&quot;&gt;&lt;a href=&quot;#横向滑动&quot; class=&quot;headerlink&quot; title=&quot;横向滑动&quot;&gt;&lt;/a&gt;横向滑动&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;效果：&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/07/31/css小记-横向滑块及拼凑遮罩图/assdfsd.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="CSS" scheme="https://www.hollytree.top/categories/CSS/"/>
+    
+    
+      <category term="CSS小记" scheme="https://www.hollytree.top/tags/CSS%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP缓存/浏览器缓存</title>
+    <link href="https://www.hollytree.top/2018/07/31/HTTP%E7%BC%93%E5%AD%98-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/"/>
+    <id>https://www.hollytree.top/2018/07/31/HTTP缓存-浏览器缓存/</id>
+    <published>2018-07-30T16:23:58.000Z</published>
+    <updated>2018-08-02T16:27:49.226Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;浏览器缓存就是把已经请求过的web资源拷贝一份副本存储在浏览器中，第二次请求时会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;浏览器对于缓存的处理是根据第一次请求资源时返回的响应头来确定的也就是Response Headers&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/07/31/HTTP缓存-浏览器缓存/43e93ac79f3df8dc9ef5821bc511728b46102811.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="HTTP" scheme="https://www.hollytree.top/categories/HTTP/"/>
+    
+    
+      <category term="缓存" scheme="https://www.hollytree.top/tags/%E7%BC%93%E5%AD%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javaScript高级程序设计-读书笔记</title>
+    <link href="https://www.hollytree.top/2018/07/30/javaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>https://www.hollytree.top/2018/07/30/javaScript高级程序设计-读书笔记/</id>
+    <published>2018-07-30T05:27:22.000Z</published>
+    <updated>2018-08-02T16:16:31.126Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;强化js基础，来看一看传说中的小红书&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/07/30/javaScript高级程序设计-读书笔记/3c0243a7d933c895abde98f1d91373f0830200b9.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="https://www.hollytree.top/categories/JavaScript/"/>
+    
+    
+      <category term="读书笔记" scheme="https://www.hollytree.top/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="javaScript" scheme="https://www.hollytree.top/tags/javaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js小整理</title>
+    <link href="https://www.hollytree.top/2018/07/29/js%E5%B0%8F%E6%95%B4%E7%90%86/"/>
+    <id>https://www.hollytree.top/2018/07/29/js小整理/</id>
+    <published>2018-07-29T02:35:57.000Z</published>
+    <updated>2018-08-02T16:02:45.839Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;偶尔过一遍js知识&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/07/29/js小整理/5c07f343ad4bd1136db9914a5dafa40f4afb05e7.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="温故" scheme="https://www.hollytree.top/categories/%E6%B8%A9%E6%95%85/"/>
+    
+    
+      <category term="小记" scheme="https://www.hollytree.top/tags/%E5%B0%8F%E8%AE%B0/"/>
     
   </entry>
   
@@ -44,14 +188,14 @@
     <link href="https://www.hollytree.top/2018/07/16/CSS%E6%8F%AD%E7%A7%98-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     <id>https://www.hollytree.top/2018/07/16/CSS揭秘-读书笔记/</id>
     <published>2018-07-16T05:27:11.000Z</published>
-    <updated>2018-07-16T14:16:02.652Z</updated>
+    <updated>2018-08-02T16:04:34.017Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;CSS如今面临的挑战是：在保证DRY、可维护、灵活性、轻量级并且尽可能符合标准的前提下，把我们手中的这些css特性转化为网易中的各种创意。（作者为W3C特邀专家，强调 CSS 代码的 DRY 原则是一个贯穿本书的主题，提供了很多css技巧）&lt;/p&gt;
+&lt;p&gt;CSS如今面临的挑战是：在保证DRY、可维护、灵活性、轻量级并且尽可能符合标准的前提下，把我们手中的这些css特性转化为网页中的各种创意。（作者为W3C特邀专家，强调 CSS 代码的 DRY 原则是一个贯穿本书的主题，提供了很多css技巧）&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/2018/07/16/CSS揭秘-读书笔记/ce3d860f4bfbfbed9c38037b7ff0f736aec31fe6.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/07/16/CSS揭秘-读书笔记/16719dac59b715654e25bbc87b54c94dff4989c6.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -69,7 +213,7 @@
     <link href="https://www.hollytree.top/2018/07/14/vue%E9%A3%8E%E6%A0%BC%E8%A7%84%E8%8C%83%E6%A2%B3%E7%90%86/"/>
     <id>https://www.hollytree.top/2018/07/14/vue风格规范梳理/</id>
     <published>2018-07-14T02:57:21.000Z</published>
-    <updated>2018-07-15T16:05:04.902Z</updated>
+    <updated>2018-08-02T15:17:24.790Z</updated>
     
     <summary type="html">
     
@@ -94,7 +238,7 @@
     <link href="https://www.hollytree.top/2018/07/04/Vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E6%9F%90%E4%BA%9Bwebpack%E9%85%8D%E7%BD%AE/"/>
     <id>https://www.hollytree.top/2018/07/04/Vue项目中的某些webpack配置/</id>
     <published>2018-07-04T14:47:47.000Z</published>
-    <updated>2018-07-04T15:53:57.425Z</updated>
+    <updated>2018-08-02T15:17:24.758Z</updated>
     
     <summary type="html">
     
@@ -119,7 +263,7 @@
     <link href="https://www.hollytree.top/2018/06/01/javascript%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E7%AC%A6/"/>
     <id>https://www.hollytree.top/2018/06/01/javascript对象的属性描述符/</id>
     <published>2018-06-01T04:45:37.000Z</published>
-    <updated>2018-06-27T07:21:50.262Z</updated>
+    <updated>2018-08-02T15:17:24.786Z</updated>
     
     <summary type="html">
     
@@ -264,6 +408,35 @@
   
   <entry>
     <title>better-scoll的封装与使用</title>
+    <link href="https://www.hollytree.top/2018/04/19/better-scoll%E7%9A%84%E5%B0%81%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8%20-%20%E5%89%AF%E6%9C%AC/"/>
+    <id>https://www.hollytree.top/2018/04/19/better-scoll的封装与使用 - 副本/</id>
+    <published>2018-04-19T13:07:23.000Z</published>
+    <updated>2018-06-24T09:28:43.438Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;better-scroll是解决各种滚动场景需求的插件，由于一般移动端项目滚动的场景特别多，所以会对其进行封装复用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/04/19/better-scoll的封装与使用 - 副本/better-scoll的封装与使用/bb823d5639d3142d7ec69d1ef61f884fe1842de0.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="https://www.hollytree.top/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
+    
+      <category term="组件" scheme="https://www.hollytree.top/tags/%E7%BB%84%E4%BB%B6/"/>
+    
+      <category term="封装" scheme="https://www.hollytree.top/tags/%E5%B0%81%E8%A3%85/"/>
+    
+      <category term="开发" scheme="https://www.hollytree.top/tags/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>better-scoll的封装与使用</title>
     <link href="https://www.hollytree.top/2018/04/19/better-scoll%E7%9A%84%E5%B0%81%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
     <id>https://www.hollytree.top/2018/04/19/better-scoll的封装与使用/</id>
     <published>2018-04-19T13:07:23.000Z</published>
@@ -336,194 +509,6 @@
     
     
       <category term="JavaScript" scheme="https://www.hollytree.top/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue首屏优化之路由懒加载</title>
-    <link href="https://www.hollytree.top/2018/03/10/routerLazy/"/>
-    <id>https://www.hollytree.top/2018/03/10/routerLazy/</id>
-    <published>2018-03-09T16:16:55.000Z</published>
-    <updated>2018-06-19T11:21:19.387Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;项目比较大时build后首次加载会有很慢的问题,路由懒加载就是优化加载速度的方法之一&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/2018/03/10/routerLazy/aaa355983dfbfb1d364f714a4b69fc183e63a4b9.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="https://www.hollytree.top/categories/Vue/"/>
-    
-    
-      <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
-    
-      <category term="优化" scheme="https://www.hollytree.top/tags/%E4%BC%98%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>利用vue-cli初始化项目</title>
-    <link href="https://www.hollytree.top/2018/03/09/vue-cli-init-project/"/>
-    <id>https://www.hollytree.top/2018/03/09/vue-cli-init-project/</id>
-    <published>2018-03-09T11:04:30.000Z</published>
-    <updated>2018-06-19T11:21:20.947Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;可以快速初始化vue项目，提供一套本地node测试服务器，集成打包上线方案&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/2018/03/09/vue-cli-init-project/2821554ce9fde44f787bbae127e5079742933935.gif&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="https://www.hollytree.top/categories/Vue/"/>
-    
-    
-      <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
-    
-      <category term="开发" scheme="https://www.hollytree.top/tags/%E5%BC%80%E5%8F%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深拷贝与浅拷贝</title>
-    <link href="https://www.hollytree.top/2018/03/02/copyDeep/"/>
-    <id>https://www.hollytree.top/2018/03/02/copyDeep/</id>
-    <published>2018-03-02T02:11:14.000Z</published>
-    <updated>2018-06-19T11:21:42.285Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;最近工作中一个简单的赋值，引发了一个很奇怪的 bug。所以深拷贝和浅拷贝还是非常有必要弄清楚的。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/2018/03/02/copyDeep/lan.gif&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="https://www.hollytree.top/categories/JavaScript/"/>
-    
-    
-      <category term="每日一坑" scheme="https://www.hollytree.top/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ios系统与Date的Bug</title>
-    <link href="https://www.hollytree.top/2018/03/01/moveIos-1/"/>
-    <id>https://www.hollytree.top/2018/03/01/moveIos-1/</id>
-    <published>2018-03-01T15:35:26.000Z</published>
-    <updated>2018-06-24T09:45:18.454Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;解决办法 （转化为/分隔的就可以）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/2018/03/01/moveIos-1/7a2fbe229152dc83c16462315859a01bfd4aaa6f.gif&quot; alt=&quot;&quot;&gt;
-      
-    
-    </summary>
-    
-      <category term="每日一坑" scheme="https://www.hollytree.top/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
-    
-    
-      <category term="javascript" scheme="https://www.hollytree.top/tags/javascript/"/>
-    
-      <category term="移动" scheme="https://www.hollytree.top/tags/%E7%A7%BB%E5%8A%A8/"/>
-    
-      <category term="踩坑记" scheme="https://www.hollytree.top/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0/"/>
-    
-      <category term="ios" scheme="https://www.hollytree.top/tags/ios/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>跑Vue项目时服务突然停止(Node内存溢出)</title>
-    <link href="https://www.hollytree.top/2018/02/03/nodeFull/"/>
-    <id>https://www.hollytree.top/2018/02/03/nodeFull/</id>
-    <published>2018-02-03T04:17:33.000Z</published>
-    <updated>2018-06-24T09:44:52.201Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;先描述下现象：vue项目在跑时偶尔出现webpack-dev-server服务停止,需要重新npm run dev.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/2018/02/03/nodeFull/375670145D5D7073D7D7843A1AE5D529069481DAA.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight stata&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;FATAL &lt;span class=&quot;keyword&quot;&gt;ERROR&lt;/span&gt;: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap &lt;span class=&quot;keyword&quot;&gt;out&lt;/span&gt; of &lt;span class=&quot;keyword&quot;&gt;memory&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="https://www.hollytree.top/categories/Vue/"/>
-    
-    
-      <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
-    
-      <category term="每日一坑" scheme="https://www.hollytree.top/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
-    
-      <category term="Node" scheme="https://www.hollytree.top/tags/Node/"/>
-    
-      <category term="Webpack" scheme="https://www.hollytree.top/tags/Webpack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue的bus组件通信时多次触发的问题</title>
-    <link href="https://www.hollytree.top/2018/01/07/busVue/"/>
-    <id>https://www.hollytree.top/2018/01/07/busVue/</id>
-    <published>2018-01-07T15:33:10.000Z</published>
-    <updated>2018-06-24T09:44:37.191Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;解决办法 在组件中   beforeDestory周期  bus.$off(“emit的事件名”) 手动销毁事&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/2018/01/07/busVue/bfd556a757c6e8b489
-      
-    
-    </summary>
-    
-      <category term="Vue" scheme="https://www.hollytree.top/categories/Vue/"/>
-    
-    
-      <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
-    
-      <category term="组件通信" scheme="https://www.hollytree.top/tags/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
-    
-      <category term="bus" scheme="https://www.hollytree.top/tags/bus/"/>
-    
-      <category term="每日一坑" scheme="https://www.hollytree.top/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%9D%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端面试题梳理</title>
-    <link href="https://www.hollytree.top/2016/01/02/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E6%A2%B3%E7%90%86/"/>
-    <id>https://www.hollytree.top/2016/01/02/前端面试题梳理/</id>
-    <published>2016-01-02T02:12:29.000Z</published>
-    <updated>2018-07-03T17:04:16.995Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;准备面试，个人梳理，比较乱；&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/2016/01/02/前端面试题梳理/d3829b12c8fcc3ced53d04229545d688d53f20b0.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="面试题" scheme="https://www.hollytree.top/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
