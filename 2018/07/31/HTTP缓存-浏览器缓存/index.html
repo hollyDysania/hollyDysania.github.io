@@ -118,11 +118,11 @@
 <meta property="og:description" content="浏览器缓存就是把已经请求过的web资源拷贝一份副本存储在浏览器中，第二次请求时会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。  浏览器对于缓存的处理是根据第一次请求资源时返回的响应头来确定的也就是Response Headers">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://www.hollytree.top/2018/07/31/HTTP缓存-浏览器缓存/43e93ac79f3df8dc9ef5821bc511728b46102811.jpg">
-<meta property="og:image" content="f:/http(浏览器">
-<meta property="og:image" content="f:/http(浏览器">
-<meta property="og:image" content="f:/http(浏览器">
-<meta property="og:image" content="f:/http(浏览器">
-<meta property="og:updated_time" content="2018-08-02T16:27:49.226Z">
+<meta property="og:image" content="https://www.hollytree.top/2018/07/31/HTTP缓存-浏览器缓存/632130-20170210135521072-1812985836.png">
+<meta property="og:image" content="https://www.hollytree.top/2018/07/31/HTTP缓存-浏览器缓存/QQ图片20180731143858.png">
+<meta property="og:image" content="https://www.hollytree.top/2018/07/31/HTTP缓存-浏览器缓存/632130-20170210141716838-764535017.png">
+<meta property="og:image" content="https://www.hollytree.top/2018/07/31/HTTP缓存-浏览器缓存/QQ截图20180731161048.png">
+<meta property="og:updated_time" content="2018-08-06T17:11:30.923Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP缓存&#x2F;浏览器缓存">
 <meta name="twitter:description" content="浏览器缓存就是把已经请求过的web资源拷贝一份副本存储在浏览器中，第二次请求时会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。  浏览器对于缓存的处理是根据第一次请求资源时返回的响应头来确定的也就是Response Headers">
@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,571 字
+                  1,539 字
                 </span>
               
 
@@ -456,7 +456,7 @@
 <p><code>浏览器对于缓存的处理是根据第一次请求资源时返回的响应头来确定的也就是Response Headers</code></p>
 <p><img src="/2018/07/31/HTTP缓存-浏览器缓存/43e93ac79f3df8dc9ef5821bc511728b46102811.jpg" alt=""></p>
   <a id="more"></a>
-<h2 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h2><p><img src="F:\http(浏览器" alt="">缓存\632130-20170210135521072-1812985836.png)</p>
+<h2 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h2><p><img src="/2018/07/31/HTTP缓存-浏览器缓存/632130-20170210135521072-1812985836.png" alt=""></p>
 <ul>
 <li><p>左图为已经有缓存数据的情况：缓存未失效，直接使用缓存数据</p>
 <p>表现为： Status Code: 200  (from memory cache) 或 （from disk cache ）</p>
@@ -467,19 +467,46 @@
 </ul>
 <h3 id="那么问题来了，浏览器怎么知道缓存是否失效呢？"><a href="#那么问题来了，浏览器怎么知道缓存是否失效呢？" class="headerlink" title="那么问题来了，浏览器怎么知道缓存是否失效呢？"></a>那么问题来了，浏览器怎么知道缓存是否失效呢？</h3><p>根据响应头里的 Expires 和 Cache-Control  来判断</p>
 <ul>
-<li><p>Expires  是HTTTP1.0版本定义的缓存字段，值为服务器端返回的到期时间（绝对时间），如果客户端的时间与服务器端的时间有误差，会导致缓存命中的误差。</p>
-</li>
-<li><p>Cache-Control  是HTTP1.1版本定义的缓存字段</p>
-<p>| 值          | 意义                             |<br>| ———– | ——————————– |<br>| private     | 客户端可以缓存                   |<br>| public      | 客户端和代理服务器都可以缓存     |<br>| max-age=xxx | 缓存在xxx秒后失效                |<br>| no-cache    | 需要使用协商缓存来验证缓存的数据 |<br>| no-store    | 不缓存                           |</p>
-</li>
+<li>Expires  是HTTTP1.0版本定义的缓存字段，值为服务器端返回的到期时间（绝对时间），如果客户端的时间与服务器端的时间有误差，会导致缓存命中的误差。</li>
+<li>Cache-Control  是HTTP1.1版本定义的缓存字段</li>
 </ul>
-<p><code>Expires和Cache-Control同时存在时Cache-Control值为max-aga=xxxx 会直接忽略Expires 。</code></p>
-<p><img src="F:\http(浏览器" alt="">缓存\QQ图片20180731143858.png)</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>private</td>
+<td>客户端可以缓存</td>
+</tr>
+<tr>
+<td>public</td>
+<td>客户端和代理服务器可以缓存</td>
+</tr>
+<tr>
+<td>max-age=xxx</td>
+<td>缓存在xxx秒后失效</td>
+</tr>
+<tr>
+<td>no-cache</td>
+<td>需要使用协商缓存来验证缓存数据</td>
+</tr>
+<tr>
+<td>no-store</td>
+<td>不缓存</td>
+</tr>
+</tbody>
+</table>
+<p>Expires和Cache-Control同时存在时Cache-Control值为max-aga=xxxx 会直接忽略Expires 。 `</p>
+<p><img src="/2018/07/31/HTTP缓存-浏览器缓存/QQ图片20180731143858.png" alt=""></p>
 <p>上图可以看到，从浏览器内存中返回的数据，并没有向源服务器返回数据</p>
 <p>Cache-Control对应的是2592000s以后缓存失效，也就是30天内请求这个url都直接从浏览器缓存中得到数据。</p>
 <p>Expires: 2018年8月22日07:23:08过期</p>
 <p>按照之前说的 Expires会被忽略</p>
-<h2 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h2><p><img src="F:\http(浏览器" alt="">缓存\632130-20170210141716838-764535017.png)</p>
+<h2 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h2><p><img src="/2018/07/31/HTTP缓存-浏览器缓存/632130-20170210141716838-764535017.png" alt=""></p>
 <ul>
 <li>左图为缓存未失效时，先向缓存得到<strong>Etag</strong>或者<strong>Last-Modified</strong>，然后请求服务器Request Headers会带上<strong>If-None-Match</strong>(值就是上一次请求返回的Etag 唯一标识)  或<strong>If-Modified-Since</strong> （上一次请求返回的资源最后修改时间）, 服务器收到<strong>If-None-Match</strong> 与唯一标识对比，没有改变 或 <strong>If-Modified-Since</strong> 与资源最后修改时间对比，没有改变，即响应HTTP 304告诉浏览器使用浏览器缓存。浏览器直接从缓存里拿到数据。</li>
 <li>右图之前的步骤同上，但<strong>If-None-Match</strong> 与资源唯一标识不同 或 <strong>If-Modified-Since</strong>小于资源最后修改时间，则表示缓存的资源已经失效，返回状态码 200 并且返回最新的数据，浏览器缓存数据。</li>
@@ -492,7 +519,7 @@
 </ul>
 <h2 id="服务器配置http缓存-nginx为例"><a href="#服务器配置http缓存-nginx为例" class="headerlink" title="服务器配置http缓存(nginx为例)"></a>服务器配置http缓存(nginx为例)</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">location ~ .*\.(js|css)$ &#123;</span><br><span class="line">    expires 1d; </span><br><span class="line">    add_header Cache-Control max-age=315360000;</span><br><span class="line">&#125; </span><br><span class="line">#nginx中Last-Modified 和 Etag是默认打开的</span><br></pre></td></tr></table></figure>
 <p>以上配置可以对应请求的响应头</p>
-<p><img src="F:\http(浏览器" alt="">缓存\QQ截图20180731161048.png)</p>
+<p><img src="/2018/07/31/HTTP缓存-浏览器缓存/QQ截图20180731161048.png" alt=""></p>
 <h2 id="常见的HTTP请求头及响应头"><a href="#常见的HTTP请求头及响应头" class="headerlink" title="常见的HTTP请求头及响应头"></a>常见的HTTP请求头及响应头</h2><table>
 <thead>
 <tr>
@@ -955,7 +982,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">37.7k</span>
+    <span title="Site words total count">35.5k</span>
   
 </div>
 

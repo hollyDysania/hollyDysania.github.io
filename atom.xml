@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.hollytree.top/"/>
-  <updated>2018-08-02T15:58:47.988Z</updated>
+  <updated>2018-08-06T16:41:44.226Z</updated>
   <id>https://www.hollytree.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>css利用不可见文本实现图标与文字对齐</title>
+    <link href="https://www.hollytree.top/2018/08/06/css%E5%88%A9%E7%94%A8%E4%B8%8D%E5%8F%AF%E8%A7%81%E6%96%87%E6%9C%AC%E5%AE%9E%E7%8E%B0%E5%9B%BE%E6%A0%87%E4%B8%8E%E6%96%87%E5%AD%97%E5%AF%B9%E9%BD%90/"/>
+    <id>https://www.hollytree.top/2018/08/06/css利用不可见文本实现图标与文字对齐/</id>
+    <published>2018-08-06T09:25:58.000Z</published>
+    <updated>2018-08-06T16:41:44.226Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;日常开发中经常需要将icon图标与文字对齐，看起来好像很简单，但实现以后切换不同屏幕或者字体大小或行高，肉眼看总是觉得好像有一些没有完全对齐。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/08/06/css利用不可见文本实现图标与文字对齐/1382472309f790524ab542b404f3d7ca7acbd5bc.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="CSS" scheme="https://www.hollytree.top/categories/CSS/"/>
+    
+    
+      <category term="css" scheme="https://www.hollytree.top/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>手机端判断滚动条到达底部</title>
@@ -116,7 +139,7 @@
     <link href="https://www.hollytree.top/2018/07/31/HTTP%E7%BC%93%E5%AD%98-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/"/>
     <id>https://www.hollytree.top/2018/07/31/HTTP缓存-浏览器缓存/</id>
     <published>2018-07-30T16:23:58.000Z</published>
-    <updated>2018-08-02T16:27:49.226Z</updated>
+    <updated>2018-08-06T17:11:30.923Z</updated>
     
     <summary type="html">
     
@@ -403,35 +426,6 @@
       <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
     
       <category term="mixin" scheme="https://www.hollytree.top/tags/mixin/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>better-scoll的封装与使用</title>
-    <link href="https://www.hollytree.top/2018/04/19/better-scoll%E7%9A%84%E5%B0%81%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8%20-%20%E5%89%AF%E6%9C%AC/"/>
-    <id>https://www.hollytree.top/2018/04/19/better-scoll的封装与使用 - 副本/</id>
-    <published>2018-04-19T13:07:23.000Z</published>
-    <updated>2018-06-24T09:28:43.438Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;better-scroll是解决各种滚动场景需求的插件，由于一般移动端项目滚动的场景特别多，所以会对其进行封装复用&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/2018/04/19/better-scoll的封装与使用 - 副本/better-scoll的封装与使用/bb823d5639d3142d7ec69d1ef61f884fe1842de0.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="https://www.hollytree.top/categories/Vue/"/>
-    
-    
-      <category term="Vue" scheme="https://www.hollytree.top/tags/Vue/"/>
-    
-      <category term="组件" scheme="https://www.hollytree.top/tags/%E7%BB%84%E4%BB%B6/"/>
-    
-      <category term="封装" scheme="https://www.hollytree.top/tags/%E5%B0%81%E8%A3%85/"/>
-    
-      <category term="开发" scheme="https://www.hollytree.top/tags/%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
