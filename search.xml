@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[配置码云和github公钥SSH]]></title>
+    <url>%2F2018%2F08%2F07%2F%E9%85%8D%E7%BD%AE%E7%A0%81%E4%BA%91%E5%92%8Cgithub%E5%85%AC%E9%92%A5SSH%2F</url>
+    <content type="text"><![CDATA[公钥可以解决每次push clone pull 时需要输入账号密码的问题(当然也可以通过git的config文件或者gitbash输入命令永远保存账号密码) 生成本地ssh 打开Git Bash 1cd ~/.ssh 生成ssh 12ssh-keygen -t rsa -C 'github的用户名邮箱' -f '自定义的公钥名例如：github_id_rsa'ssh-keygen -t rsa -C '码云的用户名邮箱' -f '自定义的公钥名例如：id_rsa' 一路回车就好，生成免密公钥 -t : 指定密钥类型 （不指定默认SSH-2的RSA密钥） rsa: 密钥类型 -C: 用于识别这个密钥的注释（可以输入任何内容，很多网站和软件用这个注释作为密钥的名字） -f: 指定文件名 生成的文件 C:\Users\Administrator\.ssh下可以看到新增的 将公钥配置到github和gitee将对应的pub文件内容粘贴到对应的网站就可以了 github: settings =&gt; SSH and GPG keys =&gt; new ssh key gitee: 设置 =&gt; SSH公钥 =&gt; 添加公钥即可 避免冲突创建config文件1234cd ~/.sshvi config// 输入:w 回车// 输入:q! 回车 文件内容 1234567891011# giteeHost gitee.comHostName gitee.comPreferredAuthentications publickeyIdentityFile ~/.ssh/id_rsa(对应文件名)# githubHost github.comHostName github.comPreferredAuthentications publickeyIdentityFile ~/.ssh/github_id_rsa（对应文件名） 保存搞定~~✿✿ヽ(°▽°)ノ✿]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>gitbash</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[css利用不可见文本实现图标与文字对齐]]></title>
     <url>%2F2018%2F08%2F06%2Fcss%E5%88%A9%E7%94%A8%E4%B8%8D%E5%8F%AF%E8%A7%81%E6%96%87%E6%9C%AC%E5%AE%9E%E7%8E%B0%E5%9B%BE%E6%A0%87%E4%B8%8E%E6%96%87%E5%AD%97%E5%AF%B9%E9%BD%90%2F</url>
     <content type="text"><![CDATA[日常开发中经常需要将icon图标与文字对齐，看起来好像很简单，但实现以后切换不同屏幕或者字体大小或行高，肉眼看总是觉得好像有一些没有完全对齐。 利用不可见文本实现图标与文字对齐使用inline-flex： 1234&lt;div&gt; &lt;span&gt;&amp;#8203;&lt;img src="url"/&gt;&lt;/span&gt; 文字内容&lt;/div&gt; 1234span&#123; display: inline-flex; align-items: center；&#125; 使用inline-block: html结构同上 123456789101112span &#123; position: relative; display: inline-block; line-height: 1; // 使文本高度为图标高度 width: 1em; //图标大小，用来占位 &#125; span img &#123; position: absolute; top: 0; left: 0; width: 1em; height: 1em; &#125; 伪元素替换html中的不可见文本 123456&lt;div&gt; &lt;span&gt; &lt;img src="url"/&gt; &lt;/span&gt; 文字内容&lt;/div&gt; 12// 加上伪元素span::before &#123; content: '\200b' &#125; 原理： 让不可见文本对齐Line Box中其他文本，让图标对齐这个不可见文本。详细原理分析请查阅大漠《Icon和文本对齐方式的探索》：http://www.w3cplus.com/css/icon-align-to-text.html]]></content>
