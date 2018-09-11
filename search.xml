@@ -61,8 +61,8 @@
         <category>Vue</category>
       </categories>
       <tags>
-        <tag>vue</tag>
         <tag>插件</tag>
+        <tag>vue</tag>
       </tags>
   </entry>
   <entry>
@@ -393,9 +393,9 @@
       </categories>
       <tags>
         <tag>Vue</tag>
-        <tag>每日一坑</tag>
         <tag>组件通信</tag>
         <tag>bus</tag>
+        <tag>每日一坑</tag>
       </tags>
   </entry>
   <entry>
