@@ -68,8 +68,8 @@
         <category>Vue</category>
       </categories>
       <tags>
-        <tag>vue</tag>
         <tag>插件</tag>
+        <tag>vue</tag>
       </tags>
   </entry>
   <entry>
@@ -300,9 +300,9 @@
       </categories>
       <tags>
         <tag>Vue</tag>
+        <tag>开发</tag>
         <tag>组件</tag>
         <tag>封装</tag>
-        <tag>开发</tag>
       </tags>
   </entry>
   <entry>
