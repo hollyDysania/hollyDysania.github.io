@@ -472,7 +472,7 @@
 <p><img src="/2019/01/20/express-mockjs-搭建一个mock服务方便前端开发/2.png" alt=""></p>
 <h2 id="具体使用方法"><a href="#具体使用方法" class="headerlink" title="具体使用方法"></a>具体使用方法</h2><h3 id="第一种方法：-项目中直接引入"><a href="#第一种方法：-项目中直接引入" class="headerlink" title="第一种方法： 项目中直接引入"></a>第一种方法： 项目中直接引入</h3><p><code>可以参考element-admin中的写法</code>：先install mockjs就不说了</p>
 <p>在src下创建mock文件夹，分模块配置，在index.js中整体配置并导出Mock然后在入口文件main.js中引入即可</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">├── src                      	</span><br><span class="line">│   ├── mock					</span><br><span class="line">│   	├── <span class="selector-tag">article</span><span class="selector-class">.js</span>          <span class="comment">// 文章相关的mock数据配置</span></span><br><span class="line">│   	├── login<span class="selector-class">.js</span>          	<span class="comment">// 登录相关的mock数据配置</span></span><br><span class="line">│   	├── index<span class="selector-class">.js</span>            <span class="comment">// 模块整合导出Mock</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">├── src                      	</span><br><span class="line">│   ├── mock					</span><br><span class="line">│   	├── article.js          // 文章相关的mock数据配置</span><br><span class="line">│   	├── login.js          	// 登录相关的mock数据配置</span><br><span class="line">│   	├── index.js            // 模块整合导出Mock</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <h3 id="接下来看看article-js"><a href="#接下来看看article-js" class="headerlink" title="接下来看看article.js"></a>接下来看看article.js</h3><p><img src="/2019/01/20/express-mockjs-搭建一个mock服务方便前端开发/3.png" alt=""></p>
 <h3 id="再看index-js"><a href="#再看index-js" class="headerlink" title="再看index.js"></a>再看index.js</h3><p><img src="/2019/01/20/express-mockjs-搭建一个mock服务方便前端开发/4.png" alt=""></p>
 <h3 id="入口文件引入"><a href="#入口文件引入" class="headerlink" title="入口文件引入"></a>入口文件引入</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'./mock'</span></span><br></pre></td></tr></table></figure>
@@ -687,7 +687,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">40</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -709,7 +709,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-count">38</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -806,7 +806,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">51.7k</span>
+    <span title="Site words total count">53.0k</span>
   
 </div>
 
