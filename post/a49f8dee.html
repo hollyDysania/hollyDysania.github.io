@@ -118,7 +118,7 @@
 <meta property="og:description" content="element源码分析-checkbox多选框，感觉逻辑跟单选框很像，来看看吧。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://47.96.100.173/post/a49f8dee/b4f0267f9e2f070881b62b8ae124b899a801f2ab.jpg">
-<meta property="og:updated_time" content="2019-04-26T05:45:13.212Z">
+<meta property="og:updated_time" content="2019-05-06T09:23:23.641Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="拜读及分析Element源码-checkbox多选框组件篇">
 <meta name="twitter:description" content="element源码分析-checkbox多选框，感觉逻辑跟单选框很像，来看看吧。">
@@ -520,10 +520,9 @@
 <h4 id="input的change事件"><a href="#input的change事件" class="headerlink" title="input的change事件"></a>input的change事件</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// input的change事件</span></span><br><span class="line">handleChange(ev) &#123;</span><br><span class="line">  <span class="comment">// 突破限制 直接return</span></span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.isLimitExceeded) <span class="keyword">return</span>;</span><br><span class="line">  <span class="keyword">let</span> value;</span><br><span class="line">  <span class="keyword">if</span> (ev.target.checked) &#123;</span><br><span class="line">    <span class="comment">// 被选中 给value赋值 有trueLabel则赋值trueLabel 无则赋值true</span></span><br><span class="line">    value = <span class="keyword">this</span>.trueLabel === <span class="literal">undefined</span> ? <span class="literal">true</span> : <span class="keyword">this</span>.trueLabel;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// 未被选中 给value赋值 有falseLable则赋值falseLabel 无则false</span></span><br><span class="line">    value = <span class="keyword">this</span>.falseLabel === <span class="literal">undefined</span> ? <span class="literal">false</span> : <span class="keyword">this</span>.falseLabel;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 发布change方法暴露value及和event对象</span></span><br><span class="line">  <span class="keyword">this</span>.$emit(<span class="string">'change'</span>, value, ev);</span><br><span class="line">  <span class="comment">// dom渲染完成后 如果被checkbox-group组件包裹 则发布change事件，暴露checkbox-group组件实例的value(数组)</span></span><br><span class="line">  <span class="keyword">this</span>.$nextTick(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.isGroup) &#123;</span><br><span class="line">      <span class="keyword">this</span>.dispatch(<span class="string">'ElCheckboxGroup'</span>, <span class="string">'change'</span>, [<span class="keyword">this</span>._checkboxGroup.value]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="监听value，与表单验证相关"><a href="#监听value，与表单验证相关" class="headerlink" title="监听value，与表单验证相关"></a>监听value，与表单验证相关</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">watch: &#123;</span><br><span class="line">  <span class="comment">// 监听value变化，向上找到form组件则发布el.form.change事件暴露出value</span></span><br><span class="line">  value(value) &#123;</span><br><span class="line">    <span class="keyword">this</span>.dispatch(<span class="string">'ElFormItem'</span>, <span class="string">'el.form.change'</span>, value);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>dispatch: 从mixins混入进来的方法,向上寻找(指定组件，发布指定事件，暴露指定值)</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Emitter <span class="keyword">from</span> <span class="string">'element-ui/src/mixins/emitter'</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>dispatch: 从mixins混入进来的方法,向上寻找(指定组件，发布指定事件，暴露指定值)</li>
 </ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Emitter <span class="keyword">from</span> <span class="string">'element-ui/src/mixins/emitter'</span></span><br></pre></td></tr></table></figure>
 <h2 id="checkbox-button"><a href="#checkbox-button" class="headerlink" title="checkbox-button"></a>checkbox-button</h2><p><code>与checkbox基本一致，多了button相关样式,computed中的activeStyle，受checkbox-group的fill控制</code></p>
 
       
@@ -829,7 +828,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">53.0k</span>
+    <span title="Site words total count">53.1k</span>
   
 </div>
 
